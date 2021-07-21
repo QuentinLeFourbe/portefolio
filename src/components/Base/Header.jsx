@@ -7,14 +7,15 @@ import HeaderLink from './Header/HeaderLink';
 
 const Container = styled(animated.header)`
     grid-area: header;
+    box-sizing:border-box;
     padding: 0px 1rem 0px 1rem;
-    /* background-color: #ff6f61; */
-    min-height:10vh;
+    background-color: #fff;
+    min-height:15vh;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     /* align-items: stretch; */
-    border-color:lightgrey;
+    border-color:#ffd127;
     border-style:solid;
     border-width: 0px 0px 1px 0px;
 `;
@@ -32,7 +33,7 @@ function Header(props) {
     return (headerTransition((style, show) => show &&
         <Container style={style}>
             <TitleLink to="/">Quentin GARCIA</TitleLink>
-            <HeaderLink to="/cv">CV</HeaderLink>
+            <HeaderLink to="/">CV</HeaderLink>
             <HeaderLink to="/projects">Projects</HeaderLink>
             <HeaderLink to="/about">About</HeaderLink>
         </Container >)

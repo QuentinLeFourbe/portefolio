@@ -28,7 +28,7 @@ function LoadingComponent(props) {
     // if (loadingState == false) {
     await new Promise(r => setTimeout(r, 800));
     setIsLoading(false);
-    await new Promise(r => setTimeout(r, 300));
+    await new Promise(r => setTimeout(r, 500));
     // hideLoading();
     dataDispatch({ type: 'APP_LOADED' })
     // }

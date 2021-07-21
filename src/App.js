@@ -4,7 +4,7 @@ import { AppContext } from './AppContext';
 import { dataReducer } from './Reducers/Reducers';
 
 const initialData = {
-  isAppLoading: false,
+  isAppLoading: true,
 }
 
 const App = (props) => {

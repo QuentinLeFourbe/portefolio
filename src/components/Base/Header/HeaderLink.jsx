@@ -7,7 +7,8 @@ import { AppContext } from '../../../AppContext';
 const Container = styled(animated(Link))`
     padding: 1rem;
     text-decoration: none;
-    color:black;
+    font-size: 3rem;
+    font-family: "Times New Roman", Times, serif;
 `;
 
 function HeaderLink(props) {
@@ -20,8 +21,8 @@ function HeaderLink(props) {
         from: {
             y: 0,
         },
-        y: isHover ? -3 : 0,
-        color: isTriggered ? '#ff6f61' : 'black',
+        y: isHover ? 5 : 0,
+        color: isTriggered ? '#ffca08' : 'black',
         config: {
             tension: 300,
             friction: 10,

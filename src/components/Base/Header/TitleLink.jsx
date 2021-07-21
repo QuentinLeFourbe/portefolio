@@ -6,12 +6,12 @@ import { AppContext } from '../../../AppContext';
 
 const Container = styled(Link)`
     font-family: "Times New Roman", Times, serif;
-    font-size: 3rem;
+    font-size: 6rem;
     margin: 1rem;
     margin-right: 5vw;
     text-decoration: none;
-    color:black;
     font-weight:bold;
+    color:black;
 `;
 
 function TitleLink(props) {

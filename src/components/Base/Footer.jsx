@@ -5,7 +5,7 @@ import { useSpring, animated, config } from 'react-spring'
 
 const Container = styled(animated.footer)`
     grid-area: footer;
-    background-color: #ff6f61;
+    background-color: #18534F;
     min-height: 10vh;
     display: flex;
     justify-content: center;
