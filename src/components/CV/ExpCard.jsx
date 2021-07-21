@@ -4,6 +4,7 @@ import { useSpring, useTransition, animated, config } from 'react-spring'
 import RoomIcon from '@material-ui/icons/Room';
 import BusinessIcon from '@material-ui/icons/Business';
 import ExpTitle from './CVComponents/ExpTitle';
+import VisiblitySensor from 'react-visibility-sensor';
 
 const Container = styled(animated.div)`
     display:flex;
@@ -102,15 +103,16 @@ const ButtonsContainer = styled.div`
 function ExpCard(props) {
     const { date, title, company, localisation, detailsList, rightSide } = props
     const [isExpanded, setExpanded] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     const spring = useSpring({
         from: {
             x: rightSide ? 100 : -100,
             opacity: 0,
         },
-        x:0,
-        opacity: 1,
-        config: config.molasses
+        x: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0,
+        config: config.molasses,
     })
 
     const expandTransition = useTransition(isExpanded, {
@@ -126,53 +128,52 @@ function ExpCard(props) {
         config: config.tight,
     })
 
+    const onChangeVisibility = (isVisible) => {
+        setIsVisible(isVisible);
+        console.log("visible: " + isVisible)
+    }
+
     return (
-        <Container style={spring} rightSide={rightSide}>
-            <ExpContainer rightSide={rightSide}>
-                <ExpTitle
-                    date={date}
-                    title={title}
-                    rightSide={rightSide}
-                    isExpanded={isExpanded}
-                    setExpanded={setExpanded}
-                />
-                {expandTransition((styles, isExpanded) => (
-                    isExpanded ?
-                        <InfoContainer style={styles} rightSide={rightSide}>
-                            <CompanyContainer rightSide={rightSide}>
-                                {/* <ButtonsContainer rightSide={rightSide}>
-                                    <DetailButton>
-                                        Détails
-                                    </DetailButton>
+        <VisiblitySensor onChange={onChangeVisibility} offset={{top:-100, bottom:-100}}>
+            <div>
+                <Container style={spring} rightSide={rightSide}>
+                    <ExpContainer rightSide={rightSide}>
+                        <ExpTitle
+                            date={date}
+                            title={title}
+                            rightSide={rightSide}
+                            isExpanded={isExpanded}
+                            setExpanded={setExpanded}
+                        />
+                        {expandTransition((styles, isExpanded) => (
+                            isExpanded ?
+                                <InfoContainer style={styles} rightSide={rightSide}>
+                                    <CompanyContainer rightSide={rightSide}>
+                                        <CompanyItem rightSide={rightSide}>
+                                            <BusinessIcon style={{ margin: "0 1rem 0 1rem" }} />
+                                            {company}
+                                        </CompanyItem>
 
-                                    <DetailButton>
-                                        Compétences
-                                    </DetailButton>
-                                </ButtonsContainer> */}
+                                        <LocalisationContainer rightSide={rightSide}>
+                                            <RoomIcon style={{ margin: "0 1rem 0 1rem" }} />
+                                            {localisation}
+                                        </LocalisationContainer>
+                                    </CompanyContainer>
 
-                                <CompanyItem rightSide={rightSide}>
-                                    <BusinessIcon style={{ margin: "0 1rem 0 1rem" }} />
-                                    {company}
-                                </CompanyItem>
+                                    <DetailsListItem rightSide={rightSide}>
+                                        {
+                                            detailsList.map((x, index) => <DetailListItem key={index}>{x}</DetailListItem>)
+                                        }
+                                    </DetailsListItem>
+                                </InfoContainer>
+                                :
+                                ""
+                        ))}
 
-                                <LocalisationContainer rightSide={rightSide}>
-                                    <RoomIcon style={{ margin: "0 1rem 0 1rem" }} />
-                                    {localisation}
-                                </LocalisationContainer>
-                            </CompanyContainer>
-
-                            <DetailsListItem rightSide={rightSide}>
-                                {
-                                    detailsList.map((x, index) => <DetailListItem key={index}>{x}</DetailListItem>)
-                                }
-                            </DetailsListItem>
-                        </InfoContainer>
-                        :
-                        ""
-                ))}
-
-            </ExpContainer>
-        </Container>
+                    </ExpContainer>
+                </Container>
+            </div>
+        </VisiblitySensor>
     )
 }
 
