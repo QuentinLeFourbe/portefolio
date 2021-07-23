@@ -30,14 +30,14 @@ function TitleSeparator(props) {
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 1000,
+        delay: 500,
     });
 
     const underlineSpring = useSpring({
         from: { opacity: 0 },
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 1500,
+        delay: 1000,
     });
 
     const onChangeVisibility = (isVisible) => {
