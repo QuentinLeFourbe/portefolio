@@ -13,7 +13,7 @@ const Container = styled(animated.div)`
     /* background-color: #226D68; */
     padding-bottom: 5vh;
     padding-top: 5vh;
-
+ 
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     justify-content:space-between;
 `;
@@ -30,7 +30,6 @@ const InfoContainer = styled(animated.div)`
     display:flex;
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     justify-content:space-between;
-
 `;
 
 
@@ -134,7 +133,7 @@ function ExpCard(props) {
     }
 
     return (
-        <VisiblitySensor onChange={onChangeVisibility} offset={{top:-100, bottom:-100}}>
+        <VisiblitySensor onChange={onChangeVisibility} offset={{top:-300, bottom:-300, right: -100}}>
             <div>
                 <Container style={spring} rightSide={rightSide}>
                     <ExpContainer rightSide={rightSide}>
