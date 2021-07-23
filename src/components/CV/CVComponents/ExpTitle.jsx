@@ -19,6 +19,7 @@ const TitleContainer = styled.div`
     padding: 1rem;
     ${props => props.rightSide ? 'padding-right: 5vw;' : 'padding-left: 5vw;'}
     font-size: 3rem;
+    cursor: pointer;
 `;
 
 const DateContainer = styled.div`
