@@ -48,7 +48,7 @@ function Presentation() {
                         <br /><br />
                         Avant cela, j'ai eu l'occasion de travailler dans du développement C# classique ou encore de la réalité virtuelle.
                         <br /><br />
-                        Actuellement ingénieur d'étude conception, ou plutôt business analyst, je cherche à me réorienté vers le développement React js afin de relever de nouveaux défis.
+                        Actuellement ingénieur d'étude conception, ou plutôt business analyst, je cherche à me réorienter vers le développement React js afin de relever de nouveaux défis.
                     </TextPresentation>
                 </Container>
 
