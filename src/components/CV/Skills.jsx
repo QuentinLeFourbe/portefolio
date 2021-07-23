@@ -44,28 +44,19 @@ const SkillItem = styled.div`
 `;
 
 function Skills() {
-    const [isVisible, setIsVisible] = useState(true);
-
-    const titleSpring = useSpring({
-        from: { x: -100, opacity: 0 },
-        x: isVisible ? 0 : -100,
-        opacity: isVisible ? 1 : 0,
-        config: config.molasses,
-    });
+    const [isVisible, setIsVisible] = useState(false);
 
     const springEffect = useSpring({
         from: { x: -100, opacity: 0 },
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
-        config: isVisible ? config.molasses : config.tight,
-        delay: isVisible ? 500 : 0,
+        config: config.molasses,
+        delay: 2000,
     });
 
-    
-
-
     const onChangeVisibility = (isVisible) => {
-        setIsVisible(isVisible);
+        if (isVisible)
+            setIsVisible(true);
     }
 
 

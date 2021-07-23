@@ -23,31 +23,33 @@ const TitleUnderline = styled(animated.div)`
 
 function TitleSeparator(props) {
     const { title } = props;
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     const titleSpring = useSpring({
         from: { x: -100, opacity: 0 },
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
+        delay: 1000,
     });
 
     const underlineSpring = useSpring({
         from: { opacity: 0 },
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 800,
+        delay: 1500,
     });
 
     const onChangeVisibility = (isVisible) => {
-        setIsVisible(isVisible);
+        if (isVisible)
+            setIsVisible(true);
     }
 
     return (
         <ReactVisibilitySensor onChange={onChangeVisibility}>
             <TitleRow>
                 <Title style={titleSpring}>{title}</Title>
-                <TitleUnderline style={underlineSpring}/>
+                <TitleUnderline style={underlineSpring} />
             </TitleRow>
         </ReactVisibilitySensor>
     )

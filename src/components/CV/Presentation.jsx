@@ -28,10 +28,12 @@ function Presentation() {
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
+        delay: 500,
     });
 
     const onChangeVisibility = (isVisible) => {
-        setIsVisible(isVisible);
+        if (isVisible)
+            setIsVisible(true);
     }
 
     return (

@@ -21,18 +21,6 @@ const TitleRow = styled(animated.div)`
 `;
 
 function Experiences() {
-    const [isVisible, setIsVisible] = useState(true);
-
-    const titleSpring = useSpring({
-        from: { x: -100, opacity: 0 },
-        x: isVisible ? 0 : -100,
-        opacity: isVisible ? 1 : 0,
-        config: config.molasses,
-    });
-
-    const onChangeVisibility = (isVisible) => {
-        setIsVisible(isVisible);
-    }
 
     return (
         <>

@@ -128,12 +128,12 @@ function ExpCard(props) {
     })
 
     const onChangeVisibility = (isVisible) => {
-        setIsVisible(isVisible);
-        console.log("visible: " + isVisible)
+        if (isVisible)
+            setIsVisible(true);
     }
 
     return (
-        <VisiblitySensor onChange={onChangeVisibility} offset={{top:-300, bottom:-300, right: -100}}>
+        <VisiblitySensor onChange={onChangeVisibility} >
             <div>
                 <Container style={spring} rightSide={rightSide}>
                     <ExpContainer rightSide={rightSide}>
