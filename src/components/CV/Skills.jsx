@@ -12,21 +12,6 @@ const Container = styled(animated.div)`
     justify-content: space-around;
 `;
 
-const Title = styled(animated.div)`
-    display: flex;
-    justify-content:center;
-    border-bottom: solid black 1px;
-    font-size: 2rem;
-    width: 400px;
-    padding-bottom: 8px;
-`;
-
-const TitleRow = styled(animated.div)`
-    display: flex;
-    justify-content: center;
-    margin-top: 15vh;
-`;
-
 const SkillTypeCol = styled.div`
     margin: 0 1rem 0 1rem;
     display:flex;
@@ -51,7 +36,7 @@ function Skills() {
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 1500,
+        delay: 500,
     });
 
     const onChangeVisibility = (isVisible) => {
@@ -61,48 +46,44 @@ function Skills() {
 
 
     return (
-        <>
-            <TitleSeparator title="Compétences" />
-
-            <ReactVisibilitySensor onChange={onChangeVisibility} partialVisibility>
-                <div>
-                    <Container style={springEffect}>
-                        <SkillTypeCol>
-                            <TypeTitle>
-                                Langues
-                            </TypeTitle>
-                            <SkillItem>Français: natif</SkillItem>
-                            <SkillItem>Anglais: courant</SkillItem>
-                        </SkillTypeCol>
-                        <SkillTypeCol>
-                            <TypeTitle>
-                                Programmation
-                            </TypeTitle>
-                            <SkillItem>React js</SkillItem>
-                            <SkillItem>Node js</SkillItem>
-                            <SkillItem>HTML</SkillItem>
-                            <SkillItem>CSS</SkillItem>
-                            <SkillItem>Javascript</SkillItem>
-                        </SkillTypeCol>
-                        <SkillTypeCol>
-                            <TypeTitle>
-                                Base de donnée
-                            </TypeTitle>
-                            <SkillItem>T-SQL</SkillItem>
-                            <SkillItem>MongoDB</SkillItem>
-                        </SkillTypeCol>
-                        <SkillTypeCol>
-                            <TypeTitle>
-                                Versionning
-                            </TypeTitle>
-                            <SkillItem>Git</SkillItem>
-                            <SkillItem>SVN</SkillItem>
-                            <SkillItem>GitKraken</SkillItem>
-                        </SkillTypeCol>
-                    </Container>
-                </div>
-            </ReactVisibilitySensor>
-        </>
+        <ReactVisibilitySensor onChange={onChangeVisibility} partialVisibility>
+            <div>
+                <Container style={springEffect}>
+                    <SkillTypeCol>
+                        <TypeTitle>
+                            Langues
+                        </TypeTitle>
+                        <SkillItem>Français: natif</SkillItem>
+                        <SkillItem>Anglais: courant</SkillItem>
+                    </SkillTypeCol>
+                    <SkillTypeCol>
+                        <TypeTitle>
+                            Programmation
+                        </TypeTitle>
+                        <SkillItem>React js</SkillItem>
+                        <SkillItem>Node js</SkillItem>
+                        <SkillItem>HTML</SkillItem>
+                        <SkillItem>CSS</SkillItem>
+                        <SkillItem>Javascript</SkillItem>
+                    </SkillTypeCol>
+                    <SkillTypeCol>
+                        <TypeTitle>
+                            Base de donnée
+                        </TypeTitle>
+                        <SkillItem>T-SQL</SkillItem>
+                        <SkillItem>MongoDB</SkillItem>
+                    </SkillTypeCol>
+                    <SkillTypeCol>
+                        <TypeTitle>
+                            Versionning
+                        </TypeTitle>
+                        <SkillItem>Git</SkillItem>
+                        <SkillItem>SVN</SkillItem>
+                        <SkillItem>GitKraken</SkillItem>
+                    </SkillTypeCol>
+                </Container>
+            </div>
+        </ReactVisibilitySensor>
     )
 }
 

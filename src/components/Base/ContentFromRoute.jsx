@@ -46,7 +46,7 @@ function ContentFromRoute() {
                 <Header show={true} />
                 {
                     dataState.isAppLoading ?
-                        <LoadingComponent  />
+                        <LoadingComponent />
                         :
                         (<>
                             <ScrollToTop />
@@ -59,9 +59,9 @@ function ContentFromRoute() {
                                     <About />
                                 </Route>
                             </Switch>
+                            <Footer />
                         </>)
                 }
-                <Footer />
             </Container>
         </Router>
     )

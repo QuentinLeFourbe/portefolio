@@ -14,18 +14,11 @@ const Title = styled(animated.div)`
     padding-bottom: 8px;
 `;
 
-const TitleRow = styled(animated.div)`
-    display: flex;
-    justify-content: center;
-    margin-top: 15vh;
-`;
 
 function Experiences() {
 
     return (
         <>
-            <TitleSeparator title="Expériences"/>
-
             <ExpCard
                 date="Décembre 2020"
                 title="Ingénieur d'étude conception"

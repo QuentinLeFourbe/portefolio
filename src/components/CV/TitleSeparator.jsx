@@ -22,7 +22,7 @@ const TitleUnderline = styled(animated.div)`
 `;
 
 function TitleSeparator(props) {
-    const { title } = props;
+    const { title, delay, springRef } = props;
     const [isVisible, setIsVisible] = useState(false);
 
     const titleSpring = useSpring({
@@ -30,14 +30,16 @@ function TitleSeparator(props) {
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 500,
+        delay: delay,
+        // ref: springRef,
     });
 
     const underlineSpring = useSpring({
         from: { opacity: 0 },
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 1000,
+        delay: delay + 500,
+        // ref: springRef,
     });
 
     const onChangeVisibility = (isVisible) => {
@@ -56,3 +58,7 @@ function TitleSeparator(props) {
 }
 
 export default TitleSeparator
+
+TitleSeparator.defaultProps = {
+    delay: 500,
+}
