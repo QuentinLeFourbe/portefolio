@@ -15,8 +15,7 @@ const Title = styled(animated.div)`
 `;
 
 
-function Experiences() {
-
+function Experiences(props) {
     return (
         <>
             <ExpCard

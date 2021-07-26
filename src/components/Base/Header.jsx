@@ -8,7 +8,7 @@ import HeaderLink from './Header/HeaderLink';
 const Container = styled(animated.header)`
     grid-area: header;
     box-sizing:border-box;
-    padding: 0px 1rem 0px 1rem;
+    /* padding: 0px 1rem 0px 1rem; */
     background-color: #fff;
     min-height:15vh;
     display: flex;

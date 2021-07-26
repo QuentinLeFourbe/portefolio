@@ -5,7 +5,7 @@ import ReactVisibilitySensor from 'react-visibility-sensor'
 
 const TitleRow = styled(animated.div)`
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     align-items:center;
     margin-top: 10vh;
     margin-bottom: 10vh;
@@ -17,7 +17,8 @@ const Title = styled(animated.div)`
 `;
 
 const TitleUnderline = styled(animated.div)`
-    width: 600px;
+    max-width: 600px;
+    width: 80vw;
     border-bottom: solid black 1px;
 `;
 
@@ -48,7 +49,7 @@ function TitleSeparator(props) {
     }
 
     return (
-        <ReactVisibilitySensor onChange={onChangeVisibility}>
+        <ReactVisibilitySensor onChange={onChangeVisibility} partialVisibility>
             <TitleRow>
                 <Title style={titleSpring}>{title}</Title>
                 <TitleUnderline style={underlineSpring} />

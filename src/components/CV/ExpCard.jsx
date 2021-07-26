@@ -112,6 +112,7 @@ function ExpCard(props) {
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
+        delay: 500,
     })
 
     const expandTransition = useTransition(isExpanded, {
@@ -133,7 +134,7 @@ function ExpCard(props) {
     }
 
     return (
-        <VisiblitySensor onChange={onChangeVisibility} >
+        <VisiblitySensor onChange={onChangeVisibility} partialVisibility>
             <div>
                 <Container style={spring} >
                     <ExpContainer >

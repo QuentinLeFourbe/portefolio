@@ -36,7 +36,7 @@ function Skills() {
         x: isVisible ? 0 : -100,
         opacity: isVisible ? 1 : 0,
         config: config.molasses,
-        delay: 500,
+        delay: 1000,
     });
 
     const onChangeVisibility = (isVisible) => {

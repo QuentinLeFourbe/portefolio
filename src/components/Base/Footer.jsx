@@ -53,7 +53,7 @@ function Footer() {
     }
 
     return (
-        <VisiblitySensor onChange={onChangeVisibility} >
+        <VisiblitySensor onChange={onChangeVisibility} partialVisibility>
             <Container >
                 <AnimatedContent style={springProps}>
                     <MailLink href="mailto:email@example.com">Contactez-moi !</MailLink>
