@@ -32,6 +32,7 @@ const InfoContainer = styled(animated.div)`
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     justify-content:space-between;
     max-height: fit-content;
+    overflow: hidden;
 `;
 
 
@@ -66,7 +67,8 @@ const DetailsListItem = styled.ul`
     ${props => !props.rightSide ? '' : 'text-align: right;'}
     padding:0;
     ${props => props.rightSide ? 'padding-right: 5vw;' : 'padding-left: 5vw;'}
-    margin: 0.5rem;
+    margin: 1rem;
+    margin-top: 1rem;
     
 
 `;
@@ -103,9 +105,9 @@ function ExpCard(props) {
     const { date, title, company, localisation, detailsList } = props
     const [isExpanded, setExpanded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [contentHeight, setContentHeight] = useState(0);
-    
-    
+    const [contentHeight, setContentHeight] = useState(1);
+
+
     const spring = useSpring({
         from: {
             x: -100,
@@ -117,16 +119,25 @@ function ExpCard(props) {
         delay: 500,
     })
 
-    const expandTransition = useTransition(isExpanded, {
+    const expandSpring = useSpring({
         from: { height: 0, opacity: 0 },
-        enter: [
-            { height: contentHeight },
-            { opacity: 1 },
-        ],
-        leave: () => async (next, cancel) => {
-            await next({ opacity: 0 })
-            await next({ height: 0 })
-        },
+        to: isExpanded ?
+            [{
+                height: contentHeight,
+            },
+            {
+                opacity: 1,
+            }]
+            :
+            [
+                {
+                    opacity: 0,
+                },
+                {
+                    height: 0,
+                }
+
+            ],
         config: config.tight,
     })
 
@@ -140,13 +151,14 @@ function ExpCard(props) {
     useEffect(() => {
         //Sets initial height
         setContentHeight(height);
-      
+        console.log(`height: ${height}`);
+        console.log(`contentHeight: ${contentHeight}`);
         //Adds resize event listener
         window.addEventListener("resize", setContentHeight(height));
-      
+
         // Clean-up
         return window.removeEventListener("resize", setContentHeight(height));
-      }, [height]);
+    }, [height]);
 
     return (
         <VisiblitySensor onChange={onChangeVisibility} partialVisibility>
@@ -160,30 +172,29 @@ function ExpCard(props) {
                             isExpanded={isExpanded}
                             setExpanded={setExpanded}
                         />
-                        {expandTransition((styles, isExpanded) => (
-                            isExpanded ?
-                                <InfoContainer style={styles} ref={measureRef} >
-                                    <CompanyContainer >
-                                        <CompanyItem >
-                                            <BusinessIcon style={{ margin: "0 1rem 0 1rem" }} />
-                                            {company}
-                                        </CompanyItem>
 
-                                        <LocalisationContainer >
-                                            <RoomIcon style={{ margin: "0 1rem 0 1rem" }} />
-                                            {localisation}
-                                        </LocalisationContainer>
-                                    </CompanyContainer>
+                        <animated.div style={{ overflow: "hidden", ...expandSpring }} >
+                            <InfoContainer ref={measureRef} >
+                                <CompanyContainer >
+                                    <CompanyItem >
+                                        <BusinessIcon style={{ margin: "0 1rem 0 1rem" }} />
+                                        {company}
+                                    </CompanyItem>
 
-                                    <DetailsListItem >
-                                        {
-                                            detailsList.map((x, index) => <DetailListItem key={index}>{x}</DetailListItem>)
-                                        }
-                                    </DetailsListItem>
-                                </InfoContainer>
-                                :
-                                ""
-                        ))}
+                                    <LocalisationContainer >
+                                        <RoomIcon style={{ margin: "0 1rem 0 1rem" }} />
+                                        {localisation}
+                                    </LocalisationContainer>
+                                </CompanyContainer>
+
+                                <DetailsListItem >
+                                    {
+                                        detailsList.map((x, index) => <DetailListItem key={index}>{x}</DetailListItem>)
+                                    }
+                                </DetailsListItem>
+                            </InfoContainer>
+                        </animated.div>
+
 
                     </ExpContainer>
                 </Container>

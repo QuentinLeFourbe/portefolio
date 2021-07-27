@@ -22,6 +22,7 @@ const DetailsListItem = styled.ul`
 `;
 
 const DetailListItem = styled.li`
+margin-top: 1rem;
 `;
 
 const FirstRow = styled.div`

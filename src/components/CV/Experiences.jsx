@@ -59,7 +59,16 @@ function Experiences(props) {
                     "Présentation et démonstration du produit dans différents salons internes à Faurecia en France et à l’étranger",
                 ]}
             />
-
+            <ExpCard
+                date="Avril – Septembre 2017"
+                title="Stage développement ASP.net MVC"
+                company="Rimeo"
+                localisation="Aix-en-Provence"
+                detailsList={[
+                    "Accompagnement à la mise en production d’une application de collecte de données auprès de collectivités territoriales.",
+                    "Suivi de la campagne de collecte et mise en place de service BI pour le client.",
+                ]}
+            />
             <ExpCard
                 date="Avril – Septembre 2018"
                 title="Stage Unity3D VR"
@@ -73,16 +82,7 @@ function Experiences(props) {
                 ]}
             />
 
-            <ExpCard
-                date="Avril – Septembre 2017"
-                title="Stage développement ASP.net MVC, Business Intelligence"
-                company="Rimeo"
-                localisation="Aix-en-Provence"
-                detailsList={[
-                    "Accompagnement à la mise en production d’une application de collecte de données auprès de collectivités territoriales.",
-                    "Suivi de la campagne de collecte et mise en place de service BI pour le client.",
-                ]}
-            />
+
         </>
     )
 }

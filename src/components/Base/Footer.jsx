@@ -7,16 +7,19 @@ import VisiblitySensor from 'react-visibility-sensor';
 const Container = styled(animated.footer)`
     grid-area: footer;
     min-height: 20vh;
-    background-color: #18534F;
+    /* border-top: solid 1px #18534F; */
+    overflow: hidden;
+    /* background-color: #18534F; */
+`;
+
+const AnimatedContent = styled(animated.div)`
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    border-top: solid 1px #18534F;
-`;
-
-const AnimatedContent = styled(animated.div)`
-    
+    background-color: #18534F;
+    width: 100%;
+    height: 100%;
 `;
 
 const FooterLink = styled(Link)`
@@ -31,6 +34,7 @@ const MailLink = styled(animated.a)`
     font-family: "Times New Roman", Times, serif;
     color: white;
     margin: 1rem;
+    padding: 0.5rem;
     font-size: 3rem;
     text-decoration: none;
 `;
@@ -50,12 +54,11 @@ function Footer() {
     });
 
     const hoverSpring = useSpring({
-        from: {
-            scale: 1,
-        },
-        backgroundColor: isHovered ? "#fff" : '#18534F',
+        backgroundColor: isHovered ? "#ECF8F6" : '#18534F',
         color: isHovered ? '#18534F' : "#ECF8F6",
-        scaleX: isHovered ? 1.5 : 1,
+        borderRadius: isHovered ? 15 : 0,
+        y: isHovered ? -5 : 0,
+        config: config.gentle,
     })
 
     const onChangeVisibility = (isVisible) => {
@@ -73,19 +76,17 @@ function Footer() {
 
     return (
         <VisiblitySensor onChange={onChangeVisibility} partialVisibility>
-            <Container style={{
-                backgroundColor: hoverSpring.backgroundColor
-            }}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                <AnimatedContent style={springProps}>
-                    <MailLink 
-                    href="mailto:quentingarcia40@gmail.com"
-                    style={hoverSpring}
+            <Container>
+                <AnimatedContent style={springProps}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                >
+                    <MailLink
+                        href="mailto:quentingarcia40@gmail.com"
+                        style={hoverSpring}
                     >
                         Contactez-moi !
-                        </MailLink>
+                    </MailLink>
                 </AnimatedContent>
             </Container>
         </VisiblitySensor>
