@@ -20,12 +20,11 @@ const Container = styled(animated.div)`
 
 function Main() {
 
-
     return (
         <Container>
             <TitleSeparator title="Qui suis-je ?" delay={0} />
             <Presentation />
-            <TitleSeparator title="Expériences" delay={1500} />
+            <TitleSeparator title="Expériences" delay={1500} visibility={true}/>
             <Experiences />
             <TitleSeparator title="Compétences" />
             <Skills />

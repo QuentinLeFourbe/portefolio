@@ -12,6 +12,7 @@ const Container = styled(animated.footer)`
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    border-top: solid 1px #18534F;
 `;
 
 const AnimatedContent = styled(animated.div)`
@@ -26,7 +27,7 @@ const FooterLink = styled(Link)`
     text-decoration: none;
 `;
 
-const MailLink = styled.a`
+const MailLink = styled(animated.a)`
     font-family: "Times New Roman", Times, serif;
     color: white;
     margin: 1rem;
@@ -36,6 +37,7 @@ const MailLink = styled.a`
 
 function Footer() {
     const [isVisible, setIsVisible] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     const springProps = useSpring({
         from: {
@@ -47,16 +49,43 @@ function Footer() {
         config: config.molasses,
     });
 
+    const hoverSpring = useSpring({
+        from: {
+            scale: 1,
+        },
+        backgroundColor: isHovered ? "#fff" : '#18534F',
+        color: isHovered ? '#18534F' : "#ECF8F6",
+        scaleX: isHovered ? 1.5 : 1,
+    })
+
     const onChangeVisibility = (isVisible) => {
         if (isVisible)
             setIsVisible(true);
     }
 
+    const onMouseEnter = () => {
+        setIsHovered(true);
+    }
+
+    const onMouseLeave = () => {
+        setIsHovered(false);
+    }
+
     return (
         <VisiblitySensor onChange={onChangeVisibility} partialVisibility>
-            <Container >
+            <Container style={{
+                backgroundColor: hoverSpring.backgroundColor
+            }}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            >
                 <AnimatedContent style={springProps}>
-                    <MailLink href="mailto:email@example.com">Contactez-moi !</MailLink>
+                    <MailLink 
+                    href="mailto:quentingarcia40@gmail.com"
+                    style={hoverSpring}
+                    >
+                        Contactez-moi !
+                        </MailLink>
                 </AnimatedContent>
             </Container>
         </VisiblitySensor>

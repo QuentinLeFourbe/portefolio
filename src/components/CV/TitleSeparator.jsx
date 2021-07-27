@@ -23,8 +23,8 @@ const TitleUnderline = styled(animated.div)`
 `;
 
 function TitleSeparator(props) {
-    const { title, delay, springRef } = props;
-    const [isVisible, setIsVisible] = useState(false);
+    const { title, delay, visibility } = props;
+    const [isVisible, setIsVisible] = useState(visibility);
 
     const titleSpring = useSpring({
         from: { x: -100, opacity: 0 },
@@ -62,4 +62,5 @@ export default TitleSeparator
 
 TitleSeparator.defaultProps = {
     delay: 500,
+    visibility: false,
 }

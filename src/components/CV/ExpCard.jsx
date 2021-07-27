@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useSpring, useTransition, animated, config } from 'react-spring'
 import RoomIcon from '@material-ui/icons/Room';
 import BusinessIcon from '@material-ui/icons/Business';
 import ExpTitle from './CVComponents/ExpTitle';
 import VisiblitySensor from 'react-visibility-sensor';
+import { useMeasure } from 'react-use';
 
 const Container = styled(animated.div)`
     display:flex;
@@ -30,6 +31,7 @@ const InfoContainer = styled(animated.div)`
     display:flex;
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     justify-content:space-between;
+    max-height: fit-content;
 `;
 
 
@@ -90,8 +92,6 @@ const DetailButton = styled.button`
     }
 `;
 
-
-
 const ButtonsContainer = styled.div`
     display:flex;
     flex-flow: row wrap;
@@ -103,7 +103,9 @@ function ExpCard(props) {
     const { date, title, company, localisation, detailsList } = props
     const [isExpanded, setExpanded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-
+    const [contentHeight, setContentHeight] = useState(0);
+    
+    
     const spring = useSpring({
         from: {
             x: -100,
@@ -118,7 +120,7 @@ function ExpCard(props) {
     const expandTransition = useTransition(isExpanded, {
         from: { height: 0, opacity: 0 },
         enter: [
-            { height: 200 },
+            { height: contentHeight },
             { opacity: 1 },
         ],
         leave: () => async (next, cancel) => {
@@ -132,6 +134,19 @@ function ExpCard(props) {
         if (isVisible)
             setIsVisible(true);
     }
+
+    const [measureRef, { height }] = useMeasure();
+
+    useEffect(() => {
+        //Sets initial height
+        setContentHeight(height);
+      
+        //Adds resize event listener
+        window.addEventListener("resize", setContentHeight(height));
+      
+        // Clean-up
+        return window.removeEventListener("resize", setContentHeight(height));
+      }, [height]);
 
     return (
         <VisiblitySensor onChange={onChangeVisibility} partialVisibility>
@@ -147,7 +162,7 @@ function ExpCard(props) {
                         />
                         {expandTransition((styles, isExpanded) => (
                             isExpanded ?
-                                <InfoContainer style={styles} >
+                                <InfoContainer style={styles} ref={measureRef} >
                                     <CompanyContainer >
                                         <CompanyItem >
                                             <BusinessIcon style={{ margin: "0 1rem 0 1rem" }} />

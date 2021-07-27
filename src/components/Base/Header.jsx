@@ -20,6 +20,11 @@ const Container = styled(animated.header)`
     border-width: 0px 0px 1px 0px;
 `;
 
+const LinkContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+`;
+
 function Header(props) {
     const { show } = props;
 
@@ -33,9 +38,11 @@ function Header(props) {
     return (headerTransition((style, show) => show &&
         <Container style={style}>
             <TitleLink to="/">Quentin GARCIA</TitleLink>
-            <HeaderLink to="/">CV</HeaderLink>
-            <HeaderLink to="/projects">Projects</HeaderLink>
-            <HeaderLink to="/about">About</HeaderLink>
+            <LinkContainer>
+                <HeaderLink to="/">CV</HeaderLink>
+                <HeaderLink to="/projects">Projets</HeaderLink>
+                <HeaderLink to="/about">À propos</HeaderLink>
+            </LinkContainer>
         </Container >)
     )
 }
