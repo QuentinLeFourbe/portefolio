@@ -12,14 +12,13 @@ const Container = styled(animated.div)`
     min-width: 300px;
 `;
 
-const Title = styled.div`
-    padding: 1rem;
-    font-size: 2rem;
-`;
-
 const TextPresentation = styled.div`
     padding: 1rem;
+    
     font-size: 1.5rem;
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 function Presentation(props) {

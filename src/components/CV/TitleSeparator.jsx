@@ -12,8 +12,13 @@ const TitleRow = styled(animated.div)`
 `;
 
 const Title = styled(animated.div)`
+    
     font-size: 4rem;
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
     padding-bottom: 8px;
+    /* flex-shrink: 1; */
 `;
 
 const TitleUnderline = styled(animated.div)`

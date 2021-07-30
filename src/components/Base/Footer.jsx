@@ -56,9 +56,9 @@ function Footer() {
     const hoverSpring = useSpring({
         backgroundColor: isHovered ? "#ECF8F6" : '#18534F',
         color: isHovered ? '#18534F' : "#ECF8F6",
-        borderRadius: isHovered ? 15 : 0,
-        y: isHovered ? -5 : 0,
-        config: config.gentle,
+        borderRadius: isHovered ? 20 : 10,
+        y: isHovered ? -10 : 0,
+        config: config.wobbly,
     })
 
     const onChangeVisibility = (isVisible) => {

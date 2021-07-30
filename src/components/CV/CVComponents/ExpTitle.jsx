@@ -5,21 +5,27 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { useTransition, useSpring, animated, config } from 'react-spring';
 
-const TitleContainer = styled.div`
+const TitleContainer = styled(animated.div)`
     width: 70vw;
+    
     min-width:fit-content;
-
     display: flex;
-    ${props => props.rightSide ? 'flex-flow: row-reverse nowrap;' : 'flex-flow: row nowrap;'};
+    ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     align-items: center;
     justify-content: space-between;
 
-    background-color: #fff4cd;
+    /* background-color: #fff4cd; */
 
     padding: 1rem;
     ${props => props.rightSide ? 'padding-right: 5vw;' : 'padding-left: 5vw;'}
     font-size: 3rem;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 90vw;
+        font-size: 2rem;
+    }
+
 `;
 
 const DateContainer = styled.div`
@@ -47,15 +53,22 @@ const Container = styled(animated.div)`
 
 function ExpTitle(props) {
     const { date, title, rightSide, isExpanded, setExpanded } = props;
+    const [isHovered, setIsHovered] = useState(false);
 
     const spring = useSpring({
         from: {
             x: rightSide ? 100 : -100,
             opacity: 0,
         },
-        x:0,
+        x: 0,
         opacity: 1,
-        config: config.molasses
+        config: config.molasses,
+        
+    })
+
+    const titleColorSpring = useSpring({
+        backgroundColor: isHovered ? "#226D68": "#fff4cd",
+        color: isHovered ? "#fff": "black",
     })
 
     const expandTransition = useTransition(isExpanded, {
@@ -65,20 +78,24 @@ function ExpTitle(props) {
         config: { tension: 280, friction: 200 },
     })
 
+    const hoverEnter = () => {
+        setIsHovered(true)
+        console.log()
+    }
+
+    const hoverLeave = () => {
+        setIsHovered(false)
+    }
+
     return (
         <Container style={spring}>
-            <DateContainer rightSide={rightSide}>
+            <DateContainer>
                 <DateRangeIcon style={{ margin: "0 1rem 0 1rem" }} />
                 {date}
             </DateContainer>
 
-            <TitleContainer rightSide={rightSide} onClick={() => setExpanded(!isExpanded)}>
+            <TitleContainer style={titleColorSpring} onClick={() => setExpanded(!isExpanded)} onMouseEnter={hoverEnter} onMouseLeave={hoverLeave}>
                 {title}
-                {
-                    expandTransition((styles, isExpanded) =>
-                        (isExpanded ? <ReduceIcon style={styles} fontSize='inherit' /> : <ExpandIcon style={styles} fontSize='inherit' />)
-                    )
-                }
             </TitleContainer>
         </Container>
     )

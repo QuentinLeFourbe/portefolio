@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useSpring, useTransition, animated, config } from 'react-spring'
 import RoomIcon from '@material-ui/icons/Room';
 import BusinessIcon from '@material-ui/icons/Business';
-import ExpTitle from './CVComponents/ExpTitle';
+import ExpTitle from './ExpTitle';
 import VisiblitySensor from 'react-visibility-sensor';
 import { useMeasure } from 'react-use';
 
@@ -18,7 +18,6 @@ const Container = styled(animated.div)`
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     justify-content:space-between;
 `;
-
 
 const ExpContainer = styled.div`
     display:flex;
@@ -69,8 +68,6 @@ const DetailsListItem = styled.ul`
     ${props => props.rightSide ? 'padding-right: 5vw;' : 'padding-left: 5vw;'}
     margin: 1rem;
     margin-top: 1rem;
-    
-
 `;
 
 const DetailListItem = styled.li`
@@ -151,8 +148,6 @@ function ExpCard(props) {
     useEffect(() => {
         //Sets initial height
         setContentHeight(height);
-        console.log(`height: ${height}`);
-        console.log(`contentHeight: ${contentHeight}`);
         //Adds resize event listener
         window.addEventListener("resize", setContentHeight(height));
 
