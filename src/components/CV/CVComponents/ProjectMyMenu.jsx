@@ -36,21 +36,33 @@ const TextArea = styled.div`
     display: flex;
     flex-flow: column wrap;
     /* flex-flow: row-reverse wrap; */
+    font-size:1rem;
+    font-size:1.5rem;
+    @media (max-width: 768px) {
+        font-size:1rem;
+    }
+
+    width: 40vw;
+    @media (max-width: 768px) {
+        width: 80vw;
+    }
 `;
 
 function ProjectMyMenu() {
     return (
         <Container>
-            <InfoContainer reverse>
-                <p>
-                    Mes menus est une application développée en React js afin de planifier simplement et rapidement les menus de la semaine.
-                </p>
-                <p>
-                    L'accès à l'application se fait via un compte google afin d'en faciliter l'accès.
-                </p>
+            <InfoContainer >
+                <TextArea>
+                    <p>
+                        Mes menus est une application développée en React js afin de planifier simplement et rapidement les menus de la semaine.
+                    </p>
+                    <p>
+                        L'accès à l'application se fait via un compte google afin d'en faciliter l'accès.
+                    </p>
+                </TextArea>
                 <ImageComponent src={AuthImage} alt="Page de connexion de l'application" />
             </InfoContainer>
-            <InfoContainer>
+            <InfoContainer reverse>
                 <TextArea>
                     <p>
                         L'application permet dans un premier temps la création des différents plats pouvant par la suite être utilisés afin de constituer les menus par la suite. <br />
@@ -61,7 +73,7 @@ function ProjectMyMenu() {
                 </TextArea>
                 <ImageComponent src={CreatorImage} alt="Formulaire de création d'un plat" />
             </InfoContainer>
-            <InfoContainer reverse>
+            <InfoContainer >
                 <TextArea>
                     <p>
                         Une fois les différents plats créés, il est possible de les consulter individuelement et de les modifier à souhait.

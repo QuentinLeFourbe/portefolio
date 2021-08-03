@@ -4,7 +4,7 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { useTransition, useSpring, animated, config } from 'react-spring';
 
-const TitleContainer = styled.div`
+const TitleContainer = styled(animated.div)`
     width: 70vw;
     min-width:fit-content;
 
@@ -37,6 +37,7 @@ const Container = styled(animated.div)`
 
 function ProjectTitle(props) {
     const { date, title, rightSide, isExpanded, setExpanded } = props;
+    const [isHovered, setIsHovered] = useState(false);
 
     const spring = useSpring({
         from: {
@@ -55,15 +56,23 @@ function ProjectTitle(props) {
         config: { tension: 280, friction: 200 },
     })
 
+    const titleColorSpring = useSpring({
+        backgroundColor: isHovered ? "#18534F" : isExpanded ? "#226D68": "#fff4cd",
+        color: (isHovered || isExpanded) ? "#fff": "black",
+    })
+
+    const hoverEnter = () => {
+        setIsHovered(true)
+    }
+
+    const hoverLeave = () => {
+        setIsHovered(false)
+    }
+
     return (
         <Container style={spring}>
-            <TitleContainer onClick={() => setExpanded(!isExpanded)}>
+            <TitleContainer style={titleColorSpring} onClick={() => setExpanded(!isExpanded)} onMouseEnter={hoverEnter} onMouseLeave={hoverLeave}>
                 {title}
-                {
-                    expandTransition((styles, isExpanded) =>
-                        (isExpanded ? <ReduceIcon style={styles} fontSize='inherit' /> : <ExpandIcon style={styles} fontSize='inherit' />)
-                    )
-                }
             </TitleContainer>
         </Container>
     )

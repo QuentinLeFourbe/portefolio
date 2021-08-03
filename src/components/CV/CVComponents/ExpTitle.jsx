@@ -67,15 +67,8 @@ function ExpTitle(props) {
     })
 
     const titleColorSpring = useSpring({
-        backgroundColor: isHovered ? "#226D68": "#fff4cd",
-        color: isHovered ? "#fff": "black",
-    })
-
-    const expandTransition = useTransition(isExpanded, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        // leave: { opacity: 0 },
-        config: { tension: 280, friction: 200 },
+        backgroundColor: isHovered ? "#18534F" : isExpanded ? "#226D68": "#fff4cd",
+        color: (isHovered || isExpanded) ? "#fff": "black",
     })
 
     const hoverEnter = () => {

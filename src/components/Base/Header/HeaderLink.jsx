@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated, config, useTransition, useTrail } from 'react-spring'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { AppContext } from '../../../AppContext';
+import { Link } from 'react-scroll';
 
 const Container = styled(animated(Link))`
     padding: 1rem;
