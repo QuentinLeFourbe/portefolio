@@ -19,6 +19,7 @@ const Container = styled(animated.div)`
     grid-template-rows: auto;
     grid-template-areas:
     "left middle right"; */
+    /* overflow: hidden; */
 `;
 
 function Main() {

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated, config, useTransition, useTrail } from 'react-spring'
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuLink from './MenuLink';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const MenuOverlay = styled(animated.div)`
     position: fixed;
@@ -40,7 +41,21 @@ function MobileMenu(props) {
         config: config.tight,
     })
 
+    let targetRef = React.createRef();
+    let targetElement = null;
+    useEffect(() => {
+        targetElement = targetRef.current;
+        console.log(targetElement);
+    }, [])
+
     const showHideMenuOverlay = () => {
+        if (showMobileMenu) {
+            console.log("allow scroll")
+            enableBodyScroll(targetElement);
+        } else {
+            console.log("disable scroll")
+            disableBodyScroll(targetElement);
+        }
         setShowMobileMenu(!showMobileMenu);
     }
 
@@ -50,14 +65,16 @@ function MobileMenu(props) {
         leave: { opacity: 0, },
     })
 
+    
+
     return (
         <>
-            <MenuButton style={menuSpring} onMouseEnter={onHover} onMouseLeave={onNotHover} onClick={showHideMenuOverlay}>
+            <MenuButton ref={targetRef} style={menuSpring} onMouseEnter={onHover} onMouseLeave={onNotHover} onClick={showHideMenuOverlay}>
                 <MenuIcon fontSize="large"></MenuIcon>
             </MenuButton>
             {
                 overlayTransition((style, showMobileMenu) => (
-                    showMobileMenu && <MenuOverlay style={style}>
+                    showMobileMenu && <MenuOverlay  id="mobileMenu" style={style}>
                         <MenuLink hideMenu={showHideMenuOverlay} to="cv">CV</MenuLink>
                         <MenuLink hideMenu={showHideMenuOverlay} to="skills">Compétences</MenuLink>
                         <MenuLink hideMenu={showHideMenuOverlay} to="projects">Projets</MenuLink>

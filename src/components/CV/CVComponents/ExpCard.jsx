@@ -51,14 +51,20 @@ const CompanyItem = styled.div`
     align-items: center;
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     margin-top: 1rem;
+    @media (max-width: 1100px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const LocalisationContainer = styled.div`
-    font-size: 1.5rem;
+    font-size: 2rem;
     display:flex;
     align-items: center;
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     margin-top: 1rem;
+    @media (max-width: 1100px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const DetailsListItem = styled.ul`
@@ -72,30 +78,6 @@ const DetailsListItem = styled.ul`
 
 const DetailListItem = styled.li`
     margin-bottom:1rem;
-`;
-
-const DetailButton = styled.button`
-    background-color:transparent;
-    border:none;
-    padding: 0.5rem;
-    margin: 0.5rem 0.5rem 0 0.5rem;
-    border: 1px solid #18534f6f;
-    border-radius: 10px;
-    &:hover{
-        color:#226D68;
-        background-color:#ECF8F6;
-    }
-
-    &:active{
-        color:#226D68;
-    }
-`;
-
-const ButtonsContainer = styled.div`
-    display:flex;
-    flex-flow: row wrap;
-    ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
-    /* border-bottom: 1px solid #18534F; */
 `;
 
 function ExpCard(props) {

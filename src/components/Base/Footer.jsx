@@ -37,6 +37,10 @@ const MailLink = styled(animated.a)`
     margin: 1rem;
     padding: 0.5rem;
     font-size: 3rem;
+    @media(max-width: 700px){
+        font-size: 2rem;
+    }
+
     text-decoration: none;
 `;
 

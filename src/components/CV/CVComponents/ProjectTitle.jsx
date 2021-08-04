@@ -19,6 +19,12 @@ const TitleContainer = styled(animated.div)`
     ${props => props.rightSide ? 'padding-right: 5vw;' : 'padding-left: 5vw;'}
     font-size: 3rem;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 90vw;
+        font-size: 2rem;
+    }
+    
 `;
 
 const ExpandIcon = styled(animated(AddIcon))`

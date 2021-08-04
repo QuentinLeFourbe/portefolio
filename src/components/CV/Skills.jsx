@@ -16,12 +16,13 @@ const SkillTypeCol = styled.div`
     margin: 0 1rem 0 1rem;
     display:flex;
     flex-flow: column wrap;
-    align-items:center;
+    /* align-items:center; */
 `;
 
 const TypeTitle = styled.div`
     font-size: 1.5rem;
-    margin: 1rem;
+    /* margin: 1rem; */
+    margin-bottom: 1rem;
 `;
 
 const SkillItem = styled.div`
