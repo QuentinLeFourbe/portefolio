@@ -9,7 +9,7 @@ const Container = styled(animated.div)`
     display:flex;
     /* background-color: #226D68; */
     padding-bottom: 5vh;
-    padding-top: 5vh;
+    padding-top: 3vh;
  
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
     flex-flow: column nowrap;

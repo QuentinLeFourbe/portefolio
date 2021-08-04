@@ -22,7 +22,7 @@ const ImageComponent = styled.img`
     margin: 1rem;
 `;
 
-const InfoContainer = styled.p`
+const InfoContainer = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;

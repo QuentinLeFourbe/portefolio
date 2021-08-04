@@ -22,9 +22,8 @@ const Container = styled(animated(Link))`
 
 `;
 
-function HeaderLink(props) {
-    const { to, children } = props;
-    const { dataDispatch } = useContext(AppContext);
+function MenuLink(props) {
+    const { to, children, hideMenu } = props;
     const [isHover, setIsHover] = useState(false);
     const [isTriggered, setIsTriggered] = useState(false);
     const timing = 50;
@@ -40,7 +39,7 @@ function HeaderLink(props) {
     })
 
     const colorSpring = useSpring({
-        color: isTriggered ? '#ffca08' : 'black',
+        color: isTriggered ? '#ffca08' : 'white',
         config: config.tight,
     })
 
@@ -60,10 +59,6 @@ function HeaderLink(props) {
         setIsTriggered(false)
     }
 
-    const activateLoading = () => {
-        dataDispatch({ type: 'APP_LOADING' });
-    }
-
     useEffect(() => {
         if (!true) {
             return;
@@ -80,19 +75,8 @@ function HeaderLink(props) {
 
 
     return (
-        // <Container
-        //     to={to}
-        //     onMouseEnter={hover}
-        //     onMouseLeave={notHover}
-        //     onClick={activateLoading}
-        //     style={springStyle}
-        // >
-        //     {children}
-        // </Container>
-
         <Container
-            // activeClass="active"
-            // className="active"
+            onClick={hideMenu}
             onSetActive={linkActive}
             onSetInactive={linkInactive}
             spy={true}
@@ -101,7 +85,7 @@ function HeaderLink(props) {
             to={to}
             onMouseEnter={hover}
             onMouseLeave={notHover}
-            style={{...springStyle, ...colorSpring}}
+            style={{ ...springStyle, ...colorSpring }}
             offset={-200}
         >
             {children}
@@ -109,4 +93,4 @@ function HeaderLink(props) {
     )
 }
 
-export default HeaderLink
+export default MenuLink

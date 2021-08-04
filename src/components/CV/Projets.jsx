@@ -5,7 +5,7 @@ import ProjectMyMenu from './CVComponents/ProjectMyMenu'
 function Projets() {
     return (
         <>
-            <ProjectCard title="Mes menus">
+            <ProjectCard title="Application de gestion des menus de la semaine: Mes petits menus">
                 <ProjectMyMenu/>
             </ProjectCard>
         </>

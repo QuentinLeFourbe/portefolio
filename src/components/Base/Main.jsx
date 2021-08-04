@@ -9,6 +9,7 @@ import TitleSeparator from '../CV/TitleSeparator';
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import { Parallax, ParallaxLayer } from 'react-spring';
 import Projets from '../CV/Projets';
+import { Element } from 'react-scroll'
 
 const Container = styled(animated.div)`
     grid-area: main;
@@ -26,15 +27,19 @@ function Main() {
         <Container>
             <TitleSeparator title="Qui suis-je ?" delay={0} />
             <Presentation />
+            <Element name="cv">
+                <TitleSeparator title="Expériences" delay={1500} visibility={true} />
+                <Experiences />
+            </Element>
 
-            <TitleSeparator title="Expériences" delay={1500} visibility={true} />
-            <Experiences />
-
-            <TitleSeparator title="Compétences" />
-            <Skills />
-
-            <TitleSeparator title="Projets" />
-            <Projets />
+            <Element name="skills">
+                <TitleSeparator title="Compétences" />
+                <Skills />
+            </Element>
+            <Element name="projects">
+                <TitleSeparator title="Projets" />
+                <Projets />
+            </Element>
         </Container>
     )
 }

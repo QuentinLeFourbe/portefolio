@@ -37,7 +37,7 @@ function Experiences(props) {
                 localisation="Aix-en-Provence"
                 detailsList={[
                     "Application de simulation pour le commandement, destinée à l’armée de terre",
-                    " Développement C# sur client lourd",
+                    "Développement C# sur client lourd",
                     "Architecture modulaire sous forme de plugins",
                     "Analyse et conception",
                     "Rédactions de spécifications fonctionnels",
@@ -59,16 +59,7 @@ function Experiences(props) {
                     "Présentation et démonstration du produit dans différents salons internes à Faurecia en France et à l’étranger",
                 ]}
             />
-            <ExpCard
-                date="Avril – Septembre 2017"
-                title="Stage développement ASP.net MVC"
-                company="Rimeo"
-                localisation="Aix-en-Provence"
-                detailsList={[
-                    "Accompagnement à la mise en production d’une application de collecte de données auprès de collectivités territoriales.",
-                    "Suivi de la campagne de collecte et mise en place de service BI pour le client.",
-                ]}
-            />
+
             <ExpCard
                 date="Avril – Septembre 2018"
                 title="Stage Unity3D VR"
@@ -81,6 +72,22 @@ function Experiences(props) {
                     "Rédaction des spécifications fonctionnelles pour la phase 2 de l’application",
                 ]}
             />
+
+            <ExpCard
+                date="Avril – Septembre 2017"
+                title="Stage développement ASP.net MVC"
+                company="Rimeo"
+                localisation="Aix-en-Provence"
+                detailsList={[
+                    "Accompagnement à la mise en production d’une application de collecte de données auprès de collectivités territoriales.",
+                    "Suivi de la campagne de collecte et mise en place de service BI pour le client.",
+                    "Développement Web ASP MVC .NET",
+                    "Intégration graphique",
+                    "Création de reporting en temps réel",
+                    "Intégration de donnée à partir de documents Excel"
+                ]}
+            />
+
 
 
         </>

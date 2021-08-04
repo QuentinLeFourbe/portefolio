@@ -5,7 +5,7 @@ import ReactVisibilitySensor from 'react-visibility-sensor';
 import TitleSeparator from './TitleSeparator';
 
 const Container = styled(animated.div)`
-    margin: 5vh 10vw 10vh 10vw;
+    margin: 10vh 10vw 10vh 10vw;
     display:flex;
     flex-flow: row wrap;
     /* width: 30vw; */

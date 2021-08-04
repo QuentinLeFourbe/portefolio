@@ -10,6 +10,7 @@ const Container = styled(animated.footer)`
     /* border-top: solid 1px #18534F; */
     overflow: hidden;
     /* background-color: #18534F; */
+    margin-top: 15vh;
 `;
 
 const AnimatedContent = styled(animated.div)`
