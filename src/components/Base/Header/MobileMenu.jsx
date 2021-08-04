@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated, config, useTransition, useTrail } from 'react-spring'
 import MenuIcon from '@material-ui/icons/Menu';
@@ -41,21 +41,17 @@ function MobileMenu(props) {
         config: config.tight,
     })
 
-    let targetRef = React.createRef();
+    const targetRef = useRef(null);
     let targetElement = null;
     useEffect(() => {
-        targetElement = targetRef.current;
-        console.log(targetElement);
-    }, [])
+        if(showMobileMenu){
+            targetRef.current && disableBodyScroll(targetRef.current)
+        }else {
+            targetRef.current && enableBodyScroll(targetRef.current)
+        }
+    }, [showMobileMenu])
 
     const showHideMenuOverlay = () => {
-        if (showMobileMenu) {
-            console.log("allow scroll")
-            enableBodyScroll(targetElement);
-        } else {
-            console.log("disable scroll")
-            disableBodyScroll(targetElement);
-        }
         setShowMobileMenu(!showMobileMenu);
     }
 
