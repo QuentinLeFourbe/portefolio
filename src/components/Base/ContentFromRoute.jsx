@@ -44,15 +44,7 @@ function ContentFromRoute() {
                         :
                         (<>
                             <ScrollToTop />
-                            <Switch>
-                                <Route exact path="/">
-                                    <Main />
-                                </Route>
-
-                                <Route exact path="/about">
-                                    <About />
-                                </Route>
-                            </Switch>
+                            <Main />
                             <Footer />
                         </>)
                 }
