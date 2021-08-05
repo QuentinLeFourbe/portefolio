@@ -9,11 +9,11 @@ const Container = styled(animated.div)`
     display:flex;
     flex-flow: row wrap;
     min-width: 300px;
-    justify-content: space-around;
+    justify-content: space-between;
 `;
 
 const SkillTypeCol = styled.div`
-    margin: 0 1rem 0 1rem;
+    margin: 1rem 1rem 1rem 1rem;
     display:flex;
     flex-flow: column wrap;
     /* align-items:center; */

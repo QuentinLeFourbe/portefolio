@@ -54,7 +54,7 @@ function ProjectMyMenu() {
             <InfoContainer >
                 <TextArea>
                     <p>
-                        Mes menus est une application développée en React js afin de planifier simplement et rapidement les menus de la semaine.
+                        Mes menus est une application développée en utilisant la MERN (MongoDB, Express, React js, Node js) stack, afin de planifier simplement et rapidement les menus de la semaine.
                     </p>
                     <p>
                         L'accès à l'application se fait via un compte google afin d'en faciliter l'accès.

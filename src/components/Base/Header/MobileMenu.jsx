@@ -42,7 +42,6 @@ function MobileMenu(props) {
     })
 
     const targetRef = useRef(null);
-    let targetElement = null;
     useEffect(() => {
         if(showMobileMenu){
             targetRef.current && disableBodyScroll(targetRef.current)
