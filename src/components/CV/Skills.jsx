@@ -65,7 +65,8 @@ function Skills() {
                         <SkillItem>Node js</SkillItem>
                         <SkillItem>HTML</SkillItem>
                         <SkillItem>CSS</SkillItem>
-                        <SkillItem>Javascript</SkillItem>
+                        <SkillItem>Javascript (ES6)</SkillItem>
+                        <SkillItem>C#</SkillItem>
                     </SkillTypeCol>
                     <SkillTypeCol>
                         <TypeTitle>
