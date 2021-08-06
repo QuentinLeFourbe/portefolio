@@ -26,6 +26,7 @@ function MenuLink(props) {
     const { to, children, hideMenu } = props;
     const [isHover, setIsHover] = useState(false);
     const [isTriggered, setIsTriggered] = useState(false);
+    const [isActive, setIsActive] = useState(false);
     const timing = 50;
     const springStyle = useSpring({
         from: {
@@ -39,7 +40,7 @@ function MenuLink(props) {
     })
 
     const colorSpring = useSpring({
-        color: isTriggered ? '#ffca08' : 'white',
+        color: (isTriggered || isActive) ? '#ffca08' : 'white',
         config: config.tight,
     })
 
@@ -52,11 +53,11 @@ function MenuLink(props) {
     }
 
     const linkActive = () => {
-        setIsTriggered(true)
+        setIsActive(true)
     }
 
     const linkInactive = () => {
-        setIsTriggered(false)
+        setIsActive(false)
     }
 
     useEffect(() => {

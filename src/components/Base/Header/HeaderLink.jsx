@@ -12,10 +12,6 @@ const Container = styled(animated(Link))`
     font-family: "Times New Roman", Times, serif;
     cursor: pointer;
 
-    &.active{
-        color: #ffca08;
-    }
-
     @media (max-width: 1425px) {
     font-size: 2.5rem;
     }
@@ -27,6 +23,7 @@ function HeaderLink(props) {
     const { dataDispatch } = useContext(AppContext);
     const [isHover, setIsHover] = useState(false);
     const [isTriggered, setIsTriggered] = useState(false);
+    const [isActive, setIsActive] = useState(false);
     const timing = 50;
     const springStyle = useSpring({
         from: {
@@ -40,7 +37,7 @@ function HeaderLink(props) {
     })
 
     const colorSpring = useSpring({
-        color: isTriggered ? '#ffca08' : 'black',
+        color: (isTriggered || isActive) ? '#ffca08' : 'black',
         config: config.tight,
     })
 
@@ -53,11 +50,11 @@ function HeaderLink(props) {
     }
 
     const linkActive = () => {
-        setIsTriggered(true)
+        setIsActive(true)
     }
 
     const linkInactive = () => {
-        setIsTriggered(false)
+        setIsActive(false)
     }
 
     const activateLoading = () => {
@@ -101,7 +98,7 @@ function HeaderLink(props) {
             to={to}
             onMouseEnter={hover}
             onMouseLeave={notHover}
-            style={{...springStyle, ...colorSpring}}
+            style={{ ...springStyle, ...colorSpring }}
             offset={-200}
         >
             {children}
