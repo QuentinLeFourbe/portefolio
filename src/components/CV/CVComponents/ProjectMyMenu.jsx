@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import CreatorImage from './Images/meal-creator.png'
 import ListImage from './Images/meal-list.png'
 import PlannerImage from './Images/menu-planner.png'
 import AuthImage from './Images/menu-auth.png'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import { useSpring, animated, config, useTransition, useTrail } from 'react-spring'
 
 const Container = styled.div`
     display: flex;
@@ -29,14 +31,33 @@ const InfoContainer = styled.div`
     align-items: center;
 
     ${props => props.reverse ? "flex-direction:row-reverse;" : ""}
-    
+`;
+
+const GithubLinkContainer = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-size:2rem;
+    @media (max-width: 768px) {
+        font-size:1.5rem;
+    }
+`;
+
+const GitLink = styled(animated.a)`
+    margin: 1rem;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 `;
 
 const TextArea = styled.div`
     display: flex;
     flex-flow: column wrap;
     /* flex-flow: row-reverse wrap; */
-    font-size:1rem;
     font-size:1.5rem;
     @media (max-width: 768px) {
         font-size:1rem;
@@ -49,6 +70,14 @@ const TextArea = styled.div`
 `;
 
 function ProjectMyMenu() {
+    const [isHovered, setIsHovered] = useState(false)
+    const linkColorSpring = useSpring({
+        color: (isHovered) ? '#ffca08' : 'black',
+    })
+
+    const hoverIn = () => {setIsHovered(true)}
+    const hoverOut = () => {setIsHovered(false)}
+
     return (
         <Container>
             <InfoContainer >
@@ -92,7 +121,12 @@ function ProjectMyMenu() {
                 </TextArea>
                 <ImageComponent src={PlannerImage} alt="Interface de planification des menus" />
             </InfoContainer>
-
+            <GithubLinkContainer>
+                <GitLink href="https://github.com/QuentinLeFourbe/my-menu" onMouseEnter={hoverIn} onMouseLeave={hoverOut} style={linkColorSpring}> 
+                    Voir le projet sur GitHub
+                    <GitHubIcon fontSize="large" style={{ marginLeft: "1rem" }} />
+                </GitLink>
+            </GithubLinkContainer>
         </Container>
     )
 }
