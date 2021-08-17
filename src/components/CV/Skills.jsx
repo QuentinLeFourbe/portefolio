@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import { useSpring, animated, config } from 'react-spring'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import TitleSeparator from './TitleSeparator';
+import SkillsGrid from './Skills/SkillsGrid';
 
 const Container = styled(animated.div)`
     margin: 5vh 10vw 20vh 10vw;
     display:flex;
-    flex-flow: row wrap;
-    min-width: 300px;
-    justify-content: space-between;
+    /* flex-flow: row wrap; */
+    /* min-width: 300px; */
+    justify-content: center;
+    width: 80vw;
 `;
 
 const SkillTypeCol = styled.div`
@@ -49,41 +51,9 @@ function Skills() {
     return (
         <ReactVisibilitySensor onChange={onChangeVisibility} partialVisibility>
             <div>
-                <Container style={springEffect}>
-                    <SkillTypeCol>
-                        <TypeTitle>
-                            Langues
-                        </TypeTitle>
-                        <SkillItem>Français: natif</SkillItem>
-                        <SkillItem>Anglais: courant</SkillItem>
-                    </SkillTypeCol>
-                    <SkillTypeCol>
-                        <TypeTitle>
-                            Programmation
-                        </TypeTitle>
-                        <SkillItem>React js</SkillItem>
-                        <SkillItem>Node js</SkillItem>
-                        <SkillItem>HTML</SkillItem>
-                        <SkillItem>CSS</SkillItem>
-                        <SkillItem>Javascript (ES6)</SkillItem>
-                        <SkillItem>C#</SkillItem>
-                    </SkillTypeCol>
-                    <SkillTypeCol>
-                        <TypeTitle>
-                            Base de donnée
-                        </TypeTitle>
-                        <SkillItem>T-SQL</SkillItem>
-                        <SkillItem>MongoDB</SkillItem>
-                    </SkillTypeCol>
-                    <SkillTypeCol>
-                        <TypeTitle>
-                            Versionning
-                        </TypeTitle>
-                        <SkillItem>Git</SkillItem>
-                        <SkillItem>SVN</SkillItem>
-                        <SkillItem>GitKraken</SkillItem>
-                    </SkillTypeCol>
-                </Container>
+                <animated.div style={springEffect}>
+                    <SkillsGrid/>
+                </animated.div>
             </div>
         </ReactVisibilitySensor>
     )

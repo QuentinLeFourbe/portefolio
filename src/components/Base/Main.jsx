@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated, config, useSpringRef, useChain } from 'react-spring'
-import ExpCard from '../CV/CVComponents/ExpCard';
+import ExpCard from '../CV/Experiences/ExpCard';
 import Presentation from '../CV/Presentation';
 import Skills from '../CV/Skills';
 import Experiences from '../CV/Experiences';

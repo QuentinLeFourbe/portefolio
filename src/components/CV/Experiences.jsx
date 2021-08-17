@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ExpCard from './CVComponents/ExpCard';
+import ExpCard from './Experiences/ExpCard';
 import { useSpring, animated, config } from 'react-spring'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import TitleSeparator from './TitleSeparator';

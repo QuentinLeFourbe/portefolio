@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import CreatorImage from './Images/meal-creator.png'
-import ListImage from './Images/meal-list.png'
-import PlannerImage from './Images/menu-planner.png'
-import AuthImage from './Images/menu-auth.png'
+import CreatorImage from './images/meal-creator.png'
+import ListImage from './images/meal-list.png'
+import PlannerImage from './images/menu-planner.png'
+import AuthImage from './images/menu-auth.png'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { useSpring, animated, config, useTransition, useTrail } from 'react-spring'
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import ProjectCard from './CVComponents/ProjectCard'
-import ProjectMyMenu from './CVComponents/ProjectMyMenu'
+import ProjectCard from './Projects/ProjectCard'
+import ProjectMyMenu from './Projects/ProjectMyMenu'
 
 function Projets() {
     return (

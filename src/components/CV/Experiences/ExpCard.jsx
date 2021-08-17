@@ -25,7 +25,7 @@ const ExpContainer = styled.div`
     min-width: fit-content;
     ${props => props.rightSide ? 'align-items: flex-end;' : 'align-items: flex-start;'}
 `;
-
+ 
 const InfoContainer = styled(animated.div)`
     display:flex;
     ${props => props.rightSide ? 'flex-flow: row-reverse wrap;' : 'flex-flow: row wrap;'};
