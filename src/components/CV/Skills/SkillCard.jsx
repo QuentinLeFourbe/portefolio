@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { animated, useTransition, config } from 'react-spring'
 
-const SkillContainer = styled.div`
-    height: 192px;
-    width: 192px;
+const SkillContainer = styled(animated.div)`
+    /* height: 192px; */
+    /* width: 192px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,35 +12,35 @@ const SkillContainer = styled.div`
     text-align: center;
 
     @media (max-width: 768px) {
-        height: 160px;
-        width: 160px;
+        /* height: 160px; */
+        /* width: 160px; */
     }
 
     @media (max-width: 530px) {
-        height: 128px;
-        width: 128px;
+        /* height: 128px; */
+        /* width: 128px; */
     }
 `;
 
 const SkillIcon = styled(animated.img)`
     height: 192px;
     width: 192px;
-    position: absolute;
+    /* position: absolute; */
 
     @media (max-width: 768px) {
-        height: 160px;
-        width: 160px;
+        height: 128px;
+        width: 128px;
     }
 
     @media (max-width: 530px) {
-        height: 128px;
-        width: 128px;
+        height: 96px;
+        width: 96px;
     }
     
 `;
 
 function SkillCard(props) {
-    const { src, alt, children } = props;
+    const { src, alt, children, animation } = props;
     const [isHovered, setIsHovered] = useState(false);
     const [isToggled, setIsToggled] = useState(false); //déclenche les animations
     const [animationOnGoing, setIsAnimationOnGoing] = useState(false); //assure qu'après la fin d'un hover, un hover enter rapide pendant la phase leave ne produise pas une animation moche
@@ -55,9 +55,10 @@ function SkillCard(props) {
     }
 
     const IconTransition = useTransition(isToggled, {
-        from: { opacity: 0, y: 50 },
+        from: { opacity: 0, y: isToggled ? -50 : 0 },
         enter: { opacity: 1, y: 0 },
-        leave: { opacity: 0, y: 50 },
+        leave: { opacity: 0, y: !isToggled ? 50 : 0 },
+        // config: config.molasses,
         trail: 500,
     })
 
@@ -114,7 +115,7 @@ function SkillCard(props) {
         if (minToggleWaiting) {
             timeoutId = window.setTimeout(() => {
                 setMinToggleWaiting(false);
-            }, 800);
+            }, 1000);
         }
 
         return () => {
@@ -123,7 +124,7 @@ function SkillCard(props) {
     }, [minToggleWaiting])
 
     return (
-        <SkillContainer onMouseEnter={hoverEnter} onMouseLeave={hoverLeave}>
+        <SkillContainer style={animation} onMouseEnter={hoverEnter} onMouseLeave={hoverLeave}>
             {IconTransition((styles, isToggled) => (
                 isToggled ?
                     <animated.div style={{ position: "absolute", ...styles }}>

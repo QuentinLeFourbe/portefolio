@@ -51,9 +51,9 @@ function Skills() {
     return (
         <ReactVisibilitySensor onChange={onChangeVisibility} partialVisibility>
             <div>
-                <animated.div style={springEffect}>
-                    <SkillsGrid/>
-                </animated.div>
+                {/* <animated.div style={springEffect}> */}
+                    <SkillsGrid isVisible={isVisible}/>
+                {/* </animated.div> */}
             </div>
         </ReactVisibilitySensor>
     )
