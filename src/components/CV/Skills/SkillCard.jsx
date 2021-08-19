@@ -10,6 +10,19 @@ const SkillContainer = styled(animated.div)`
     text-align: center;
 
     /* border: solid 1px black; */
+
+    height: 192px;
+    width: 192px;
+
+    @media (max-width: 768px) {
+        height: 128px;
+        width: 128px;
+    }
+
+    @media (max-width: 530px) {
+        height: 96px;
+        width: 96px;
+    }
 `;
 
 const SkillIcon = styled(animated.img)`

@@ -9,9 +9,6 @@ import { useMeasure } from 'react-use';
 
 const Container = styled(animated.div)`
     display:flex;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    background-color: #fff;
-    /* background-color: #226D68; */
     padding-bottom: 5vh;
     padding-top: 5vh;
  
@@ -68,7 +65,7 @@ const LocalisationContainer = styled.div`
 `;
 
 const DetailsListItem = styled.ul`
-    list-style: none outside none;
+    list-style: square outside none;
     ${props => !props.rightSide ? '' : 'text-align: right;'}
     padding:0;
     ${props => props.rightSide ? 'padding-right: 5vw;' : 'padding-left: 5vw;'}
