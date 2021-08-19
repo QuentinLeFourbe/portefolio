@@ -3,29 +3,20 @@ import styled from 'styled-components'
 import { animated, useTransition, config } from 'react-spring'
 
 const SkillContainer = styled(animated.div)`
-    /* height: 192px; */
-    /* width: 192px; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     text-align: center;
 
-    @media (max-width: 768px) {
-        /* height: 160px; */
-        /* width: 160px; */
-    }
-
-    @media (max-width: 530px) {
-        /* height: 128px; */
-        /* width: 128px; */
-    }
+    /* border: solid 1px black; */
 `;
 
 const SkillIcon = styled(animated.img)`
+    /* position: absolute; */
+
     height: 192px;
     width: 192px;
-    /* position: absolute; */
 
     @media (max-width: 768px) {
         height: 128px;

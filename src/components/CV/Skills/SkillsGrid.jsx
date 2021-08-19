@@ -26,8 +26,8 @@ const GridDiv = styled.div`
     @media (max-width: 768px) {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
     }
-    /* justify-items: start; */
-    /* align-items: center; */
+    justify-items: center;
+    align-items: center;
 `;
 
 const cards = [
