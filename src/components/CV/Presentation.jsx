@@ -23,7 +23,7 @@ const TextPresentation = styled.div`
 
 const texts = [
     "Je m'appelle Quentin GARCIA, je suis un développeur passionné ayant un bagage technique varié. Je me suis formé en React.js afin d'entrer dans le monde du Web par le biais d'une technologie passionnante et innovante.",
-    "Avant cela, j'ai eu l'occasion de travailler dans du développement C# classique ou encore de la réalité virtuelle.",
+    "Avant cela, j'ai eu l'occasion de travailler dans du développement C# sur client lourd ou encore de la réalité virtuelle.",
     "Actuellement ingénieur d'étude conception, ou plutôt business analyst, je cherche à me réorienter vers le développement React.js afin de relever de nouveaux défis.",
 ];
 
