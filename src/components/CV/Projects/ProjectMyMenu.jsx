@@ -69,14 +69,24 @@ const TextArea = styled.div`
     }
 `;
 
-function ProjectMyMenu() {
+function ProjectMyMenu()
+{
     const [isHovered, setIsHovered] = useState(false)
+    const [isAppLinkHovered, setIsAppLinkOvered] = useState(false)
+
     const linkColorSpring = useSpring({
         color: (isHovered) ? '#ffca08' : 'black',
     })
 
-    const hoverIn = () => {setIsHovered(true)}
-    const hoverOut = () => {setIsHovered(false)}
+    const projectLinkSpring = useSpring({
+        color: (isAppLinkHovered) ? '#ffca08' : 'black',
+    })
+
+    const hoverAppIn = () => { setIsAppLinkOvered(true) }
+    const hoverAppOut = () => { setIsAppLinkOvered(false) }
+
+    const hoverIn = () => { setIsHovered(true) }
+    const hoverOut = () => { setIsHovered(false) }
 
     return (
         <Container>
@@ -122,9 +132,15 @@ function ProjectMyMenu() {
                 <ImageComponent src={PlannerImage} alt="Interface de planification des menus" />
             </InfoContainer>
             <GithubLinkContainer>
-                <GitLink href="https://github.com/QuentinLeFourbe/my-menu" onMouseEnter={hoverIn} onMouseLeave={hoverOut} style={linkColorSpring}> 
+                <GitLink href="https://github.com/QuentinLeFourbe/my-menu" onMouseEnter={hoverIn} onMouseLeave={hoverOut} style={linkColorSpring}>
                     Voir le projet sur GitHub
                     <GitHubIcon fontSize="large" style={{ marginLeft: "1rem" }} />
+                </GitLink>
+            </GithubLinkContainer>
+            <GithubLinkContainer>
+                <GitLink href="https://mes-menus.herokuapp.com/" onMouseEnter={hoverAppIn} onMouseLeave={hoverAppOut} style={projectLinkSpring}>
+                    Lien vers l'application (bêta)
+                    {/* <GitHubIcon fontSize="large" style={{ marginLeft: "1rem" }} /> */}
                 </GitLink>
             </GithubLinkContainer>
         </Container>
