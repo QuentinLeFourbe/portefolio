@@ -2,6 +2,8 @@
 import type { AnySelector, Selectors } from './selectors';
 
 export type Conditions = {
+	/** `[data-color-mode=light] &` */"_light": string
+	/** `[data-color-mode=dark] &` */"_dark": string
 	/** `&:is(:hover, [data-hover])` */"_hover": string
 	/** `&:is(:focus, [data-focus])` */"_focus": string
 	/** `&:focus-within` */"_focusWithin": string
@@ -75,8 +77,6 @@ export type Conditions = {
 	/** `@media print` */"_print": string
 	/** `@media (orientation: landscape)` */"_landscape": string
 	/** `@media (orientation: portrait)` */"_portrait": string
-	/** ` &.dark, .dark &` */"_dark": string
-	/** ` &.light, .light &` */"_light": string
 	/** `@media (prefers-color-scheme: dark)` */"_osDark": string
 	/** `@media (prefers-color-scheme: light)` */"_osLight": string
 	/** `@media (forced-colors: active)` */"_highContrast": string

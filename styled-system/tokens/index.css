@@ -36,9 +36,6 @@
   --line-heights-normal: 1.5;
   --line-heights-relaxed: 1.625;
   --line-heights-loose: 2;
-  --fonts-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fonts-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --fonts-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --letter-spacings-tighter: -0.05em;
   --letter-spacings-tight: -0.025em;
   --letter-spacings-normal: 0em;
@@ -413,18 +410,68 @@
   --colors-slate-800: #1e293b;
   --colors-slate-900: #0f172a;
   --colors-slate-950: #020617;
-  --colors-text-primary: #213547;
+  --colors-text-primary: #6f623d;
   --colors-text-secondary: grey;
   --colors-title-background: #01717D;
   --colors-title-color: white;
   --colors-header-background: #FFF7A3;
   --colors-header-color: #293156;
   --colors-middle-border: #f2d78e;
+  --colors-light-gold: #BFAA87;
+  --colors-medium-gold: #A89773;
+  --colors-dark-gold: #8E7D59;
+  --colors-cream: #FFF8E7;
+  --colors-light-grey: #F5F5F5;
+  --colors-broken-white: #FAF3E0;
+  --colors-white-gold: #f2eee4;
+  --colors-grey-gold-50: #fbf7f2;
+  --colors-grey-gold-100: #f6f1e6;
+  --colors-grey-gold-200: #e8e1ca;
+  --colors-grey-gold-300: #d9d0ae;
+  --colors-grey-gold-400: #cac091;
+  --colors-grey-gold-500: #b9ae7b;
+  --colors-grey-gold-600: #a09a66;
+  --colors-grey-gold-700: #877751;
+  --colors-grey-gold-800: #6f623d;
+  --colors-grey-gold-900: #59502e;
+  --colors-grey-gold-950: #403921;
+  --fonts-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fonts-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --fonts-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --fonts-body: var(--font-roboto), sans-serif;
+  --fonts-heading: var(--font-playfair), serif;
+  --fonts-dancing: var(--font-dancing);
   --breakpoints-sm: 640px;
   --breakpoints-md: 768px;
   --breakpoints-lg: 1024px;
   --breakpoints-xl: 1280px;
-  --breakpoints-2xl: 1536px
+  --breakpoints-2xl: 1536px;
+  --colors-text-title: #01717D;
+  --colors-background-primary: #e8e1ca;
+  --colors-background-secondary: #F5F5F5;
+  --colors-navbar-text: #115e59;
+  --colors-navbar-background: #e8e1ca;
+  --colors-navbar-border: var(--colors-greygold-600);
+  --colors-navbar-dot: #0d9488;
+  --colors-card-background-primary: #e8e1ca;
+  --colors-card-background-secondary: #877751;
+  --colors-card-border: #0d9488;
+  --colors-card-text: #e8e1ca
+}
+
+[data-color-mode=dark] {
+  --colors-text-primary: #8E7D59;
+  --colors-text-title: #BFAA87;
+  --colors-background-primary: #FAF3E0;
+  --colors-background-secondary: #F5F5F5;
+  --colors-navbar-text: #BFAA87;
+  --colors-navbar-background: #A89773;
+  --colors-navbar-border: #8E7D59;
+  --colors-navbar-dot: #8E7D59;
+  --colors-card-background-primary: #FAF3E0;
+  --colors-card-background-secondary: #BFAA87;
+  --colors-card-border: #8E7D59;
+  --colors-card-text: #8E7D59
 }
   }
   

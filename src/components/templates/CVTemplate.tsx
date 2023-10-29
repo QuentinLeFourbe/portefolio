@@ -13,8 +13,9 @@ function CVTemplate({ children }: CVTemplateProps) {
 export default CVTemplate;
 
 const template = css({
-  height: "100vh",
-  width: "100vw",
+  height: "1056px",
+  width: "816px",
+  backgroundColor: "white",
   display: "grid",
   gridTemplateColumns: "1fr 2fr",
   gridTemplateRows: "1fr 4fr",

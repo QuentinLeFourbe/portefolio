@@ -143,18 +143,6 @@ const tokens = {
     "value": "2",
     "variable": "var(--line-heights-loose)"
   },
-  "fonts.sans": {
-    "value": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
-    "variable": "var(--fonts-sans)"
-  },
-  "fonts.serif": {
-    "value": "ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
-    "variable": "var(--fonts-serif)"
-  },
-  "fonts.mono": {
-    "value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
-    "variable": "var(--fonts-mono)"
-  },
   "letterSpacings.tighter": {
     "value": "-0.05em",
     "variable": "var(--letter-spacings-tighter)"
@@ -1679,6 +1667,102 @@ const tokens = {
     "value": "#f2d78e",
     "variable": "var(--colors-middle-border)"
   },
+  "colors.lightGold": {
+    "value": "#BFAA87",
+    "variable": "var(--colors-light-gold)"
+  },
+  "colors.mediumGold": {
+    "value": "#A89773",
+    "variable": "var(--colors-medium-gold)"
+  },
+  "colors.darkGold": {
+    "value": "#8E7D59",
+    "variable": "var(--colors-dark-gold)"
+  },
+  "colors.cream": {
+    "value": "#FFF8E7",
+    "variable": "var(--colors-cream)"
+  },
+  "colors.lightGrey": {
+    "value": "#F5F5F5",
+    "variable": "var(--colors-light-grey)"
+  },
+  "colors.brokenWhite": {
+    "value": "#FAF3E0",
+    "variable": "var(--colors-broken-white)"
+  },
+  "colors.whiteGold": {
+    "value": "#f2eee4",
+    "variable": "var(--colors-white-gold)"
+  },
+  "colors.greyGold.50": {
+    "value": "#fbf7f2",
+    "variable": "var(--colors-grey-gold-50)"
+  },
+  "colors.greyGold.100": {
+    "value": "#f6f1e6",
+    "variable": "var(--colors-grey-gold-100)"
+  },
+  "colors.greyGold.200": {
+    "value": "#e8e1ca",
+    "variable": "var(--colors-grey-gold-200)"
+  },
+  "colors.greyGold.300": {
+    "value": "#d9d0ae",
+    "variable": "var(--colors-grey-gold-300)"
+  },
+  "colors.greyGold.400": {
+    "value": "#cac091",
+    "variable": "var(--colors-grey-gold-400)"
+  },
+  "colors.greyGold.500": {
+    "value": "#b9ae7b",
+    "variable": "var(--colors-grey-gold-500)"
+  },
+  "colors.greyGold.600": {
+    "value": "#a09a66",
+    "variable": "var(--colors-grey-gold-600)"
+  },
+  "colors.greyGold.700": {
+    "value": "#877751",
+    "variable": "var(--colors-grey-gold-700)"
+  },
+  "colors.greyGold.800": {
+    "value": "#6f623d",
+    "variable": "var(--colors-grey-gold-800)"
+  },
+  "colors.greyGold.900": {
+    "value": "#59502e",
+    "variable": "var(--colors-grey-gold-900)"
+  },
+  "colors.greyGold.950": {
+    "value": "#403921",
+    "variable": "var(--colors-grey-gold-950)"
+  },
+  "fonts.sans": {
+    "value": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "variable": "var(--fonts-sans)"
+  },
+  "fonts.serif": {
+    "value": "ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+    "variable": "var(--fonts-serif)"
+  },
+  "fonts.mono": {
+    "value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+    "variable": "var(--fonts-mono)"
+  },
+  "fonts.body": {
+    "value": "var(--font-roboto), sans-serif",
+    "variable": "var(--fonts-body)"
+  },
+  "fonts.heading": {
+    "value": "var(--font-playfair), serif",
+    "variable": "var(--fonts-heading)"
+  },
+  "fonts.dancing": {
+    "value": "var(--font-dancing)",
+    "variable": "var(--fonts-dancing)"
+  },
   "breakpoints.sm": {
     "value": "640px",
     "variable": "var(--breakpoints-sm)"
@@ -1698,6 +1782,54 @@ const tokens = {
   "breakpoints.2xl": {
     "value": "1536px",
     "variable": "var(--breakpoints-2xl)"
+  },
+  "colors.text.primary": {
+    "value": "var(--colors-text-primary)",
+    "variable": "var(--colors-text-primary)"
+  },
+  "colors.text.title": {
+    "value": "var(--colors-text-title)",
+    "variable": "var(--colors-text-title)"
+  },
+  "colors.background.primary": {
+    "value": "var(--colors-background-primary)",
+    "variable": "var(--colors-background-primary)"
+  },
+  "colors.background.secondary": {
+    "value": "var(--colors-background-secondary)",
+    "variable": "var(--colors-background-secondary)"
+  },
+  "colors.navbar.text": {
+    "value": "var(--colors-navbar-text)",
+    "variable": "var(--colors-navbar-text)"
+  },
+  "colors.navbar.background": {
+    "value": "var(--colors-navbar-background)",
+    "variable": "var(--colors-navbar-background)"
+  },
+  "colors.navbar.border": {
+    "value": "var(--colors-navbar-border)",
+    "variable": "var(--colors-navbar-border)"
+  },
+  "colors.navbar.dot": {
+    "value": "var(--colors-navbar-dot)",
+    "variable": "var(--colors-navbar-dot)"
+  },
+  "colors.card.background.primary": {
+    "value": "var(--colors-card-background-primary)",
+    "variable": "var(--colors-card-background-primary)"
+  },
+  "colors.card.background.secondary": {
+    "value": "var(--colors-card-background-secondary)",
+    "variable": "var(--colors-card-background-secondary)"
+  },
+  "colors.card.border": {
+    "value": "var(--colors-card-border)",
+    "variable": "var(--colors-card-border)"
+  },
+  "colors.card.text": {
+    "value": "var(--colors-card-text)",
+    "variable": "var(--colors-card-text)"
   },
   "spacing.-1": {
     "value": "calc(var(--spacing-1) * -1)",
@@ -1874,6 +2006,42 @@ const tokens = {
   "colors.colorPalette.950": {
     "value": "var(--colors-color-palette-950)",
     "variable": "var(--colors-color-palette-950)"
+  },
+  "colors.colorPalette.primary": {
+    "value": "var(--colors-color-palette-primary)",
+    "variable": "var(--colors-color-palette-primary)"
+  },
+  "colors.colorPalette.title": {
+    "value": "var(--colors-color-palette-title)",
+    "variable": "var(--colors-color-palette-title)"
+  },
+  "colors.colorPalette.secondary": {
+    "value": "var(--colors-color-palette-secondary)",
+    "variable": "var(--colors-color-palette-secondary)"
+  },
+  "colors.colorPalette.text": {
+    "value": "var(--colors-color-palette-text)",
+    "variable": "var(--colors-color-palette-text)"
+  },
+  "colors.colorPalette.background": {
+    "value": "var(--colors-color-palette-background)",
+    "variable": "var(--colors-color-palette-background)"
+  },
+  "colors.colorPalette.border": {
+    "value": "var(--colors-color-palette-border)",
+    "variable": "var(--colors-color-palette-border)"
+  },
+  "colors.colorPalette.dot": {
+    "value": "var(--colors-color-palette-dot)",
+    "variable": "var(--colors-color-palette-dot)"
+  },
+  "colors.colorPalette.background.primary": {
+    "value": "var(--colors-color-palette-background-primary)",
+    "variable": "var(--colors-color-palette-background-primary)"
+  },
+  "colors.colorPalette.background.secondary": {
+    "value": "var(--colors-color-palette-background-secondary)",
+    "variable": "var(--colors-color-palette-background-secondary)"
   }
 }
 
