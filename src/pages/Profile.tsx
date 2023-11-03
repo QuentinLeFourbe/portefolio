@@ -1,18 +1,14 @@
 import React from "react";
 import { css } from "../../styled-system/css";
+import { useTranslation } from "react-i18next";
 
 function Profile() {
+  const { t } = useTranslation("profile");
+
   return (
     <div className={containerStyle}>
-      <h1 className={titleStyle}>Bonjour !</h1>
-      <p className={textStyle}>
-        Je m'appelle Quentin GARCIA, je suis un développeur full-stack passionné
-        par les technologies, expert en React, Node.js et TypeScript. Avec une
-        expérience chez Linxo en tant que développeur web avant de devenir tech
-        lead, je m'efforce constamment de rester à la pointe des bonnes
-        pratiques et des dernières nouveautés. Mon engagement envers le code
-        propre et robuste est au cœur de mon travail.
-      </p>
+      <h1 className={titleStyle}>{t("greet")}</h1>
+      <p className={textStyle}>{t("presentation")}</p>
     </div>
   );
 }

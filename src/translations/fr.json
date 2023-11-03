@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "greet": "Bonjour",
+    "presentation": "Je m'appelle Quentin GARCIA, je suis un développeur full-stack passionné par les technologies, expert en React, Node.js et TypeScript. Avec une expérience chez Linxo en tant que développeur web avant de devenir tech lead, je m'efforce constamment de rester à la pointe des bonnes pratiques et des dernières nouveautés. Mon engagement envers le code propre et robuste est au cœur de mon travail."
+  },
+  "projects": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "challenges": "Défis",
+    "results": "Résultats",
+    "amcoeur_description": "Refonte du site web de l'association. Le site devient une application fullstack permettant à terme de gérer les adoptions et les disparitions depuis un backoffice mit à disposition des bénévoles. Un développeur junior dont je suis le mentor m'accompagne sur ce projet.",
+    "tech_lead": "Tech lead",
+    "amcoeur_challenges": "Un des défis pour moi a été d'élaborer la nouvelle application Web from scratch, et notamment niveau design et expérience utilisateur. Un autre point a été de gérer l'entièreté du développement, de la création au déploiement en ligne, en devant faire des choix pertinents et adaptés sur les solutions mise en oeuvre.",
+    "amcoeur_results": "Au final, nous sommes entrain de peaufiner et déployer la première version de l'application qui intègre uniquement les bases: la partie statique du site et des formulaires de contacts."
+  }
+}

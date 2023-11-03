@@ -12,6 +12,6 @@ export default MainContainer;
 const backgroundStyle = css({
   // backgroundColor: "#ffedb116",
   color: "white",
-  margin: "10vh 5vw 10vh 0vw",
+  margin: "10vh 5vw 10vh 5vw",
   flexGrow: 1,
 });

@@ -82,8 +82,8 @@ export const theme = {
           },
           border: {
             value: {
-              base: "{colors.greygold.600}",
-              _dark: "{colors.darkGold}",
+              base: "{colors.greyGold.400}",
+              _dark: "{colors.mediumGold}",
             },
           },
           dot: {
@@ -123,6 +123,8 @@ export const theme = {
         },
       },
     },
+
+    keyframes: {},
   },
 };
 

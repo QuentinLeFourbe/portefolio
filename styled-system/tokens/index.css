@@ -451,7 +451,7 @@
   --colors-background-secondary: #F5F5F5;
   --colors-navbar-text: #115e59;
   --colors-navbar-background: #e8e1ca;
-  --colors-navbar-border: var(--colors-greygold-600);
+  --colors-navbar-border: #cac091;
   --colors-navbar-dot: #0d9488;
   --colors-card-background-primary: #e8e1ca;
   --colors-card-background-secondary: #877751;
@@ -466,7 +466,7 @@
   --colors-background-secondary: #F5F5F5;
   --colors-navbar-text: #BFAA87;
   --colors-navbar-background: #A89773;
-  --colors-navbar-border: #8E7D59;
+  --colors-navbar-border: #A89773;
   --colors-navbar-dot: #8E7D59;
   --colors-card-background-primary: #FAF3E0;
   --colors-card-background-secondary: #BFAA87;

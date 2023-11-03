@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import HomeTemplate from "./components/templates/HomeTemplate";
 import Contact from "./pages/Contact";
 import Curriculum from "./pages/Curriculum";
+import "./i18n";
 
 const router = createBrowserRouter([
   {

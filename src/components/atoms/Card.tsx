@@ -1,26 +1,85 @@
 import React, { ComponentProps } from "react";
 import { css, cx } from "../../../styled-system/css";
+import ExpandedCard from "./ExpandedCard";
+import { Project } from "../../types/project";
 
-type CardProps = ComponentProps<"div"> & {
-  title: string;
-  children?: React.ReactNode;
-  src?: string;
+type CardProps = ComponentProps<typeof ExpandedCard> & {
+  project: Project;
+  isOpen?: boolean;
+  onOpen: () => void;
+  onClose: () => void;
 };
 
-function Card({ title, children, src, ...props }: CardProps) {
+function Card({ project, isOpen, onOpen, onClose }: CardProps) {
+  const { title, src } = project;
   return (
-    <div {...props} className={cx(mainCard, mainCardSize)}>
-      <div className={cx(borderCard, mainCardSize, "borderCard")} />
-      {/* <div className={bodyStyle}>{children}</div> */}
-      {src && <img src={src} alt={""} className={logoSize} />}
-      <div className={cx(overCard, "overCard")}>
-        <h2 className={titleStyle}>{title}</h2>
-      </div>
+    <div
+      className={cx("card", mainCard, isOpen ? openedCard : closedCard)}
+      onClick={() => !isOpen && onOpen()}
+      role={isOpen ? "" : "button"}
+      tabIndex={isOpen ? -1 : 0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          onOpen();
+        }
+      }}
+    >
+      {isOpen && <ExpandedCard project={project} onClose={onClose} />}
+      {!isOpen && <div className={cx(borderCard, "borderCard")} />}
+      {!isOpen && src && <img src={src} alt={""} className={logoSize} />}
+      {!isOpen && (
+        <div className={cx(overCard, "overCard")}>
+          <h2 className={titleStyle}>{title}</h2>
+        </div>
+      )}
     </div>
   );
 }
 
 export default Card;
+
+const openedCard = css({
+  height: "80vh",
+  width: "100%",
+  color: "greyGold.700",
+  padding: "2rem",
+  position: "relative",
+});
+
+const closedCard = css({
+  height: "300px",
+  width: "250px",
+  cursor: "pointer",
+  position: "relative",
+
+  display: "flex",
+  flexFlow: "column nowrap",
+  justifyContent: "flex-start",
+  alignItems: "center",
+
+  "&:hover": {
+    opacity: "1",
+    "& .borderCard": {
+      top: "-32px",
+      left: "32px",
+    },
+
+    "& .overCard": {
+      transform: "scale(1.1)",
+      bottom: "-40px",
+      left: "40px",
+    },
+    "& img": {
+      opacity: "1",
+    },
+  },
+});
+
+const mainCard = css({
+  backgroundColor: "card.background.primary",
+
+  transition: "all 0.2s ease-in-out",
+});
 
 const logoSize = css({
   height: "100px",
@@ -37,47 +96,12 @@ const overCard = css({
   position: "absolute",
   bottom: "-25px",
   left: "25px",
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: "card.background.secondary",
-  transition: "all 0.2s ease-in-out",
-});
-
-const mainCard = css({
-  backgroundColor: "card.background.primary",
   padding: "1rem",
 
   display: "flex",
-  flexFlow: "column nowrap",
-  justifyContent: "flex-start",
   alignItems: "center",
-  position: "relative",
-
+  backgroundColor: "card.background.secondary",
   transition: "all 0.2s ease-in-out",
-
-  "&:hover": {
-    transform: "translateY(-20px) scale(1.1)",
-
-    "& .borderCard": {
-      top: "0",
-      left: "0",
-    },
-
-    "& .overCard": {
-      bottom: "-5px",
-      left: "5px",
-    },
-    "& img": {
-      opacity: "1",
-    },
-  },
-});
-
-const mainCardSize = css({
-  height: "300px",
-  width: "250px",
 });
 
 const borderCard = css({
@@ -94,14 +118,7 @@ const borderCard = css({
 });
 
 const titleStyle = css({
-  fontSize: "2rem",
+  fontSize: "1.5rem",
   fontWeight: "400",
   color: "card.text",
-});
-
-const bodyStyle = css({
-  fontSize: "0.9rem",
-  textAlign: "justify",
-  lineHeight: "1.5rem",
-  color: "text.primary",
 });
