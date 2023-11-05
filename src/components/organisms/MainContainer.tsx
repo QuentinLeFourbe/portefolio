@@ -1,4 +1,4 @@
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 import { css } from "../../../styled-system/css";
 
 type MainContainerProps = ComponentProps<"div">;

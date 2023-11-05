@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import { css, cx } from "../../../styled-system/css";
+import { css } from "../../../styled-system/css";
 import { Link, useLocation } from "react-router-dom";
-import DocumentMagnify from "../../assets/icons/document-magnify.svg?react";
 import Fingerprint from "../../assets/icons/fingerprint.svg?react";
 import PaperAirplane from "../../assets/icons/paper-airplane.svg?react";
 import ServerStack from "../../assets/icons/server-stack.svg?react";

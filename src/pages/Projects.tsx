@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "../components/atoms/Card";
 import { css } from "../../styled-system/css";
 import amcoeurLogo from "../assets/logos/amcoeur.jpeg";

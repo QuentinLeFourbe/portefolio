@@ -5,7 +5,6 @@ import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 import HomeTemplate from "./components/templates/HomeTemplate";
 import Contact from "./pages/Contact";
-import Curriculum from "./pages/Curriculum";
 import "./i18n";
 
 const router = createBrowserRouter([
@@ -24,10 +23,6 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
-      },
-      {
-        path: "curriculum",
-        element: <Curriculum />,
       },
     ],
   },

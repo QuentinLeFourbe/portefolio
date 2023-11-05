@@ -1,4 +1,4 @@
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 import { css, cx } from "../../../styled-system/css";
 import ExpandedCard from "../organisms/ExpandedCard";
 import { Project } from "../../types/project";

@@ -1,5 +1,5 @@
 import React from "react";
-import { css, cx } from "../../../styled-system/css";
+import { css } from "../../../styled-system/css";
 
 type HeaderProps = {
   children?: React.ReactNode;

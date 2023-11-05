@@ -1,11 +1,8 @@
-import { Children, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import HomeTemplate from "../components/templates/HomeTemplate";
-import { css } from "../../styled-system/css";
 import Navbar from "../components/organisms/Navbar";
 import MainContainer from "../components/organisms/MainContainer";
-import Profile from "./Profile";
-import Projects from "./Projects";
 
 type HomeProps = {
   children?: React.ReactNode;
@@ -14,13 +11,13 @@ type HomeProps = {
 function Home({ children }: HomeProps) {
   const [colorScheme, setColorScheme] = useState("light"); // Par défaut, le mode clair
 
-  const switchMode = () => {
-    if (colorScheme === "light") {
-      setColorScheme("dark");
-    } else {
-      setColorScheme("light");
-    }
-  };
+  // const switchMode = () => {
+  //   if (colorScheme === "light") {
+  //     setColorScheme("dark");
+  //   } else {
+  //     setColorScheme("light");
+  //   }
+  // };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");

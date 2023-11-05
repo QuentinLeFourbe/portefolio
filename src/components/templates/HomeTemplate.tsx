@@ -6,16 +6,18 @@ import { Outlet } from "react-router-dom";
 
 type HomeTemplateProps = ComponentProps<"div">;
 
-function HomeTemplate({ children, ...props }: HomeTemplateProps) {
+function HomeTemplate({ ...props }: HomeTemplateProps) {
   const [colorScheme, setColorScheme] = useState("light"); // Par défaut, le mode clair
 
-  const switchMode = () => {
-    if (colorScheme === "light") {
-      setColorScheme("dark");
-    } else {
-      setColorScheme("light");
-    }
-  };
+  // const switchMode = () => {
+  //   if (colorScheme === "light") {
+  //     setColorScheme("dark");
+  //   } else {
+  //     setColorScheme("light");
+  //   }
+  // };
+
+  console.log(colorScheme);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
