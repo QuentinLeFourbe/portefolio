@@ -35,6 +35,7 @@ const buttonPrimarySize = {
   fontSize: "3rem",
   cursor: "pointer",
   fontFamily: "title",
+  transition: "all 0.2s ease-in-out",
 };
 
 const primaryStyle = css(buttonPrimarySize, {
@@ -43,7 +44,7 @@ const primaryStyle = css(buttonPrimarySize, {
   fontWeight: "bold",
   padding: "1rem 4rem",
   "&:hover": {
-    backgroundColor: "red",
+    backgroundColor: "greyGold.600",
   },
 });
 
@@ -69,7 +70,11 @@ const roundedStyle = css({
   padding: "12px",
   fontWeight: "bold",
   cursor: "pointer",
+  transition: "all 0.2s ease-in-out",
   "&:hover": {
     backgroundColor: "greyGold.600",
+    borderColor: "greyGold.800",
+    color: "cream",
+    transform: "scale(1.2)",
   },
 });

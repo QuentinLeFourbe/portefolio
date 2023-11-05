@@ -10,7 +10,7 @@ const projects: Project[] = [
     title: "Amcoeur",
     src: amcoeurLogo,
     description: "amcoeur_description",
-    role: "tech_lead",
+    roles: "amcoeur_roles",
     challenges: "amcoeur_challenges",
     results: "amcoeur_results",
     technologies: {
@@ -22,13 +22,37 @@ const projects: Project[] = [
   {
     title: "Linxo accounts aggregation",
     src: linxoLogo,
+    description: "ais_description",
+    roles: "ais_roles",
+    challenges: "ais_challenges",
+    results: "ais_results",
+    technologies: {
+      backend: ["Node.js", "JavaScript", "Express.js", "Redis"],
+      frontend: ["React", "JavaScript", "Redux", "Webpack"],
+    },
   },
   {
     title: "Linxo paiement initiation",
     src: linxoLogo,
+    description: "pis_description",
+    roles: "pis_roles",
+    challenges: "pis_challenges",
+    results: "pis_results",
+    technologies: {
+      backend: ["Node.js", "JavaScript", "Express.js"],
+      frontend: ["React", "JavaScript", "Redux", "Webpack"],
+    },
   },
   {
     title: "Mes menus",
+    description: "menus_description",
+    roles: "menus_roles",
+    challenges: "menus_challenges",
+    results: "menus_results",
+    technologies: {
+      backend: ["Node.js", "TypeScript", "Express.js"],
+      frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
+    },
   },
 ];
 
@@ -69,9 +93,10 @@ export default Projects;
 
 const container = css({
   display: "flex",
-  flexFlow: "row nowrap",
+  flexFlow: "row wrap",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "center",
   height: "100%",
   width: "100%",
+  gap: "64px",
 });

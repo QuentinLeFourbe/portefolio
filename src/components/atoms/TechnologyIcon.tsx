@@ -10,6 +10,7 @@ import ViteIcon from "../../assets/icons/vite.svg?react";
 import WebpackIcon from "../../assets/icons/webpack.svg?react";
 import JavascriptIcon from "../../assets/icons/javascript.svg?react";
 import MongodbIcon from "../../assets/icons/mongodb.svg?react";
+import RedisIcon from "../../assets/icons/redis.svg?react";
 import { css } from "../../../styled-system/css";
 
 type TechnologyIconProps = {
@@ -49,6 +50,9 @@ function TechnologyIcon({ technology }: TechnologyIconProps) {
       break;
     case "MongoDB":
       renderIcon = <MongodbIcon />;
+      break;
+    case "Redis":
+      renderIcon = <RedisIcon />;
       break;
     default:
       break;

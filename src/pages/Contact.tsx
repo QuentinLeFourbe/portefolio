@@ -27,20 +27,32 @@ function Contact() {
           <CVIcon />
         </Button>
         <div
-          className={isButtonsHovered ? firstBorderBox : firstBorderBoxHover}
+          className={isButtonsHovered ? firstBorderBoxHover : firstBorderBox}
         />
         <div
-          className={isButtonsHovered ? secondBorderBox : secondBorderBoxHover}
+          className={isButtonsHovered ? secondBorderBoxHover : secondBorderBox}
         />
       </div>
       <div className={css(linksContainer)}>
-        <Button variant="rounded">
+        <Button
+          variant="rounded"
+          href="https://www.linkedin.com/in/quentin-garcia-9862b1146/"
+          target="_blank"
+        >
           <LinkedInIcon />
         </Button>
-        <Button variant="rounded">
+        <Button
+          variant="rounded"
+          href="https://www.malt.fr/profile/quentingarcia2"
+          target="_blank"
+        >
           <MaltIcon />
         </Button>
-        <Button variant="rounded">
+        <Button
+          variant="rounded"
+          href="https://github.com/QuentinLeFourbe"
+          target="_blank"
+        >
           <GithubIcon />
         </Button>
       </div>
@@ -75,16 +87,16 @@ const secondBorderBox = css(baseBorderBox, secondBorderBoxBase, {
 });
 
 const firstBorderBoxHover = css(baseBorderBox, firstBorderBoxBase, {
-  top: "-12.5%",
-  right: "-5%",
-  width: "110%",
-  height: "125%",
+  top: "-37%",
+  right: "-7%",
+  width: "100%",
+  height: "100%",
 });
 const secondBorderBoxHover = css(baseBorderBox, secondBorderBoxBase, {
-  top: "-25%",
-  left: "-7.5%",
-  width: "115%",
-  height: "150%",
+  top: "37%",
+  left: "-9.5%",
+  width: "100%",
+  height: "100%",
 });
 
 const cvButton = css({
@@ -115,32 +127,6 @@ const buttonContainer = {
   flexFlow: "row nowrap",
   position: "relative",
   gap: "32px",
-
-  // "&:after": {
-  //   position: "absolute",
-  //   content: "''",
-  //   borderWidth: "1px ",
-  //   borderStyle: "solid",
-  //   top: "-35%",
-  //   right: "-5%",
-  //   width: "60%",
-  //   height: "100%",
-  //   borderColor: "greyGold.600",
-  //   zIndex: -1,
-  // },
-
-  // "&:before": {
-  //   position: "absolute",
-  //   content: "''",
-  //   borderWidth: "1px",
-  //   borderStyle: "solid",
-  //   top: "35%",
-  //   left: "-7.5%",
-  //   width: "20%",
-  //   height: "100%",
-  //   borderColor: "greyGold.400",
-  //   zIndex: -1,
-  // },
 };
 
 const linksContainer = {

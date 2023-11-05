@@ -5,6 +5,7 @@ import DocumentMagnify from "../../assets/icons/document-magnify.svg?react";
 import Fingerprint from "../../assets/icons/fingerprint.svg?react";
 import PaperAirplane from "../../assets/icons/paper-airplane.svg?react";
 import ServerStack from "../../assets/icons/server-stack.svg?react";
+import { SystemStyleObject } from "@pandacss/dev";
 
 function Navbar() {
   const location = useLocation();
@@ -13,32 +14,27 @@ function Navbar() {
     <nav className={container}>
       <Link
         to="/"
-        className={cx(
-          bubble,
-          location.pathname === "/" ? activeBubble : inactiveBubble
-        )}
+        className={location.pathname === "/" ? activeBubble : inactiveBubble}
       >
-        <Fingerprint className={icon} />
+        <Fingerprint />
       </Link>
       <div className="line"></div>
       <Link
         to="/projects"
-        className={cx(
-          bubble,
+        className={
           location.pathname === "/projects" ? activeBubble : inactiveBubble
-        )}
+        }
       >
-        <ServerStack className={icon} />
+        <ServerStack />
       </Link>
       <div className="line"></div>
       <Link
         to="/contact"
-        className={cx(
-          bubble,
+        className={
           location.pathname === "/contact" ? activeBubble : inactiveBubble
-        )}
+        }
       >
-        <PaperAirplane className={icon} />
+        <PaperAirplane />
       </Link>
     </nav>
   );
@@ -46,71 +42,86 @@ function Navbar() {
 
 export default Navbar;
 
-const activeBubble = css({
-  width: "100px",
-  height: "100px",
-  opacity: 1,
-
-  "& svg": {
-    height: "50px",
-    width: "50px",
-  },
-});
-
-const inactiveBubble = css({
-  width: "75px",
-  height: "75px",
-  opacity: 0.5,
-});
-
-const bubble = css({
+const bubble = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   padding: "10px",
   backgroundColor: "navbar.background",
-  color: "text.primary",
   borderWidth: "1px",
   borderStyle: "solid",
   borderColor: "navbar.border",
-
   borderRadius: "50%",
+
+  width: "75px",
+  height: "75px",
 
   textAlign: "center",
 
   transition: "all 0.2s ease-in-out",
 
-  "&:hover": {
-    transform: "scale(1.1)",
-    opacity: 1,
+  "& svg": {
+    height: "32px",
+    width: "32px",
+    color: "navbar.text",
+    transition: "all 0.2s ease-in-out",
   },
-  "&:focus": {
-    transform: "scale(1.1)",
-    opacity: 1,
+} as SystemStyleObject;
+
+const activeBubble = css(bubble, {
+  transform: "scale(1.2)",
+  opacity: 1,
+  backgroundColor: "navbar.text",
+
+  "& svg": {
+    height: "40px",
+    width: "40px",
+    color: "greyGold.50",
   },
 });
 
-const icon = css({
-  height: "32px",
-  width: "32px",
-  color: "navbar.text",
-  transition: "all 0.2s ease-in-out",
+const inactiveBubble = css(bubble, {
+  opacity: 0.5,
+
+  "&:hover": {
+    transform: "scale(1.2)",
+    backgroundColor: "navbar.text",
+    "& svg": {
+      height: "40px",
+      width: "40px",
+      color: "greyGold.50",
+    },
+  },
+
+  "&:focus": {
+    transform: "scale(1.2)",
+    backgroundColor: "navbar.text",
+    "& svg": {
+      height: "40px",
+      width: "40px",
+      color: "greyGold.50",
+    },
+  },
 });
 
 const container = css({
   display: "flex",
-  flexDirection: "column",
+  flexFlow: "column nowrap",
   alignItems: "center",
-  padding: "10vh 5vw 10vh 5vw",
+  justifyContent: "center",
   minHeight: "500px",
   width: "200px",
+  margin: "5vh 0",
+
   "& .line": {
     flexGrow: 1,
     width: "1px",
+    maxHeight: "150px",
     margin: "12px 0 ",
     borderStyle: "none none none dotted",
     borderColor: "navbar.dot",
     borderWidth: "3px",
     opacity: 0.5,
+    zIndex: -1,
   },
 });

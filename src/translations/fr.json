@@ -8,9 +8,89 @@
     "frontend": "Frontend",
     "challenges": "Défis",
     "results": "Résultats",
+    "role": "Rôle",
     "amcoeur_description": "Refonte du site web de l'association. Le site devient une application fullstack permettant à terme de gérer les adoptions et les disparitions depuis un backoffice mit à disposition des bénévoles. Un développeur junior dont je suis le mentor m'accompagne sur ce projet.",
-    "tech_lead": "Tech lead",
-    "amcoeur_challenges": "Un des défis pour moi a été d'élaborer la nouvelle application Web from scratch, et notamment niveau design et expérience utilisateur. Un autre point a été de gérer l'entièreté du développement, de la création au déploiement en ligne, en devant faire des choix pertinents et adaptés sur les solutions mise en oeuvre.",
-    "amcoeur_results": "Au final, nous sommes entrain de peaufiner et déployer la première version de l'application qui intègre uniquement les bases: la partie statique du site et des formulaires de contacts."
+    "amcoeur_roles": [
+      "📈 Initiateur du projet",
+      "🏆 Responsable de tous les aspects du projet",
+      "🧑‍🏫 Mentorat et encadrement d'un développeur junior"
+    ],
+    "amcoeur_challenges": [
+      "🛠️ Refonte d'un vieux site au design obsolète",
+      "👨‍💻 Choix des technologies adaptées",
+      "📢 Gestion de projet et communication avec une association ayant des ressources limitées",
+      "💡 Analyse et conception d'une UX ergonomique et tendance",
+      "👷‍♂️ Rôle multifonction"
+    ],
+    "amcoeur_results": [
+      "👨‍🏫 Conception de l'interface graphique",
+      "🔨 Développement d'une base solide de l'application",
+      "🌱 Début de la seconde phase de développement (intégration d'un back office)",
+      "🚀 Première version déployée en pré-production",
+      "🎉 Optimisation de l'expérience utilisateur en rendant le site plus convivial et informatif pour les visiteurs"
+    ],
+    "ais_description": "Une suite d'écrans personnalisable facilitant l'intégration de l'agrégation de comptes via les API Linxo. Cette suite d'écrans était proposée à divers intégrateurs, qui pouvaient l'intégrer dans une iframe et personnaliser à la fois l'aspect visuel et le flux de l'application.",
+    "ais_roles": [
+      "💻 Chef technique de l'équipe",
+      "🔨 Garant de la solidité et de la pérennité de l'application",
+      "🧑‍🤝‍🧑 Mentor de l'équipe",
+      "🛡️ Responsable de la qualité, des performances et de la sécurité du projet",
+      "🚀 Pilotage des choix stratégiques pour les aspects techniques."
+    ],
+    "ais_challenges": [
+      "🪛 Gestion d'une dette technique conséquente avec une version obsolète de React",
+      "🧩 Complexité du monolithe et désordre du code",
+      "⏳ Gestion simultanée de deux versions du projet",
+      "🏗️ Absence de processus de développement défini",
+      "📜 Absence de documentation technique ou fonctionnelle"
+    ],
+    "ais_results": [
+      "🔗 Création d'un monorepo dédié pour regrouper le frontend et le backend",
+      "🔍 Refonte complète du code et de l'architecture, côté frontend et backend",
+      "🤲 Mise en place de bonnes pratiques et revues de code",
+      "🧪 Intégration de tests d'intégration avec une couverture de 80% sur le nouveau code",
+      "📝 Élaboration de documents techniques, y compris des schémas UML et des procédures."
+    ],
+    "pis_description": "Une suite d'écrans personnalisable facilitant l'intégration de l'initiation de paiement Iban to Iban via les API Linxo Paiements. Cette suite d'écrans s'intègre en iframe sur les applications des clients de Linxo. Le flux utilisateur ainsi que l'aspect visuel sont entièrement personnalisables.",
+    "pis_roles": [
+      "🎯 Direction de l'équipe technique.",
+      "🏗️ Conception d'une architecture solide pour le projet.",
+      "🤝 Mentorat de l'équipe",
+      "📈 Gestion du projet pour garantir son succès.",
+      "🛡️ Responsabilité de la qualité, des performances et de la sécurité du projet."
+    ],
+    "pis_challenges": [
+      "🔨 Dette technique. Version de React obsolète",
+      "🧩 Monolithe complexe et code désorganisé.",
+      "⏳ Flux utilisateur complexe en raison de la customisation",
+      "🛠️ Absence de procédures de développement",
+      "📚 Absence de documentation technique ou fonctionnelle."
+    ],
+    "pis_results": [
+      "📦 Création d'un monorepo dédié regroupant frontend et backend.",
+      "🏢 Refonte majeure du code frontend",
+      "🤝 Mise en place de bonnes pratiques et de revues de code.",
+      "🧪 Ajout de tests d'intégration avec une couverture de 80% sur le nouveau code.",
+      "📄 Création de documents techniques (schémas UML, procédures, etc.)."
+    ],
+    "menus_description": "Projet personnel consistant en une application fullstack permettant de gérer des menus semaines par semaines, incluant la création des différents plats et leur organisation au fil des jours de la semaine.",
+    "menus_roles": [
+      "🏆 Responsable de tous les aspects du projet",
+      "🏗️ Analyse et conception de l'architecture",
+      "📊 Analyse et conception du modèle de données",
+      "🛠 Développement de l'application"
+    ],
+    "menus_challenges": [
+      "🌐 Choix des technologies adaptées",
+      "📚 Apprentissage des technologies en parallèle",
+      "🎨 Conception d'une UX lisible et acceptable",
+      "⏰ Développement sur mon temps libre"
+    ],
+    "menus_results": [
+      "🚀 Une application fullstack fonctionnelle",
+      "👁️ Une UX simple et lisible",
+      "🌐 Application déployée sur Heroku",
+      "💡 Très formateur pour moi"
+    ]
   }
 }

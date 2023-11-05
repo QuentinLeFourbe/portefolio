@@ -1,6 +1,6 @@
 import React, { ComponentProps } from "react";
 import { css, cx } from "../../../styled-system/css";
-import ExpandedCard from "./ExpandedCard";
+import ExpandedCard from "../organisms/ExpandedCard";
 import { Project } from "../../types/project";
 
 type CardProps = ComponentProps<typeof ExpandedCard> & {
@@ -47,7 +47,7 @@ const openedCard = css({
 });
 
 const closedCard = css({
-  height: "300px",
+  height: "200px",
   width: "250px",
   cursor: "pointer",
   position: "relative",
@@ -85,7 +85,7 @@ const logoSize = css({
   height: "100px",
   width: "100px",
   objectFit: "contain",
-  marginTop: "20%",
+  marginTop: "5%",
   opacity: "0.5",
   transition: "all 0.2s ease-in-out",
 });

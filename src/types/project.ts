@@ -19,7 +19,7 @@ export type Technologies = {
 
 export type Project = {
   title: string;
-  role?: string;
+  roles?: string;
   description?: string;
   challenges?: string;
   results?: string;
