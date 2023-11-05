@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import Fingerprint from "../../assets/icons/fingerprint.svg?react";
 import PaperAirplane from "../../assets/icons/paper-airplane.svg?react";
 import ServerStack from "../../assets/icons/server-stack.svg?react";
-import { SystemStyleObject } from "@pandacss/dev";
 
 function Navbar() {
   const location = useLocation();
@@ -64,7 +63,7 @@ const bubble = {
     color: "navbar.text",
     transition: "all 0.2s ease-in-out",
   },
-} as SystemStyleObject;
+};
 
 const activeBubble = css(bubble, {
   transform: "scale(1.2)",
