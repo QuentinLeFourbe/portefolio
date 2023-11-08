@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { RefObject, createRef, useState } from "react";
 import Card from "../components/atoms/Card";
-import { css } from "../../styled-system/css";
+import { css, cx } from "../../styled-system/css";
 import amcoeurLogo from "../assets/logos/amcoeur.jpeg";
 import linxoLogo from "../assets/logos/linxo.png";
 import { Project } from "../types/project";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-const projects: Project[] = [
+type ProjectElement = Project & {
+  nodeRef: RefObject<HTMLDivElement>;
+};
+
+const projects: ProjectElement[] = [
   {
     title: "Amcoeur",
     src: amcoeurLogo,
@@ -17,6 +22,7 @@ const projects: Project[] = [
       backend: ["Node.js", "TypeScript", "Express.js"],
       frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
     },
+    nodeRef: createRef<HTMLDivElement>(),
   },
 
   {
@@ -30,6 +36,7 @@ const projects: Project[] = [
       backend: ["Node.js", "JavaScript", "Express.js", "Redis"],
       frontend: ["React", "JavaScript", "Redux", "Webpack"],
     },
+    nodeRef: createRef<HTMLDivElement>(),
   },
   {
     title: "Linxo paiement initiation",
@@ -42,6 +49,7 @@ const projects: Project[] = [
       backend: ["Node.js", "JavaScript", "Express.js"],
       frontend: ["React", "JavaScript", "Redux", "Webpack"],
     },
+    nodeRef: createRef<HTMLDivElement>(),
   },
   {
     title: "Mes menus",
@@ -53,6 +61,7 @@ const projects: Project[] = [
       backend: ["Node.js", "TypeScript", "Express.js"],
       frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
     },
+    nodeRef: createRef<HTMLDivElement>(),
   },
 ];
 
@@ -60,22 +69,33 @@ function Projects() {
   const [openedProjectIndex, setOpenedProjectIndex] = useState<number | null>(
     null
   );
+  const [displayedProjectIndex, setDisplayedProjectsIndex] = useState<number[]>(
+    projects.map((_, index) => index)
+  );
 
   const closeCard = () => {
+    setDisplayedProjectsIndex(projects.map((_, index) => index));
     setOpenedProjectIndex(null);
   };
-  console.log(openedProjectIndex);
 
   const openCard = (index: number) => {
-    console.log("opening card");
+    setDisplayedProjectsIndex([index]);
     setOpenedProjectIndex(index);
   };
 
+  console.log("displayedProjectIndex", displayedProjectIndex);
+
   return (
-    <div className={container}>
-      {projects.map(
-        (project, index) =>
-          (openedProjectIndex === null || openedProjectIndex === index) && (
+    <div className={cx(container)}>
+      {projects.map((project, index) => (
+        <CSSTransition
+          classNames="card"
+          timeout={1000}
+          key={project.title}
+          nodeRef={project.nodeRef}
+          in={displayedProjectIndex.includes(index)}
+        >
+          <div ref={project.nodeRef}>
             <Card
               project={project}
               key={project.title}
@@ -83,8 +103,9 @@ function Projects() {
               onOpen={() => openCard(index)}
               onClose={() => closeCard()}
             />
-          )
-      )}
+          </div>
+        </CSSTransition>
+      ))}
     </div>
   );
 }
@@ -99,4 +120,26 @@ const container = css({
   height: "100%",
   width: "100%",
   gap: "64px",
+
+  "& .card-enter": {
+    opacity: "0",
+    transition: "opacity 300ms ease-in-out",
+  },
+  "& .card-enter-active": {
+    opacity: "1",
+    transition: "opacity 300ms ease-in-out",
+  },
+  "& .card-exit": {
+    opacity: "1",
+    transition: "opacity 300ms ease-in-out",
+  },
+  "& .card-exit-active": {
+    opacity: "0",
+    transition: "opacity 300ms ease-in-out",
+  },
+  "& .card-exit-done": {
+    opacity: "0",
+    transition: "opacity 300ms ease-in-out",
+    pointerEvents: "none",
+  },
 });

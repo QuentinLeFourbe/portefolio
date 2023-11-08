@@ -1,11 +1,11 @@
-import { css } from "../../styled-system/css";
+import { css, cx } from "../../styled-system/css";
 import { useTranslation } from "react-i18next";
 
 function Profile() {
   const { t } = useTranslation("profile");
 
   return (
-    <div className={containerStyle}>
+    <div className={cx(containerStyle)}>
       <h1 className={titleStyle}>{t("greet")}</h1>
       <p className={textStyle}>{t("presentation")}</p>
     </div>

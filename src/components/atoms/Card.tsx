@@ -1,4 +1,4 @@
-import { ComponentProps } from "react";
+import { ComponentProps, forwardRef } from "react";
 import { css, cx } from "../../../styled-system/css";
 import ExpandedCard from "../organisms/ExpandedCard";
 import { Project } from "../../types/project";
@@ -10,31 +10,34 @@ type CardProps = ComponentProps<typeof ExpandedCard> & {
   onClose: () => void;
 };
 
-function Card({ project, isOpen, onOpen, onClose }: CardProps) {
-  const { title, src } = project;
-  return (
-    <div
-      className={cx("card", mainCard, isOpen ? openedCard : closedCard)}
-      onClick={() => !isOpen && onOpen()}
-      role={isOpen ? "" : "button"}
-      tabIndex={isOpen ? -1 : 0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          onOpen();
-        }
-      }}
-    >
-      {isOpen && <ExpandedCard project={project} onClose={onClose} />}
-      {!isOpen && <div className={cx(borderCard, "borderCard")} />}
-      {!isOpen && src && <img src={src} alt={""} className={logoSize} />}
-      {!isOpen && (
-        <div className={cx(overCard, "overCard")}>
-          <h2 className={titleStyle}>{title}</h2>
-        </div>
-      )}
-    </div>
-  );
-}
+const Card = forwardRef<HTMLDivElement, CardProps>(
+  ({ project, isOpen, onOpen, onClose }: CardProps, ref) => {
+    const { title, src } = project;
+    return (
+      <div
+        ref={ref}
+        className={cx("card", mainCard, isOpen ? openedCard : closedCard)}
+        onClick={() => !isOpen && onOpen()}
+        role={isOpen ? "" : "button"}
+        tabIndex={isOpen ? -1 : 0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            onOpen();
+          }
+        }}
+      >
+        {isOpen && <ExpandedCard project={project} onClose={onClose} />}
+        {!isOpen && <div className={cx(borderCard, "borderCard")} />}
+        {!isOpen && src && <img src={src} alt={""} className={logoSize} />}
+        {!isOpen && (
+          <div className={cx(overCard, "overCard")}>
+            <h2 className={titleStyle}>{title}</h2>
+          </div>
+        )}
+      </div>
+    );
+  }
+);
 
 export default Card;
 
@@ -47,7 +50,7 @@ const openedCard = css({
 });
 
 const closedCard = css({
-  height: "200px",
+  height: "250px",
   width: "250px",
   cursor: "pointer",
   position: "relative",

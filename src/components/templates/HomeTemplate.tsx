@@ -1,13 +1,19 @@
 import { ComponentProps, useEffect, useState } from "react";
-import { css } from "../../../styled-system/css";
+import { css, cx } from "../../../styled-system/css";
 import Navbar from "../organisms/Navbar";
 import MainContainer from "../organisms/MainContainer";
-import { Outlet } from "react-router-dom";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { useOutlet, useLocation } from "react-router-dom";
+import { porteFolioRoutes } from "../../routes";
 
 type HomeTemplateProps = ComponentProps<"div">;
 
 function HomeTemplate({ ...props }: HomeTemplateProps) {
   const [colorScheme, setColorScheme] = useState("light"); // Par défaut, le mode clair
+  const location = useLocation();
+  const currentOutlet = useOutlet();
+  const { nodeRef } =
+    porteFolioRoutes.find((route) => route.path === location.pathname) || {};
 
   // const switchMode = () => {
   //   if (colorScheme === "light") {
@@ -16,7 +22,6 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
   //     setColorScheme("light");
   //   }
   // };
-
   console.log(colorScheme);
 
   useEffect(() => {
@@ -47,9 +52,18 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
   return (
     <div {...props} className={backgroundStyle}>
       <Navbar />
-      <MainContainer>
-        <Outlet />
-      </MainContainer>
+      <SwitchTransition>
+        <CSSTransition
+          timeout={200}
+          key={location.pathname}
+          nodeRef={nodeRef}
+          in={true}
+          appear
+          classNames={"pages"}
+        >
+          <MainContainer ref={nodeRef}>{currentOutlet}</MainContainer>
+        </CSSTransition>
+      </SwitchTransition>
     </div>
   );
 }
@@ -94,5 +108,25 @@ const backgroundStyle = css({
     height: "100%",
     backgroundColor: "background.primary",
     opacity: 0.7,
+  },
+
+  "& .pages-enter": {
+    opacity: 0,
+  },
+  "& .pages-enter-active": {
+    opacity: 1,
+  },
+  "& .pages-exit": {
+    opacity: 1,
+  },
+  "& .pages-exit-active": {
+    opacity: 0,
+  },
+
+  "& .pages-appear": {
+    opacity: 0,
+  },
+  "& .pages-appear-active": {
+    opacity: 1,
   },
 });
