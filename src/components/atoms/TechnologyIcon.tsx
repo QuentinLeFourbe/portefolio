@@ -77,8 +77,8 @@ function TechnologyIcon({ technology }: TechnologyIconProps) {
         key={isRevealed ? "text" : "icon"}
         nodeRef={nodeRef}
         classNames={{
-          enter: "enter " + enterStyle,
-          enterActive: "enteractive " + enterActiveStyle,
+          enter: enterStyle,
+          enterActive: enterActiveStyle,
           exit: exitStyle,
           exitActive: exitActiveStyle,
         }}
