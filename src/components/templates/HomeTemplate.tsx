@@ -1,5 +1,5 @@
 import { ComponentProps, useEffect, useState } from "react";
-import { css, cx } from "../../../styled-system/css";
+import { css } from "../../../styled-system/css";
 import Navbar from "../organisms/Navbar";
 import MainContainer from "../organisms/MainContainer";
 import { CSSTransition, SwitchTransition } from "react-transition-group";

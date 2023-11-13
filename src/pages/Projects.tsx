@@ -1,5 +1,4 @@
-import { RefObject, createRef, useRef, useState } from "react";
-import Card from "../components/atoms/Card";
+import { useRef, useState } from "react";
 import { css, cx } from "../../styled-system/css";
 import amcoeurLogo from "../assets/logos/amcoeur.jpeg";
 import linxoLogo from "../assets/logos/linxo.png";
@@ -60,9 +59,6 @@ const projects: Project[] = [
 ];
 
 function Projects() {
-  const [openedProjectIndex, setOpenedProjectIndex] = useState<number | null>(
-    null
-  );
   const [openedProject, setOpenedProject] = useState<Project | null>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const openedProjectRef = useRef<HTMLDivElement>(null);
@@ -70,7 +66,6 @@ function Projects() {
 
   const closeCard = () => {
     setOpenedProject(null);
-    setOpenedProjectIndex(null);
   };
 
   const openCard = (project: Project) => {
