@@ -1,16 +1,14 @@
-import { RefObject, createRef, useState } from "react";
+import { RefObject, createRef, useRef, useState } from "react";
 import Card from "../components/atoms/Card";
 import { css, cx } from "../../styled-system/css";
 import amcoeurLogo from "../assets/logos/amcoeur.jpeg";
 import linxoLogo from "../assets/logos/linxo.png";
 import { Project } from "../types/project";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+import ExpandedCard from "../components/organisms/ExpandedCard";
+import CardsList from "../components/molecules/CardsList";
 
-type ProjectElement = Project & {
-  nodeRef: RefObject<HTMLDivElement>;
-};
-
-const projects: ProjectElement[] = [
+const projects: Project[] = [
   {
     title: "Amcoeur",
     src: amcoeurLogo,
@@ -22,7 +20,6 @@ const projects: ProjectElement[] = [
       backend: ["Node.js", "TypeScript", "Express.js"],
       frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
     },
-    nodeRef: createRef<HTMLDivElement>(),
   },
 
   {
@@ -36,7 +33,6 @@ const projects: ProjectElement[] = [
       backend: ["Node.js", "JavaScript", "Express.js", "Redis"],
       frontend: ["React", "JavaScript", "Redux", "Webpack"],
     },
-    nodeRef: createRef<HTMLDivElement>(),
   },
   {
     title: "Linxo paiement initiation",
@@ -49,7 +45,6 @@ const projects: ProjectElement[] = [
       backend: ["Node.js", "JavaScript", "Express.js"],
       frontend: ["React", "JavaScript", "Redux", "Webpack"],
     },
-    nodeRef: createRef<HTMLDivElement>(),
   },
   {
     title: "Mes menus",
@@ -61,7 +56,6 @@ const projects: ProjectElement[] = [
       backend: ["Node.js", "TypeScript", "Express.js"],
       frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
     },
-    nodeRef: createRef<HTMLDivElement>(),
   },
 ];
 
@@ -69,43 +63,40 @@ function Projects() {
   const [openedProjectIndex, setOpenedProjectIndex] = useState<number | null>(
     null
   );
-  const [displayedProjectIndex, setDisplayedProjectsIndex] = useState<number[]>(
-    projects.map((_, index) => index)
-  );
+  const [openedProject, setOpenedProject] = useState<Project | null>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const openedProjectRef = useRef<HTMLDivElement>(null);
+  const nodeRef = openedProject ? openedProjectRef : projectsRef;
 
   const closeCard = () => {
-    setDisplayedProjectsIndex(projects.map((_, index) => index));
+    setOpenedProject(null);
     setOpenedProjectIndex(null);
   };
 
-  const openCard = (index: number) => {
-    setDisplayedProjectsIndex([index]);
-    setOpenedProjectIndex(index);
+  const openCard = (project: Project) => {
+    setOpenedProject(project);
   };
-
-  console.log("displayedProjectIndex", displayedProjectIndex);
 
   return (
     <div className={cx(container)}>
-      {projects.map((project, index) => (
+      <SwitchTransition>
         <CSSTransition
           classNames="card"
-          timeout={1000}
-          key={project.title}
-          nodeRef={project.nodeRef}
-          in={displayedProjectIndex.includes(index)}
+          timeout={200}
+          key={openedProject ? "openProject" : "projects"}
+          nodeRef={nodeRef}
         >
-          <div ref={project.nodeRef}>
-            <Card
-              project={project}
-              key={project.title}
-              isOpen={openedProjectIndex === index}
-              onOpen={() => openCard(index)}
+          {openedProject ? (
+            <ExpandedCard
+              project={openedProject}
               onClose={() => closeCard()}
+              ref={nodeRef}
             />
-          </div>
+          ) : (
+            <CardsList projects={projects} onClick={openCard} ref={nodeRef} />
+          )}
         </CSSTransition>
-      ))}
+      </SwitchTransition>
     </div>
   );
 }
@@ -117,9 +108,6 @@ const container = css({
   flexFlow: "row wrap",
   alignItems: "center",
   justifyContent: "center",
-  height: "100%",
-  width: "100%",
-  gap: "64px",
 
   "& .card-enter": {
     opacity: "0",
@@ -130,7 +118,7 @@ const container = css({
     transition: "opacity 300ms ease-in-out",
   },
   "& .card-exit": {
-    opacity: "1",
+    opacity: "0",
     transition: "opacity 300ms ease-in-out",
   },
   "& .card-exit-active": {

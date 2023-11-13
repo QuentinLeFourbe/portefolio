@@ -18,7 +18,7 @@ const MainContainer = forwardRef<HTMLDivElement, MainContainerProps>(
 export default MainContainer;
 
 const backgroundStyle = css({
-  margin: "10vh 5vw 10vh 0",
-  flexGrow: 1,
+  padding: "10vh 0 10vh 200px",
+  width: "90vw",
   transition: "all 0.2s ease-in-out",
 });

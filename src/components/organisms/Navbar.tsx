@@ -102,13 +102,15 @@ const inactiveBubble = css(bubble, {
 });
 
 const container = css({
+  position: "fixed",
+  top: "50%",
+  transform: "translate(0, -50%)",
   display: "flex",
   flexFlow: "column nowrap",
   alignItems: "center",
   justifyContent: "center",
-  minHeight: "500px",
+  height: "100vh",
   width: "200px",
-  margin: "5vh 0",
 
   "& .line": {
     flexGrow: 1,

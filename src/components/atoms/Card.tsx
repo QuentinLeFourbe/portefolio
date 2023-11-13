@@ -1,53 +1,39 @@
-import { ComponentProps, forwardRef } from "react";
+import { forwardRef } from "react";
 import { css, cx } from "../../../styled-system/css";
-import ExpandedCard from "../organisms/ExpandedCard";
-import { Project } from "../../types/project";
 
-type CardProps = ComponentProps<typeof ExpandedCard> & {
-  project: Project;
-  isOpen?: boolean;
-  onOpen: () => void;
-  onClose: () => void;
+type CardProps = {
+  logoSrc?: string;
+  children?: string;
+  onClick: () => void;
 };
 
 const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ project, isOpen, onOpen, onClose }: CardProps, ref) => {
-    const { title, src } = project;
+  ({ logoSrc, children, onClick }: CardProps, ref) => {
     return (
       <div
         ref={ref}
-        className={cx("card", mainCard, isOpen ? openedCard : closedCard)}
-        onClick={() => !isOpen && onOpen()}
-        role={isOpen ? "" : "button"}
-        tabIndex={isOpen ? -1 : 0}
+        className={cx("card", mainCard, closedCard)}
+        onClick={() => onClick()}
+        role={"button"}
+        tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
-            onOpen();
+            onClick();
           }
         }}
       >
-        {isOpen && <ExpandedCard project={project} onClose={onClose} />}
-        {!isOpen && <div className={cx(borderCard, "borderCard")} />}
-        {!isOpen && src && <img src={src} alt={""} className={logoSize} />}
-        {!isOpen && (
-          <div className={cx(overCard, "overCard")}>
-            <h2 className={titleStyle}>{title}</h2>
-          </div>
-        )}
+        <div className={cx(borderCard, "borderCard")} />
+        {logoSrc && <img src={logoSrc} alt={""} className={logoSize} />}
+
+        <div className={cx(overCard, "overCard")}>
+          <h2 className={titleStyle}>{children}</h2>
+        </div>
       </div>
     );
   }
 );
 
 export default Card;
-
-const openedCard = css({
-  height: "80vh",
-  width: "100%",
-  color: "greyGold.700",
-  padding: "2rem",
-  position: "relative",
-});
 
 const closedCard = css({
   height: "250px",

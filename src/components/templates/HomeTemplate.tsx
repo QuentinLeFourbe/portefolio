@@ -76,6 +76,7 @@ const backgroundStyle = css({
   minHeight: "100vh",
   backgroundColor: "transparent",
   display: "flex",
+  alignItems: "center",
 
   fontFamily: "body",
 
