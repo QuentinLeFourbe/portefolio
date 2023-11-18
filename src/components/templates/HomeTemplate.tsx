@@ -1,28 +1,28 @@
 import { ComponentProps, useEffect, useState } from "react";
-import { css } from "../../../styled-system/css";
+import { css, cx } from "../../../styled-system/css";
 import Navbar from "../organisms/Navbar";
 import MainContainer from "../organisms/MainContainer";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useOutlet, useLocation } from "react-router-dom";
 import { porteFolioRoutes } from "../../routes";
+import DarkModeButton from "../atoms/DarkModeButton";
 
 type HomeTemplateProps = ComponentProps<"div">;
 
 function HomeTemplate({ ...props }: HomeTemplateProps) {
-  const [colorScheme, setColorScheme] = useState("light"); // Par défaut, le mode clair
+  const [colorScheme, setColorScheme] = useState<"light" | "dark">("light"); // Par défaut, le mode clair
   const location = useLocation();
   const currentOutlet = useOutlet();
   const { nodeRef } =
     porteFolioRoutes.find((route) => route.path === location.pathname) || {};
 
-  // const switchMode = () => {
-  //   if (colorScheme === "light") {
-  //     setColorScheme("dark");
-  //   } else {
-  //     setColorScheme("light");
-  //   }
-  // };
-  console.log(colorScheme);
+  const switchMode = () => {
+    if (colorScheme === "light") {
+      setColorScheme("dark");
+    } else {
+      setColorScheme("light");
+    }
+  };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -50,7 +50,19 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
   }, []);
 
   return (
-    <div {...props} className={backgroundStyle}>
+    <div
+      {...props}
+      className={cx(
+        backgroundStyle,
+        colorScheme === "dark" ? darkPattern : lightPattern
+      )}
+      data-color-mode={colorScheme}
+    >
+      <DarkModeButton
+        mode={colorScheme}
+        onClick={switchMode}
+        className={darkModeButtonStyle}
+      />
       <Navbar />
       <SwitchTransition>
         <CSSTransition
@@ -77,27 +89,7 @@ const backgroundStyle = css({
   backgroundColor: "transparent",
   display: "flex",
   alignItems: "center",
-
   fontFamily: "body",
-
-  "&:before": {
-    zIndex: -1,
-    content: "''",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    // backgroundColor: "#e9d9d9",
-    backgroundImage: "url(hideout.svg)",
-    backgroundRepeat: "repeat",
-    backgroundSize: "200px 200px",
-    filter:
-      // "invert(93%) sepia(5%) saturate(6880%) hue-rotate(304deg) brightness(132%) contrast(104%)",
-      "  invert(92%) sepia(5%) saturate(3076%) hue-rotate(347deg) brightness(92%) contrast(106%)",
-    // "invert(100%) sepia(2%) saturate(0%) hue-rotate(328deg) brightness(114%) contrast(92%)",
-    opacity: 0.2,
-  },
 
   "&:after": {
     zIndex: -2,
@@ -108,7 +100,7 @@ const backgroundStyle = css({
     width: "100%",
     height: "100%",
     backgroundColor: "background.primary",
-    opacity: 0.7,
+    // opacity: 0.7,
   },
 
   "& .pages-enter": {
@@ -130,4 +122,51 @@ const backgroundStyle = css({
   "& .pages-appear-active": {
     opacity: 1,
   },
+});
+
+const darkPattern = css({
+  "&:before": {
+    zIndex: -1,
+    content: "''",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    // backgroundColor: "#e9d9d9",
+    backgroundImage: "url(hideout.svg)",
+    backgroundRepeat: "repeat",
+    backgroundSize: "200px 200px",
+    filter:
+      "   invert(76%) sepia(58%) saturate(3002%) hue-rotate(2deg) brightness(108%) contrast(105%)",
+    opacity: 0.05,
+  },
+});
+
+const lightPattern = css({
+  "&:before": {
+    zIndex: -1,
+    content: "''",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    // backgroundColor: "#e9d9d9",
+    backgroundImage: "url(hideout.svg)",
+    backgroundRepeat: "repeat",
+    backgroundSize: "200px 200px",
+    filter:
+      // "invert(93%) sepia(5%) saturate(6880%) hue-rotate(304deg) brightness(132%) contrast(104%)",
+      "  invert(92%) sepia(5%) saturate(3076%) hue-rotate(347deg) brightness(92%) contrast(106%)",
+    // "invert(100%) sepia(2%) saturate(0%) hue-rotate(328deg) brightness(114%) contrast(92%)",
+    opacity: 0.2,
+  },
+});
+
+const darkModeButtonStyle = css({
+  position: "fixed",
+  top: "32px",
+  right: "32px",
+  zIndex: "100",
 });

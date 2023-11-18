@@ -19,6 +19,6 @@ export default MainContainer;
 
 const backgroundStyle = css({
   padding: "10vh 0 10vh 200px",
-  width: "90vw",
   transition: "all 0.2s ease-in-out",
+  flexGrow: 1,
 });

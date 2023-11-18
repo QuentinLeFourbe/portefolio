@@ -69,9 +69,15 @@ const baseBorderBox = {
   transition: "all 0.3s ease-in-out",
 };
 
-const firstBorderBoxBase = { borderColor: "greyGold.600", zIndex: -1 };
+const firstBorderBoxBase = {
+  borderColor: "contact.borders.primary",
+  zIndex: -1,
+};
 
-const secondBorderBoxBase = { borderColor: "greyGold.400", zIndex: -1 };
+const secondBorderBoxBase = {
+  borderColor: "contact.borders.secondary",
+  zIndex: -1,
+};
 
 const firstBorderBox = css(baseBorderBox, firstBorderBoxBase, {
   top: "-35%",

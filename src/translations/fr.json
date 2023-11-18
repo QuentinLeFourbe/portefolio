@@ -1,7 +1,8 @@
 {
   "profile": {
     "greet": "Bonjour",
-    "presentation": "Je m'appelle Quentin GARCIA, je suis un développeur full-stack passionné par les technologies, expert en React, Node.js et TypeScript. Avec une expérience chez Linxo en tant que développeur web avant de devenir tech lead, je m'efforce constamment de rester à la pointe des bonnes pratiques et des dernières nouveautés. Mon engagement envers le code propre et robuste est au cœur de mon travail."
+    "presentation1": "Je suis Quentin Garcia, un développeur full-stack passionné par les technologies, avec une expertise particulière en React, Node.js et TypeScript. Mon expérience professionnelle, enrichie par des projets variés, m'a permis de perfectionner mes compétences et de rester constamment à la pointe des dernières avancées. Mon engagement envers la qualité du code et la robustesse des solutions est au cœur de ma démarche professionnelle.",
+    "presentation2": "En parallèle de mon engagement professionnel, je pratique assidûment la force athlétique. Mon entraînement intense reflète ma détermination à atteindre des objectifs, constituant un moyen de dépassement aussi bien physique que mental."
   },
   "projects": {
     "backend": "Backend",

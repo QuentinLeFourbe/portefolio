@@ -44,7 +44,6 @@ const bubble = {
   alignItems: "center",
   justifyContent: "center",
   padding: "10px",
-  backgroundColor: "navbar.background",
   borderWidth: "1px",
   borderStyle: "solid",
   borderColor: "navbar.border",
@@ -60,7 +59,6 @@ const bubble = {
   "& svg": {
     height: "32px",
     width: "32px",
-    color: "navbar.text",
     transition: "all 0.2s ease-in-out",
   },
 };
@@ -68,35 +66,37 @@ const bubble = {
 const activeBubble = css(bubble, {
   transform: "scale(1.2)",
   opacity: 1,
-  backgroundColor: "navbar.text",
+  backgroundColor: "navbar.background.active",
 
   "& svg": {
     height: "40px",
     width: "40px",
-    color: "greyGold.50",
+    color: "navbar.text.active",
   },
 });
 
 const inactiveBubble = css(bubble, {
   opacity: 0.5,
+  backgroundColor: "navbar.background.inactive",
+  color: "navbar.text.inactive",
 
   "&:hover": {
     transform: "scale(1.2)",
-    backgroundColor: "navbar.text",
+    backgroundColor: "navbar.background.active",
     "& svg": {
       height: "40px",
       width: "40px",
-      color: "greyGold.50",
+      color: "navbar.text.active",
     },
   },
 
   "&:focus": {
     transform: "scale(1.2)",
-    backgroundColor: "navbar.text",
+    backgroundColor: "navbar.background.active",
     "& svg": {
       height: "40px",
       width: "40px",
-      color: "greyGold.50",
+      color: "navbar.text.active",
     },
   },
 });

@@ -7,7 +7,8 @@ function Profile() {
   return (
     <div className={cx(containerStyle)}>
       <h1 className={titleStyle}>{t("greet")}</h1>
-      <p className={textStyle}>{t("presentation")}</p>
+      <p className={textStyle}>{t("presentation1")}</p>
+      <p className={textStyle}>{t("presentation2")}</p>
     </div>
   );
 }

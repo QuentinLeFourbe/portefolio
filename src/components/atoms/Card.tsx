@@ -75,7 +75,6 @@ const logoSize = css({
   width: "100px",
   objectFit: "contain",
   marginTop: "5%",
-  opacity: "0.5",
   transition: "all 0.2s ease-in-out",
 });
 

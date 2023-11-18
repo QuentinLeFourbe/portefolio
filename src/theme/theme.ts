@@ -17,6 +17,19 @@ export const theme = {
         lightGrey: { value: "#F5F5F5" },
         brokenWhite: { value: "#FAF3E0" },
         whiteGold: { value: "#f2eee4" },
+        grey: {
+          50: { value: "#f8f8f1" }, // Or très clair
+          100: { value: "#e8e7d9" },
+          200: { value: "#d7d6c2" },
+          300: { value: "#c7c6ac" },
+          400: { value: "#b7b69b" },
+          500: { value: "#a6a589" },
+          600: { value: "#92917a" },
+          700: { value: "#7e7d6b" },
+          800: { value: "#6a695d" },
+          900: { value: "#55544d" },
+          950: { value: "#403f3e" },
+        },
         greyGold: {
           50: { value: "#fbf7f2" },
           100: { value: "#f6f1e6" },
@@ -30,6 +43,19 @@ export const theme = {
           900: { value: "#59502e" },
           950: { value: "#403921" },
         },
+        teal: {
+          50: { value: "#f2f9f9" },
+          100: { value: "#e6f4f4" },
+          200: { value: "#c9e6e6" },
+          300: { value: "#acd8d8" },
+          400: { value: "#8fcaca" },
+          500: { value: "#75b8b8" },
+          600: { value: "#669e9e" },
+          700: { value: "#518585" },
+          800: { value: "#3e6f6f" },
+          900: { value: "#2e5959" },
+          950: { value: "#214040" },
+        },
       },
       fonts: {
         body: { value: "var(--font-roboto), sans-serif" },
@@ -40,56 +66,78 @@ export const theme = {
     semanticTokens: {
       colors: {
         text: {
+          title: {
+            value: {
+              base: "{colors.teal.800}",
+              _dark: "{colors.greyGold.400}",
+            },
+          },
+          subtitle: {
+            value: {
+              base: "{colors.greyGold.800}",
+              _dark: "{colors.greyGold.400}",
+            },
+          },
           primary: {
             value: {
               base: "{colors.greyGold.800}",
-              _dark: "{colors.darkGold}",
+              _dark: "{colors.greyGold.100}",
             },
           },
-          title: {
+          secondary: {
             value: {
-              base: "{colors.titleBackground}",
-              _dark: "{colors.lightGold}",
+              base: "{colors.teal.800}",
+              _dark: "{colors.grey.200}",
             },
           },
         },
         background: {
           primary: {
             value: {
-              base: "{colors.greyGold.200}",
-              _dark: "{colors.brokenWhite}",
-            },
-          },
-          secondary: {
-            value: {
-              base: "{colors.lightGrey}",
-              _dark: "{colors.lightGrey}",
+              base: "{colors.greyGold.100}",
+              _dark: "{colors.grey.950}",
             },
           },
         },
         navbar: {
           text: {
-            value: {
-              base: "{colors.teal.800}",
-              _dark: "{colors.lightGold}",
+            active: {
+              value: {
+                base: "{colors.greyGold.50}",
+                _dark: "{colors.greyGold.50}",
+              },
+            },
+            inactive: {
+              value: {
+                base: "{colors.teal.800}",
+                _dark: "{colors.grey.900}",
+              },
             },
           },
           background: {
-            value: {
-              base: "{colors.greyGold.200}",
-              _dark: "{colors.mediumGold}",
+            inactive: {
+              value: {
+                base: "{colors.greyGold.200}",
+                _dark: "{colors.greyGold.600}",
+              },
+            },
+            active: {
+              value: {
+                base: "{colors.teal.800}",
+                _dark: "{colors.grey.900}",
+              },
             },
           },
           border: {
             value: {
-              base: "{colors.greyGold.400}",
-              _dark: "{colors.mediumGold}",
+              base: "{colors.teal.800}",
+              _dark: "{colors.greyGold.600}",
             },
           },
           dot: {
             value: {
               base: "{colors.teal.600}",
-              _dark: "{colors.darkGold}",
+              _dark: "{colors.teal.800}",
             },
           },
         },
@@ -98,32 +146,175 @@ export const theme = {
             primary: {
               value: {
                 base: "{colors.greyGold.200}",
-                _dark: "{colors.brokenWhite}",
+                _dark: "{colors.grey.900}",
               },
             },
             secondary: {
               value: {
                 base: "{colors.greyGold.700}",
-                _dark: "{colors.lightGold}",
+                _dark: "{colors.greyGold.400}",
               },
             },
           },
           border: {
             value: {
               base: "{colors.teal.600}",
-              _dark: "{colors.darkGold}",
+              _dark: "{colors.teal.900}",
             },
           },
           text: {
             value: {
               base: "{colors.greyGold.200}",
-              _dark: "{colors.darkGold}",
+              _dark: "{colors.greyGold.900}",
+            },
+          },
+        },
+        expandedCard: {
+          closeButton: {
+            base: {
+              value: {
+                base: "{colors.greyGold.600}",
+                _dark: "{colors.greyGold.100}",
+              },
+            },
+            hover: {
+              value: {
+                base: "{colors.grey.300}",
+                _dark: "{colors.teal.800}",
+              },
+            },
+          },
+          background: {
+            value: {
+              base: "{colors.greyGold.200}",
+              _dark: "{colors.grey.900}",
+            },
+          },
+        },
+        buttons: {
+          primary: {
+            background: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.400}",
+                  _dark: "{colors.greyGold.300}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.600}",
+                  _dark: "{colors.greyGold.500}",
+                },
+              },
+            },
+            text: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.50}",
+                  _dark: "{colors.greyGold.800}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.100}",
+                  _dark: "{colors.greyGold.900}",
+                },
+              },
+            },
+          },
+          secondary: {
+            background: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.300}",
+                  _dark: "{colors.grey.600}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.600}",
+                  _dark: "{colors.greyGold.200}",
+                },
+              },
+            },
+            text: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.900}",
+                  _dark: "{colors.greyGold.200}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.100}",
+                  _dark: "{colors.grey.800}",
+                },
+              },
+            },
+          },
+          tertiary: {
+            background: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.200}",
+                  _dark: "{colors.grey.800}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.600}",
+                  _dark: "{colors.greyGold.200}",
+                },
+              },
+            },
+            text: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.900}",
+                  _dark: "{colors.greyGold.200}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.50}",
+                  _dark: "{colors.greyGold.900}",
+                },
+              },
+            },
+            border: {
+              base: {
+                value: {
+                  base: "{colors.greyGold.300}",
+                  _dark: "{colors.greyGold.200}",
+                },
+              },
+              hover: {
+                value: {
+                  base: "{colors.greyGold.800}",
+                  _dark: "{colors.grey.800}",
+                },
+              },
+            },
+          },
+        },
+        contact: {
+          borders: {
+            primary: {
+              value: {
+                base: "{colors.greyGold.600}",
+                _dark: "{colors.teal.700}",
+              },
+            },
+            secondary: {
+              value: {
+                base: "{colors.greyGold.400}",
+                _dark: "{colors.greyGold.600}",
+              },
             },
           },
         },
       },
     },
-
     keyframes: {},
   },
 };

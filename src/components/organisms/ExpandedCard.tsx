@@ -109,21 +109,31 @@ const ExpandedCard = forwardRef<HTMLDivElement, ExpandedCardProps>(
 export default ExpandedCard;
 
 const descriptionStyle = css({
-  maxWidth: "700px",
+  maxWidth: "800px",
   textAlign: "justify",
-  color: "greyGold.900",
+  color: "text.secondary",
   fontSize: "1.2rem",
-  marginTop: "-32px",
 });
 
 const globalContainer = css({
   position: "relative",
-  color: "greyGold.700",
-  backgroundColor: "#e8e1ca58",
+  color: "text.primary",
   display: "flex",
-  flexFlow: "column nowrap",
+  flexFlow: "column wrap",
   gap: "16px",
   padding: "32px",
+
+  "&:before": {
+    content: "''",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "expandedCard.background",
+    opacity: 0.3,
+    zIndex: -1,
+  },
 });
 
 const detailsContainer = css({
@@ -142,7 +152,7 @@ const detailsSection = css({
   "& h3": {
     fontSize: "1.5rem",
     fontWeight: "600",
-    color: "greyGold.900",
+    color: "text.subtitle",
   },
   "& ul": {},
 
@@ -166,8 +176,8 @@ const titleContainer = css({
   },
 
   "& img": {
-    width: "100px",
-    height: "100px",
+    width: "75px",
+    height: "75px",
     objectFit: "contain",
   },
 });
@@ -178,10 +188,10 @@ const closingButton = css({
   width: "75px",
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
-  color: "greyGold.500",
+  color: "expandedCard.closeButton.base",
 
   "&:hover": {
-    color: "greyGold.50",
+    color: "expandedCard.closeButton.hover",
   },
 
   "& svg": {

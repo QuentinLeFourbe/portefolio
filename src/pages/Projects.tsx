@@ -52,8 +52,8 @@ const projects: Project[] = [
     challenges: "menus_challenges",
     results: "menus_results",
     technologies: {
-      backend: ["Node.js", "TypeScript", "Express.js"],
-      frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
+      frontend: ["React", "JavaScript", "Webpack"],
+      backend: ["Node.js", "JavaScript", "Express.js", "MongoDB"],
     },
   },
 ];
@@ -100,9 +100,8 @@ export default Projects;
 
 const container = css({
   display: "flex",
-  flexFlow: "row wrap",
-  alignItems: "center",
   justifyContent: "center",
+  padding: "1rem",
 
   "& .card-enter": {
     opacity: "0",

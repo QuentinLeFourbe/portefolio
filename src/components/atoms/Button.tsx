@@ -38,29 +38,31 @@ const buttonPrimarySize = {
 };
 
 const primaryStyle = css(buttonPrimarySize, {
-  backgroundColor: "greyGold.400",
-  color: "cream",
+  backgroundColor: "buttons.primary.background.base",
+  color: "buttons.primary.text.base",
   fontWeight: "bold",
   padding: "1rem 4rem",
   "&:hover": {
-    backgroundColor: "greyGold.600",
+    backgroundColor: "buttons.primary.background.hover",
+    color: "buttons.primary.text.hover",
   },
 });
 
 const secondaryStyle = css(buttonPrimarySize, {
-  backgroundColor: "greyGold.300",
-  color: "greyGold.900",
+  backgroundColor: "buttons.secondary.background.base",
+  color: "buttons.secondary.text.base",
   fontWeight: "bold",
   padding: "16px 16px",
   "&:hover": {
-    backgroundColor: "greyGold.600",
+    backgroundColor: "buttons.secondary.background.hover",
+    color: "buttons.secondary.text.hover",
   },
 });
 
 const roundedStyle = css({
-  backgroundColor: "greyGold.200",
-  color: "greyGold.900",
-  borderColor: "greyGold.300",
+  backgroundColor: "buttons.tertiary.background.base",
+  color: "buttons.tertiary.text.base",
+  borderColor: "buttons.tertiary.border.base",
   borderWidth: "1px",
   borderStyle: "solid",
   borderRadius: "full",
@@ -71,9 +73,9 @@ const roundedStyle = css({
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
   "&:hover": {
-    backgroundColor: "greyGold.600",
-    borderColor: "greyGold.800",
-    color: "cream",
+    backgroundColor: "buttons.tertiary.background.hover",
+    borderColor: "buttons.tertiary.border.hover",
+    color: "buttons.tertiary.text.hover",
     transform: "scale(1.2)",
   },
 });
