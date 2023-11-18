@@ -1067,50 +1067,6 @@ const tokens = {
     "value": "#083344",
     "variable": "var(--colors-cyan-950)"
   },
-  "colors.teal.50": {
-    "value": "#f0fdfa",
-    "variable": "var(--colors-teal-50)"
-  },
-  "colors.teal.100": {
-    "value": "#ccfbf1",
-    "variable": "var(--colors-teal-100)"
-  },
-  "colors.teal.200": {
-    "value": "#99f6e4",
-    "variable": "var(--colors-teal-200)"
-  },
-  "colors.teal.300": {
-    "value": "#5eead4",
-    "variable": "var(--colors-teal-300)"
-  },
-  "colors.teal.400": {
-    "value": "#2dd4bf",
-    "variable": "var(--colors-teal-400)"
-  },
-  "colors.teal.500": {
-    "value": "#14b8a6",
-    "variable": "var(--colors-teal-500)"
-  },
-  "colors.teal.600": {
-    "value": "#0d9488",
-    "variable": "var(--colors-teal-600)"
-  },
-  "colors.teal.700": {
-    "value": "#0f766e",
-    "variable": "var(--colors-teal-700)"
-  },
-  "colors.teal.800": {
-    "value": "#115e59",
-    "variable": "var(--colors-teal-800)"
-  },
-  "colors.teal.900": {
-    "value": "#134e4a",
-    "variable": "var(--colors-teal-900)"
-  },
-  "colors.teal.950": {
-    "value": "#042f2e",
-    "variable": "var(--colors-teal-950)"
-  },
   "colors.emerald.50": {
     "value": "#ecfdf5",
     "variable": "var(--colors-emerald-50)"
@@ -1695,6 +1651,50 @@ const tokens = {
     "value": "#f2eee4",
     "variable": "var(--colors-white-gold)"
   },
+  "colors.grey.50": {
+    "value": "#f8f8f1",
+    "variable": "var(--colors-grey-50)"
+  },
+  "colors.grey.100": {
+    "value": "#e8e7d9",
+    "variable": "var(--colors-grey-100)"
+  },
+  "colors.grey.200": {
+    "value": "#d7d6c2",
+    "variable": "var(--colors-grey-200)"
+  },
+  "colors.grey.300": {
+    "value": "#c7c6ac",
+    "variable": "var(--colors-grey-300)"
+  },
+  "colors.grey.400": {
+    "value": "#b7b69b",
+    "variable": "var(--colors-grey-400)"
+  },
+  "colors.grey.500": {
+    "value": "#a6a589",
+    "variable": "var(--colors-grey-500)"
+  },
+  "colors.grey.600": {
+    "value": "#92917a",
+    "variable": "var(--colors-grey-600)"
+  },
+  "colors.grey.700": {
+    "value": "#7e7d6b",
+    "variable": "var(--colors-grey-700)"
+  },
+  "colors.grey.800": {
+    "value": "#6a695d",
+    "variable": "var(--colors-grey-800)"
+  },
+  "colors.grey.900": {
+    "value": "#55544d",
+    "variable": "var(--colors-grey-900)"
+  },
+  "colors.grey.950": {
+    "value": "#403f3e",
+    "variable": "var(--colors-grey-950)"
+  },
   "colors.greyGold.50": {
     "value": "#fbf7f2",
     "variable": "var(--colors-grey-gold-50)"
@@ -1738,6 +1738,50 @@ const tokens = {
   "colors.greyGold.950": {
     "value": "#403921",
     "variable": "var(--colors-grey-gold-950)"
+  },
+  "colors.teal.50": {
+    "value": "#f2f9f9",
+    "variable": "var(--colors-teal-50)"
+  },
+  "colors.teal.100": {
+    "value": "#e6f4f4",
+    "variable": "var(--colors-teal-100)"
+  },
+  "colors.teal.200": {
+    "value": "#c9e6e6",
+    "variable": "var(--colors-teal-200)"
+  },
+  "colors.teal.300": {
+    "value": "#acd8d8",
+    "variable": "var(--colors-teal-300)"
+  },
+  "colors.teal.400": {
+    "value": "#8fcaca",
+    "variable": "var(--colors-teal-400)"
+  },
+  "colors.teal.500": {
+    "value": "#75b8b8",
+    "variable": "var(--colors-teal-500)"
+  },
+  "colors.teal.600": {
+    "value": "#669e9e",
+    "variable": "var(--colors-teal-600)"
+  },
+  "colors.teal.700": {
+    "value": "#518585",
+    "variable": "var(--colors-teal-700)"
+  },
+  "colors.teal.800": {
+    "value": "#3e6f6f",
+    "variable": "var(--colors-teal-800)"
+  },
+  "colors.teal.900": {
+    "value": "#2e5959",
+    "variable": "var(--colors-teal-900)"
+  },
+  "colors.teal.950": {
+    "value": "#214040",
+    "variable": "var(--colors-teal-950)"
   },
   "fonts.sans": {
     "value": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
@@ -1783,29 +1827,41 @@ const tokens = {
     "value": "1536px",
     "variable": "var(--breakpoints-2xl)"
   },
+  "colors.text.title": {
+    "value": "var(--colors-text-title)",
+    "variable": "var(--colors-text-title)"
+  },
+  "colors.text.subtitle": {
+    "value": "var(--colors-text-subtitle)",
+    "variable": "var(--colors-text-subtitle)"
+  },
   "colors.text.primary": {
     "value": "var(--colors-text-primary)",
     "variable": "var(--colors-text-primary)"
   },
-  "colors.text.title": {
-    "value": "var(--colors-text-title)",
-    "variable": "var(--colors-text-title)"
+  "colors.text.secondary": {
+    "value": "var(--colors-text-secondary)",
+    "variable": "var(--colors-text-secondary)"
   },
   "colors.background.primary": {
     "value": "var(--colors-background-primary)",
     "variable": "var(--colors-background-primary)"
   },
-  "colors.background.secondary": {
-    "value": "var(--colors-background-secondary)",
-    "variable": "var(--colors-background-secondary)"
+  "colors.navbar.text.active": {
+    "value": "var(--colors-navbar-text-active)",
+    "variable": "var(--colors-navbar-text-active)"
   },
-  "colors.navbar.text": {
-    "value": "var(--colors-navbar-text)",
-    "variable": "var(--colors-navbar-text)"
+  "colors.navbar.text.inactive": {
+    "value": "var(--colors-navbar-text-inactive)",
+    "variable": "var(--colors-navbar-text-inactive)"
   },
-  "colors.navbar.background": {
-    "value": "var(--colors-navbar-background)",
-    "variable": "var(--colors-navbar-background)"
+  "colors.navbar.background.inactive": {
+    "value": "var(--colors-navbar-background-inactive)",
+    "variable": "var(--colors-navbar-background-inactive)"
+  },
+  "colors.navbar.background.active": {
+    "value": "var(--colors-navbar-background-active)",
+    "variable": "var(--colors-navbar-background-active)"
   },
   "colors.navbar.border": {
     "value": "var(--colors-navbar-border)",
@@ -1830,6 +1886,82 @@ const tokens = {
   "colors.card.text": {
     "value": "var(--colors-card-text)",
     "variable": "var(--colors-card-text)"
+  },
+  "colors.expandedCard.closeButton.base": {
+    "value": "var(--colors-expanded-card-close-button-base)",
+    "variable": "var(--colors-expanded-card-close-button-base)"
+  },
+  "colors.expandedCard.closeButton.hover": {
+    "value": "var(--colors-expanded-card-close-button-hover)",
+    "variable": "var(--colors-expanded-card-close-button-hover)"
+  },
+  "colors.expandedCard.background": {
+    "value": "var(--colors-expanded-card-background)",
+    "variable": "var(--colors-expanded-card-background)"
+  },
+  "colors.buttons.primary.background.base": {
+    "value": "var(--colors-buttons-primary-background-base)",
+    "variable": "var(--colors-buttons-primary-background-base)"
+  },
+  "colors.buttons.primary.background.hover": {
+    "value": "var(--colors-buttons-primary-background-hover)",
+    "variable": "var(--colors-buttons-primary-background-hover)"
+  },
+  "colors.buttons.primary.text.base": {
+    "value": "var(--colors-buttons-primary-text-base)",
+    "variable": "var(--colors-buttons-primary-text-base)"
+  },
+  "colors.buttons.primary.text.hover": {
+    "value": "var(--colors-buttons-primary-text-hover)",
+    "variable": "var(--colors-buttons-primary-text-hover)"
+  },
+  "colors.buttons.secondary.background.base": {
+    "value": "var(--colors-buttons-secondary-background-base)",
+    "variable": "var(--colors-buttons-secondary-background-base)"
+  },
+  "colors.buttons.secondary.background.hover": {
+    "value": "var(--colors-buttons-secondary-background-hover)",
+    "variable": "var(--colors-buttons-secondary-background-hover)"
+  },
+  "colors.buttons.secondary.text.base": {
+    "value": "var(--colors-buttons-secondary-text-base)",
+    "variable": "var(--colors-buttons-secondary-text-base)"
+  },
+  "colors.buttons.secondary.text.hover": {
+    "value": "var(--colors-buttons-secondary-text-hover)",
+    "variable": "var(--colors-buttons-secondary-text-hover)"
+  },
+  "colors.buttons.tertiary.background.base": {
+    "value": "var(--colors-buttons-tertiary-background-base)",
+    "variable": "var(--colors-buttons-tertiary-background-base)"
+  },
+  "colors.buttons.tertiary.background.hover": {
+    "value": "var(--colors-buttons-tertiary-background-hover)",
+    "variable": "var(--colors-buttons-tertiary-background-hover)"
+  },
+  "colors.buttons.tertiary.text.base": {
+    "value": "var(--colors-buttons-tertiary-text-base)",
+    "variable": "var(--colors-buttons-tertiary-text-base)"
+  },
+  "colors.buttons.tertiary.text.hover": {
+    "value": "var(--colors-buttons-tertiary-text-hover)",
+    "variable": "var(--colors-buttons-tertiary-text-hover)"
+  },
+  "colors.buttons.tertiary.border.base": {
+    "value": "var(--colors-buttons-tertiary-border-base)",
+    "variable": "var(--colors-buttons-tertiary-border-base)"
+  },
+  "colors.buttons.tertiary.border.hover": {
+    "value": "var(--colors-buttons-tertiary-border-hover)",
+    "variable": "var(--colors-buttons-tertiary-border-hover)"
+  },
+  "colors.contact.borders.primary": {
+    "value": "var(--colors-contact-borders-primary)",
+    "variable": "var(--colors-contact-borders-primary)"
+  },
+  "colors.contact.borders.secondary": {
+    "value": "var(--colors-contact-borders-secondary)",
+    "variable": "var(--colors-contact-borders-secondary)"
   },
   "spacing.-1": {
     "value": "calc(var(--spacing-1) * -1)",
@@ -2007,25 +2139,45 @@ const tokens = {
     "value": "var(--colors-color-palette-950)",
     "variable": "var(--colors-color-palette-950)"
   },
-  "colors.colorPalette.primary": {
-    "value": "var(--colors-color-palette-primary)",
-    "variable": "var(--colors-color-palette-primary)"
-  },
   "colors.colorPalette.title": {
     "value": "var(--colors-color-palette-title)",
     "variable": "var(--colors-color-palette-title)"
+  },
+  "colors.colorPalette.subtitle": {
+    "value": "var(--colors-color-palette-subtitle)",
+    "variable": "var(--colors-color-palette-subtitle)"
+  },
+  "colors.colorPalette.primary": {
+    "value": "var(--colors-color-palette-primary)",
+    "variable": "var(--colors-color-palette-primary)"
   },
   "colors.colorPalette.secondary": {
     "value": "var(--colors-color-palette-secondary)",
     "variable": "var(--colors-color-palette-secondary)"
   },
-  "colors.colorPalette.text": {
-    "value": "var(--colors-color-palette-text)",
-    "variable": "var(--colors-color-palette-text)"
+  "colors.colorPalette.text.active": {
+    "value": "var(--colors-color-palette-text-active)",
+    "variable": "var(--colors-color-palette-text-active)"
   },
-  "colors.colorPalette.background": {
-    "value": "var(--colors-color-palette-background)",
-    "variable": "var(--colors-color-palette-background)"
+  "colors.colorPalette.active": {
+    "value": "var(--colors-color-palette-active)",
+    "variable": "var(--colors-color-palette-active)"
+  },
+  "colors.colorPalette.text.inactive": {
+    "value": "var(--colors-color-palette-text-inactive)",
+    "variable": "var(--colors-color-palette-text-inactive)"
+  },
+  "colors.colorPalette.inactive": {
+    "value": "var(--colors-color-palette-inactive)",
+    "variable": "var(--colors-color-palette-inactive)"
+  },
+  "colors.colorPalette.background.inactive": {
+    "value": "var(--colors-color-palette-background-inactive)",
+    "variable": "var(--colors-color-palette-background-inactive)"
+  },
+  "colors.colorPalette.background.active": {
+    "value": "var(--colors-color-palette-background-active)",
+    "variable": "var(--colors-color-palette-background-active)"
   },
   "colors.colorPalette.border": {
     "value": "var(--colors-color-palette-border)",
@@ -2042,6 +2194,118 @@ const tokens = {
   "colors.colorPalette.background.secondary": {
     "value": "var(--colors-color-palette-background-secondary)",
     "variable": "var(--colors-color-palette-background-secondary)"
+  },
+  "colors.colorPalette.text": {
+    "value": "var(--colors-color-palette-text)",
+    "variable": "var(--colors-color-palette-text)"
+  },
+  "colors.colorPalette.closeButton.base": {
+    "value": "var(--colors-color-palette-close-button-base)",
+    "variable": "var(--colors-color-palette-close-button-base)"
+  },
+  "colors.colorPalette.base": {
+    "value": "var(--colors-color-palette-base)",
+    "variable": "var(--colors-color-palette-base)"
+  },
+  "colors.colorPalette.closeButton.hover": {
+    "value": "var(--colors-color-palette-close-button-hover)",
+    "variable": "var(--colors-color-palette-close-button-hover)"
+  },
+  "colors.colorPalette.hover": {
+    "value": "var(--colors-color-palette-hover)",
+    "variable": "var(--colors-color-palette-hover)"
+  },
+  "colors.colorPalette.background": {
+    "value": "var(--colors-color-palette-background)",
+    "variable": "var(--colors-color-palette-background)"
+  },
+  "colors.colorPalette.primary.background.base": {
+    "value": "var(--colors-color-palette-primary-background-base)",
+    "variable": "var(--colors-color-palette-primary-background-base)"
+  },
+  "colors.colorPalette.background.base": {
+    "value": "var(--colors-color-palette-background-base)",
+    "variable": "var(--colors-color-palette-background-base)"
+  },
+  "colors.colorPalette.primary.background.hover": {
+    "value": "var(--colors-color-palette-primary-background-hover)",
+    "variable": "var(--colors-color-palette-primary-background-hover)"
+  },
+  "colors.colorPalette.background.hover": {
+    "value": "var(--colors-color-palette-background-hover)",
+    "variable": "var(--colors-color-palette-background-hover)"
+  },
+  "colors.colorPalette.primary.text.base": {
+    "value": "var(--colors-color-palette-primary-text-base)",
+    "variable": "var(--colors-color-palette-primary-text-base)"
+  },
+  "colors.colorPalette.text.base": {
+    "value": "var(--colors-color-palette-text-base)",
+    "variable": "var(--colors-color-palette-text-base)"
+  },
+  "colors.colorPalette.primary.text.hover": {
+    "value": "var(--colors-color-palette-primary-text-hover)",
+    "variable": "var(--colors-color-palette-primary-text-hover)"
+  },
+  "colors.colorPalette.text.hover": {
+    "value": "var(--colors-color-palette-text-hover)",
+    "variable": "var(--colors-color-palette-text-hover)"
+  },
+  "colors.colorPalette.secondary.background.base": {
+    "value": "var(--colors-color-palette-secondary-background-base)",
+    "variable": "var(--colors-color-palette-secondary-background-base)"
+  },
+  "colors.colorPalette.secondary.background.hover": {
+    "value": "var(--colors-color-palette-secondary-background-hover)",
+    "variable": "var(--colors-color-palette-secondary-background-hover)"
+  },
+  "colors.colorPalette.secondary.text.base": {
+    "value": "var(--colors-color-palette-secondary-text-base)",
+    "variable": "var(--colors-color-palette-secondary-text-base)"
+  },
+  "colors.colorPalette.secondary.text.hover": {
+    "value": "var(--colors-color-palette-secondary-text-hover)",
+    "variable": "var(--colors-color-palette-secondary-text-hover)"
+  },
+  "colors.colorPalette.tertiary.background.base": {
+    "value": "var(--colors-color-palette-tertiary-background-base)",
+    "variable": "var(--colors-color-palette-tertiary-background-base)"
+  },
+  "colors.colorPalette.tertiary.background.hover": {
+    "value": "var(--colors-color-palette-tertiary-background-hover)",
+    "variable": "var(--colors-color-palette-tertiary-background-hover)"
+  },
+  "colors.colorPalette.tertiary.text.base": {
+    "value": "var(--colors-color-palette-tertiary-text-base)",
+    "variable": "var(--colors-color-palette-tertiary-text-base)"
+  },
+  "colors.colorPalette.tertiary.text.hover": {
+    "value": "var(--colors-color-palette-tertiary-text-hover)",
+    "variable": "var(--colors-color-palette-tertiary-text-hover)"
+  },
+  "colors.colorPalette.tertiary.border.base": {
+    "value": "var(--colors-color-palette-tertiary-border-base)",
+    "variable": "var(--colors-color-palette-tertiary-border-base)"
+  },
+  "colors.colorPalette.border.base": {
+    "value": "var(--colors-color-palette-border-base)",
+    "variable": "var(--colors-color-palette-border-base)"
+  },
+  "colors.colorPalette.tertiary.border.hover": {
+    "value": "var(--colors-color-palette-tertiary-border-hover)",
+    "variable": "var(--colors-color-palette-tertiary-border-hover)"
+  },
+  "colors.colorPalette.border.hover": {
+    "value": "var(--colors-color-palette-border-hover)",
+    "variable": "var(--colors-color-palette-border-hover)"
+  },
+  "colors.colorPalette.borders.primary": {
+    "value": "var(--colors-color-palette-borders-primary)",
+    "variable": "var(--colors-color-palette-borders-primary)"
+  },
+  "colors.colorPalette.borders.secondary": {
+    "value": "var(--colors-color-palette-borders-secondary)",
+    "variable": "var(--colors-color-palette-borders-secondary)"
   }
 }
 
