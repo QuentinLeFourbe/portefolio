@@ -1,6 +1,6 @@
-import SunIcon from "../../assets/icons/sun.svg?react";
-import MoonIcon from "../../assets/icons/moon.svg?react";
-import { css, cx } from "../../../styled-system/css";
+import SunIcon from "../../../assets/icons/sun.svg?react";
+import MoonIcon from "../../../assets/icons/moon.svg?react";
+import { css, cx } from "../../../../styled-system/css";
 import { ComponentProps } from "react";
 
 type DarkModeButtonProps = ComponentProps<"button"> & {

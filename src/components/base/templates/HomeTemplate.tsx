@@ -1,11 +1,10 @@
 import { ComponentProps, useEffect, useState } from "react";
-import { css, cx } from "../../../styled-system/css";
+import { css, cx } from "../../../../styled-system/css";
 import Navbar from "../organisms/Navbar";
-import MainContainer from "../organisms/MainContainer";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useOutlet, useLocation } from "react-router-dom";
-import { porteFolioRoutes } from "../../routes";
-import DarkModeButton from "../atoms/DarkModeButton";
+import { porteFolioRoutes } from "../../../routes";
+import DarkModeButton from "../Atoms/DarkModeButton";
 
 type HomeTemplateProps = ComponentProps<"div">;
 
@@ -89,6 +88,7 @@ const contentContainer = css({
   display: "flex",
   flexDirection: "column nowrap",
   alignItems: "center",
+  transition: "all 0.2s ease-in-out",
 });
 
 const backgroundStyle = css({
@@ -98,7 +98,7 @@ const backgroundStyle = css({
   display: "flex",
   flexDirection: "column",
   fontFamily: "body",
-  padding: { base: "0", lg: "10vh 0 10vh 200px" },
+  padding: { base: "0", lg: "10vh 5vw 10vh 200px" },
 
   "&:after": {
     zIndex: -2,

@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -17,8 +17,8 @@ export default Header;
 
 const header = css({
   gridArea: "header",
-  background: "headerBackground",
-  color: "headerColor",
+  background: "cv.header.background",
+  color: "cv.header.text",
   display: "grid",
   gridTemplateColumns: "1fr 2fr",
   gridTemplateRows: "1fr 0.3fr",

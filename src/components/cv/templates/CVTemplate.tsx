@@ -1,6 +1,6 @@
 import React from "react";
-import { css } from "../../../styled-system/css/css";
-import { cx } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css/css";
+import { cx } from "../../../../styled-system/css";
 
 type CVTemplateProps = {
   children?: React.ReactNode;
@@ -24,7 +24,7 @@ const template = css({
 });
 
 const textStyles = css({
-  color: "textPrimary",
+  color: "cv.text.primary",
 
   "& h1": {
     fontSize: "2.5rem",
@@ -52,7 +52,7 @@ const textStyles = css({
   "& h5": {
     fontSize: "0.8rem",
     textTransform: "uppercase",
-    color: "textSecondary",
+    color: "cv.text.secondary",
   },
 
   "& p": {

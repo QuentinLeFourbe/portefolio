@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
-import Card from "../atoms/Card";
-import { Project } from "../../types/project";
-import { css } from "../../../styled-system/css";
+import Card from "../Atoms/Card";
+import { Project } from "../../../types/project";
+import { css } from "../../../../styled-system/css";
 
 type CardsListProps = {
   projects: Project[];

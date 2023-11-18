@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 import { forwardRef } from "react";
-import Xmark from "../../assets/icons/x-mark.svg?react";
-import { Project } from "../../types/project";
-import TechnologyIcon from "../atoms/TechnologyIcon";
+import Xmark from "../../../assets/icons/x-mark.svg?react";
+import { Project } from "../../../types/project";
+import TechnologyIcon from "../Atoms/TechnologyIcon";
 
 type ExpandedCardProps = {
   project: Project;

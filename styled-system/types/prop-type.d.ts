@@ -202,7 +202,7 @@ type PropertyValueTypes  = {
 	stroke: Tokens["colors"];
 	srOnly: boolean;
 	debug: boolean;
-	colorPalette: "rose" | "pink" | "fuchsia" | "purple" | "violet" | "indigo" | "blue" | "sky" | "cyan" | "emerald" | "green" | "lime" | "yellow" | "amber" | "orange" | "red" | "neutral" | "stone" | "zinc" | "gray" | "slate" | "grey" | "greyGold" | "teal" | "text" | "background" | "navbar" | "navbar.text" | "navbar.background" | "card" | "card.background" | "expandedCard" | "expandedCard.closeButton" | "buttons" | "buttons.primary" | "buttons.primary.background" | "buttons.primary.text" | "buttons.secondary" | "buttons.secondary.background" | "buttons.secondary.text" | "buttons.tertiary" | "buttons.tertiary.background" | "buttons.tertiary.text" | "buttons.tertiary.border" | "contact" | "contact.borders";
+	colorPalette: "rose" | "pink" | "fuchsia" | "purple" | "violet" | "indigo" | "blue" | "sky" | "cyan" | "emerald" | "green" | "lime" | "yellow" | "amber" | "orange" | "red" | "neutral" | "stone" | "zinc" | "gray" | "slate" | "grey" | "greyGold" | "teal" | "text" | "background" | "navbar" | "navbar.text" | "navbar.background" | "card" | "card.background" | "expandedCard" | "expandedCard.closeButton" | "buttons" | "buttons.primary" | "buttons.primary.background" | "buttons.primary.text" | "buttons.secondary" | "buttons.secondary.background" | "buttons.secondary.text" | "buttons.tertiary" | "buttons.tertiary.background" | "buttons.tertiary.text" | "buttons.tertiary.border" | "contact" | "contact.borders" | "cv" | "cv.header" | "cv.title" | "cv.text";
 	textStyle: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";
 }
 

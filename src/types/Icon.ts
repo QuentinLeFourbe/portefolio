@@ -4,4 +4,6 @@ export type IconName =
   | "mail"
   | "livre"
   | "pin"
+  | "diplome"
+  | "cake"
   | "telephone";

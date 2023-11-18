@@ -2,12 +2,12 @@ export const theme = {
   extend: {
     tokens: {
       colors: {
-        textPrimary: { value: "#213547" },
-        textSecondary: { value: "grey" },
-        titleBackground: { value: "#01717D" },
-        titleColor: { value: "white" },
-        headerBackground: { value: "#FFF7A3" },
-        headerColor: { value: "#293156" },
+        darkdarkBlue: { value: "#213547" },
+        greyLight: { value: "grey" },
+        duckTeal: { value: "#01717D" },
+        white: { value: "#fff" },
+        yellowLight: { value: "#FFF7A3" },
+        darkBlue: { value: "#293156" },
         middleBorder: { value: "#f2d78e" },
 
         lightGold: { value: "#BFAA87" },
@@ -317,6 +317,20 @@ export const theme = {
                 _dark: "{colors.greyGold.600}",
               },
             },
+          },
+        },
+        cv: {
+          header: {
+            text: { value: "{colors.darkBlue}" },
+            background: { value: "{colors.yellowLight}" },
+          },
+          title: {
+            text: { value: "{colors.white}" },
+            background: { value: "{colors.duckTeal}" },
+          },
+          text: {
+            primary: { value: "{colors.darkdarkBlue}" },
+            secondary: { value: "{colors.greyLight}" },
           },
         },
       },

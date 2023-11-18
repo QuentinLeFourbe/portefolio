@@ -166,7 +166,6 @@
   --animations-bounce: bounce 1s infinite;
   --colors-current: currentColor;
   --colors-black: #000;
-  --colors-white: #fff;
   --colors-transparent: rgb(0 0 0 / 0);
   --colors-rose-50: #fff1f2;
   --colors-rose-100: #ffe4e6;
@@ -399,12 +398,12 @@
   --colors-slate-800: #1e293b;
   --colors-slate-900: #0f172a;
   --colors-slate-950: #020617;
-  --colors-text-primary: #6f623d;
-  --colors-text-secondary: #3e6f6f;
-  --colors-title-background: #01717D;
-  --colors-title-color: white;
-  --colors-header-background: #FFF7A3;
-  --colors-header-color: #293156;
+  --colors-darkdark-blue: #213547;
+  --colors-grey-light: grey;
+  --colors-duck-teal: #01717D;
+  --colors-white: #fff;
+  --colors-yellow-light: #FFF7A3;
+  --colors-dark-blue: #293156;
   --colors-middle-border: #f2d78e;
   --colors-light-gold: #BFAA87;
   --colors-medium-gold: #A89773;
@@ -459,6 +458,8 @@
   --breakpoints-2xl: 1536px;
   --colors-text-title: #3e6f6f;
   --colors-text-subtitle: #6f623d;
+  --colors-text-primary: #6f623d;
+  --colors-text-secondary: #3e6f6f;
   --colors-background-primary: #f6f1e6;
   --colors-navbar-text-active: #fbf7f2;
   --colors-navbar-text-inactive: #3e6f6f;
@@ -489,7 +490,13 @@
   --colors-buttons-tertiary-border-base: #d9d0ae;
   --colors-buttons-tertiary-border-hover: #6f623d;
   --colors-contact-borders-primary: #a09a66;
-  --colors-contact-borders-secondary: #cac091
+  --colors-contact-borders-secondary: #cac091;
+  --colors-cv-header-text: #293156;
+  --colors-cv-header-background: #FFF7A3;
+  --colors-cv-title-text: #fff;
+  --colors-cv-title-background: #01717D;
+  --colors-cv-text-primary: #213547;
+  --colors-cv-text-secondary: grey
 }
 
 [data-color-mode=dark] {

@@ -4,8 +4,8 @@ import amcoeurLogo from "../assets/logos/amcoeur.jpeg";
 import linxoLogo from "../assets/logos/linxo.png";
 import { Project } from "../types/project";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
-import ExpandedCard from "../components/organisms/ExpandedCard";
-import CardsList from "../components/molecules/CardsList";
+import ExpandedCard from "../components/base/organisms/ExpandedCard";
+import CardsList from "../components/base/molecules/CardsList";
 
 const projects: Project[] = [
   {

@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import { Technology } from "../../types/project";
-import ExpressIcon from "../../assets/icons/express.svg?react";
-import NodeJsIcon from "../../assets/icons/nodejs.svg?react";
-import ReactIcon from "../../assets/icons/reactjs.svg?react";
-import ReduxIcon from "../../assets/icons/redux.svg?react";
-import TypeScriptIcon from "../../assets/icons/typescript.svg?react";
-import PandacssIcon from "../../assets/icons/pandacss.svg?react";
-import ViteIcon from "../../assets/icons/vite.svg?react";
-import WebpackIcon from "../../assets/icons/webpack.svg?react";
-import JavascriptIcon from "../../assets/icons/javascript.svg?react";
-import MongodbIcon from "../../assets/icons/mongodb.svg?react";
-import RedisIcon from "../../assets/icons/redis.svg?react";
-import { css } from "../../../styled-system/css";
+import { Technology } from "../../../types/project";
+import ExpressIcon from "../../../assets/icons/express.svg?react";
+import NodeJsIcon from "../../../assets/icons/nodejs.svg?react";
+import ReactIcon from "../../../assets/icons/reactjs.svg?react";
+import ReduxIcon from "../../../assets/icons/redux.svg?react";
+import TypeScriptIcon from "../../../assets/icons/typescript.svg?react";
+import PandacssIcon from "../../../assets/icons/pandacss.svg?react";
+import ViteIcon from "../../../assets/icons/vite.svg?react";
+import WebpackIcon from "../../../assets/icons/webpack.svg?react";
+import JavascriptIcon from "../../../assets/icons/javascript.svg?react";
+import MongodbIcon from "../../../assets/icons/mongodb.svg?react";
+import RedisIcon from "../../../assets/icons/redis.svg?react";
+import { css } from "../../../../styled-system/css";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 type TechnologyIconProps = {

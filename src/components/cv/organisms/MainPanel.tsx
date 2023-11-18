@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "../../../styled-system/css/css";
+import { css } from "../../../../styled-system/css/css";
 
 type MainPanelProps = {
   children?: React.ReactNode;

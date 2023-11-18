@@ -1,9 +1,97 @@
 {
-  "translation": {
-    "profile": {
-      "greet": "Hello"
-    },
+  "profile": {
     "greet": "Hello",
-    "projects": {}
+    "presentation1": "I am Quentin Garcia, a passionate full-stack developer with expertise in technologies like React, Node.js, and TypeScript. My professional experience, enriched by diverse projects, has allowed me to refine my skills and stay at the forefront of the latest advancements. My commitment to code quality and solution robustness is at the core of my professional approach.",
+    "presentation2": "In addition to my professional commitment, I am dedicated to powerlifting. My intense training reflects my determination to achieve goals, serving as a means of surpassing myself both physically and mentally."
+  },
+  "projects": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "challenges": "Challenges",
+    "results": "Results",
+    "role": "Role",
+    "amcoeur_description": "Redesign of the association's website. The site is transformed into a full-stack application, ultimately allowing the management of adoptions and losses from a back office provided to volunteers. I mentor a junior developer on this project.",
+    "amcoeur_roles": [
+      "📈 Project Initiator",
+      "🏆 Responsible for all aspects of the project",
+      "🧑‍🏫 Mentorship and guidance of a junior developer"
+    ],
+    "amcoeur_challenges": [
+      "🛠️ Redesign of an outdated website",
+      "👨‍💻 Selection of suitable technologies",
+      "📢 Project management and communication with a resource-limited association",
+      "💡 Analysis and design of an ergonomic and trendy UX",
+      "👷‍♂️ Multifunctional role"
+    ],
+    "amcoeur_results": [
+      "👨‍🏫 Design of the graphical interface",
+      "🔨 Development of a solid foundation for the application",
+      "🌱 Start of the second development phase (integration of a back office)",
+      "🚀 First version deployed in pre-production",
+      "🎉 Optimization of the user experience by making the site more user-friendly and informative for visitors"
+    ],
+    "ais_description": "A customizable screen suite facilitating the integration of account aggregation via Linxo APIs. This screen suite was offered to various integrators, who could embed it in an iframe and customize both the visual appearance and the application flow.",
+    "ais_roles": [
+      "💻 Technical lead of the team",
+      "🔨 Ensuring the solidity and sustainability of the application",
+      "🧑‍🤝‍🧑 Team mentoring",
+      "🛡️ Responsible for the quality, performance, and security of the project",
+      "🚀 Strategic decision-making for technical aspects."
+    ],
+    "ais_challenges": [
+      "🔨 Management of significant technical debt with an outdated version of React",
+      "🧩 Complexity of the monolith and code disarray",
+      "⏳ Simultaneous management of two versions of the project",
+      "🏗️ Lack of defined development processes",
+      "📜 Absence of technical or functional documentation"
+    ],
+    "ais_results": [
+      "🔗 Creation of a dedicated monorepo to consolidate frontend and backend",
+      "🔍 Complete redesign of frontend and backend code and architecture",
+      "🤲 Implementation of best practices and code reviews",
+      "🧪 Integration of integration tests with 80% coverage on the new code",
+      "📝 Development of technical documents, including UML diagrams and procedures."
+    ],
+    "pis_description": "A customizable screen suite facilitating the initiation of Iban-to-Iban payments via Linxo Payments APIs. This screen suite integrates into the applications of Linxo's clients via an iframe. Both user flow and visual appearance are entirely customizable.",
+    "pis_roles": [
+      "🎯 Direction of the technical team.",
+      "🏗️ Design of a robust architecture for the project.",
+      "🤝 Team mentoring",
+      "📈 Project management to ensure its success.",
+      "🛡️ Responsibility for the quality, performance, and security of the project."
+    ],
+    "pis_challenges": [
+      "🔨 Technical debt. Outdated version of React",
+      "🧩 Complex monolith and disorganized code",
+      "⏳ Complex user flow due to customization",
+      "🛠️ Lack of development procedures",
+      "📚 Lack of technical or functional documentation."
+    ],
+    "pis_results": [
+      "📦 Creation of a dedicated monorepo combining frontend and backend.",
+      "🏢 Major redesign of frontend code",
+      "🤝 Implementation of best practices and code reviews.",
+      "🧪 Addition of integration tests with 80% coverage on the new code.",
+      "📄 Creation of technical documents (UML diagrams, procedures, etc.)."
+    ],
+    "menus_description": "A personal project consisting of a full-stack application for managing weekly menus, including the creation of various dishes and their organization throughout the days of the week.",
+    "menus_roles": [
+      "🏆 Responsible for all aspects of the project",
+      "🏗️ Analysis and design of the architecture",
+      "📊 Analysis and design of the data model",
+      "🛠 Development of the application"
+    ],
+    "menus_challenges": [
+      "🌐 Selection of suitable technologies",
+      "📚 Learning technologies in parallel",
+      "🎨 Design of a readable and acceptable UX",
+      "⏰ Development in my free time"
+    ],
+    "menus_results": [
+      "🚀 A functional full-stack application",
+      "👁️ A simple and readable UX",
+      "🌐 Application deployed on Heroku",
+      "💡 Very instructive for me"
+    ]
   }
 }

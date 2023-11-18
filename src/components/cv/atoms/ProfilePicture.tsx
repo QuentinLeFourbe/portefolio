@@ -1,4 +1,4 @@
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 
 function ProfilePicture() {
   return <img className={imageStyle} src="src\images\photo_profil.png" />;

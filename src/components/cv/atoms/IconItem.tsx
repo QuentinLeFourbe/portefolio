@@ -1,7 +1,7 @@
 import React from "react";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 import Icon from "./Icon";
-import { IconName } from "../../types/Icon";
+import { IconName } from "../../../types/Icon";
 
 type IconItemProps = {
   icon: IconName;
@@ -40,4 +40,5 @@ const column = css({
 const iconStyle = css({
   width: "1.5rem",
   height: "1.5rem",
+  marginRight: "0.5rem",
 });

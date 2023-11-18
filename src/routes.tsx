@@ -2,7 +2,7 @@ import CV from "./markdown/cv.mdx";
 import CVEn from "./markdown/cv-en.mdx";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
-import HomeTemplate from "./components/templates/HomeTemplate";
+import HomeTemplate from "./components/base/templates/HomeTemplate";
 import Contact from "./pages/Contact";
 import { createRef } from "react";
 

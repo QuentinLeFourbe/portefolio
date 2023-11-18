@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "../../styled-system/css";
-import Button from "../components/atoms/Button";
+import Button from "../components/base/atoms/Button";
 import MaltIcon from "../assets/icons/malt.svg?react";
 import GithubIcon from "../assets/icons/github.svg?react";
 import LinkedInIcon from "../assets/icons/linkedin.svg?react";
@@ -15,6 +15,7 @@ function Contact() {
         <Button
           onMouseEnter={() => setIsButtonsHovered(true)}
           onMouseLeave={() => setIsButtonsHovered(false)}
+          href="mailto:quentingarcia40@gmail.com"
         >
           Contactez-moi
         </Button>
