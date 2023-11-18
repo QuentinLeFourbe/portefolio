@@ -34,10 +34,18 @@ const buttonStyle = css({
   backgroundColor: "transparent",
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
+  color: "buttons.secondary.text.base",
+  padding: "4px",
   "&:hover": {
-    backgroundColor: "greyGold.200",
+    backgroundColor: "buttons.secondary.background.hover",
+    color: "buttons.secondary.text.hover",
   },
   "&:focus": {
     outline: "none",
+  },
+
+  "& svg": {
+    width: "100%",
+    height: "100%",
   },
 });
