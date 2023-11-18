@@ -466,6 +466,7 @@
   --colors-navbar-background-active: #3e6f6f;
   --colors-navbar-border: #3e6f6f;
   --colors-navbar-dot: #669e9e;
+  --colors-navbar-mobile-background: #e8e1ca;
   --colors-card-background-primary: #e8e1ca;
   --colors-card-background-secondary: #877751;
   --colors-card-border: #669e9e;
@@ -498,11 +499,12 @@
   --colors-text-secondary: #d7d6c2;
   --colors-background-primary: #403f3e;
   --colors-navbar-text-active: #fbf7f2;
-  --colors-navbar-text-inactive: #55544d;
-  --colors-navbar-background-inactive: #a09a66;
-  --colors-navbar-background-active: #55544d;
+  --colors-navbar-text-inactive: #c7c6ac;
+  --colors-navbar-background-inactive: #55544d;
+  --colors-navbar-background-active: #a09a66;
   --colors-navbar-border: #a09a66;
   --colors-navbar-dot: #3e6f6f;
+  --colors-navbar-mobile-background: #55544d;
   --colors-card-background-primary: #55544d;
   --colors-card-background-secondary: #cac091;
   --colors-card-border: #2e5959;

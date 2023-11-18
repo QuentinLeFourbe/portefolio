@@ -1871,6 +1871,10 @@ const tokens = {
     "value": "var(--colors-navbar-dot)",
     "variable": "var(--colors-navbar-dot)"
   },
+  "colors.navbar.mobileBackground": {
+    "value": "var(--colors-navbar-mobile-background)",
+    "variable": "var(--colors-navbar-mobile-background)"
+  },
   "colors.card.background.primary": {
     "value": "var(--colors-card-background-primary)",
     "variable": "var(--colors-card-background-primary)"
@@ -2186,6 +2190,10 @@ const tokens = {
   "colors.colorPalette.dot": {
     "value": "var(--colors-color-palette-dot)",
     "variable": "var(--colors-color-palette-dot)"
+  },
+  "colors.colorPalette.mobileBackground": {
+    "value": "var(--colors-color-palette-mobile-background)",
+    "variable": "var(--colors-color-palette-mobile-background)"
   },
   "colors.colorPalette.background.primary": {
     "value": "var(--colors-color-palette-background-primary)",
