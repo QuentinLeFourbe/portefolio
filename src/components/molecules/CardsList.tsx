@@ -35,4 +35,5 @@ const container = css({
   alignItems: "center",
   width: "100%",
   gap: "64px",
+  margin: "32px 0",
 });

@@ -101,6 +101,7 @@ export default Projects;
 const container = css({
   display: "flex",
   justifyContent: "center",
+  width: "100%",
   padding: "1rem",
 
   "& .card-enter": {

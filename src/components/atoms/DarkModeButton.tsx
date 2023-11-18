@@ -31,11 +31,11 @@ const buttonStyle = css({
   height: "50px",
   borderRadius: "50%",
   border: "none",
-  backgroundColor: "transparent",
+  backgroundColor: "buttons.secondary.background.base",
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
   color: "buttons.secondary.text.base",
-  padding: "4px",
+  padding: "8px",
   "&:hover": {
     backgroundColor: "buttons.secondary.background.hover",
     color: "buttons.secondary.text.hover",

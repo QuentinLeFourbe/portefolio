@@ -20,11 +20,14 @@ const containerStyle = css({
   flexDirection: "column",
   justifyContent: "center",
   height: "100%",
-  padding: "8% 10% 8% 15%",
+  padding: {
+    base: "0 1rem 10% 1rem",
+    lg: "8% 10% 8% 10%",
+  },
 });
 
 const titleStyle = css({
-  fontSize: "6rem",
+  fontSize: { base: "4rem", lg: "6rem" },
   fontFamily: "title",
   lineHeight: "6.5rem",
   color: "text.title",
@@ -33,7 +36,7 @@ const titleStyle = css({
 const textStyle = css({
   fontSize: "1.2rem",
   maxWidth: "800px",
-  padding: "1rem",
+  margin: "1rem 0",
   lineHeight: "2rem",
   color: "text.primary",
 });

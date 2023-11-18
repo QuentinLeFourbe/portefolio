@@ -80,29 +80,29 @@ const secondBorderBoxBase = {
 };
 
 const firstBorderBox = css(baseBorderBox, firstBorderBoxBase, {
-  top: "-35%",
-  right: "-5%",
-  width: "60%",
-  height: "100%",
+  top: { base: "-20%", lg: "-35%" },
+  right: { base: "-5%", lg: "-5%" },
+  width: { base: "65%", lg: "60%" },
+  height: { base: "50%", lg: "100%" },
 });
 const secondBorderBox = css(baseBorderBox, secondBorderBoxBase, {
-  top: "35%",
-  left: "-7.5%",
-  width: "20%",
-  height: "100%",
+  bottom: { base: "-15%", lg: "-35%" },
+  left: { base: "-10%", lg: "-7.5%" },
+  width: { base: "65%", lg: "20%" },
+  height: { base: "50%", lg: "100%" },
 });
 
 const firstBorderBoxHover = css(baseBorderBox, firstBorderBoxBase, {
-  top: "-37%",
-  right: "-7%",
-  width: "100%",
-  height: "100%",
+  top: { base: "-25%", lg: "-37%" },
+  right: { base: "-10%", lg: "-7%" },
+  width: { base: "100%", lg: "100%" },
+  height: { base: "100%", lg: "100%" },
 });
 const secondBorderBoxHover = css(baseBorderBox, secondBorderBoxBase, {
-  top: "37%",
-  left: "-9.5%",
-  width: "100%",
-  height: "100%",
+  bottom: { base: "-17%", lg: "-37%" },
+  left: { base: "-12%", lg: "-9.5%" },
+  width: { base: "100%", lg: "100%" },
+  height: { base: "100%", lg: "100%" },
 });
 
 const cvButton = css({
@@ -121,6 +121,7 @@ const container = css({
   display: "flex",
   flexFlow: "column nowrap",
   alignItems: "center",
+  justifyContent: "center",
   height: "100%",
   width: "100%",
   gap: "64px",
@@ -130,7 +131,8 @@ const container = css({
 const buttonContainer = {
   marginTop: "auto",
   display: "flex",
-  flexFlow: "row nowrap",
+  flexFlow: { base: "column wrap", lg: "row nowrap" },
+  alignItems: "stretch",
   position: "relative",
   gap: "32px",
 };

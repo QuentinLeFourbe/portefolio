@@ -144,7 +144,6 @@ const detailsContainer = css({
 });
 
 const detailsSection = css({
-  width: "600px",
   display: "flex",
   flexFlow: "column nowrap",
   justifyContent: "center",

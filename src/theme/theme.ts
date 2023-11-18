@@ -110,7 +110,7 @@ export const theme = {
             inactive: {
               value: {
                 base: "{colors.teal.800}",
-                _dark: "{colors.grey.900}",
+                _dark: "{colors.grey.300}",
               },
             },
           },
@@ -118,13 +118,13 @@ export const theme = {
             inactive: {
               value: {
                 base: "{colors.greyGold.200}",
-                _dark: "{colors.greyGold.600}",
+                _dark: "{colors.grey.900}",
               },
             },
             active: {
               value: {
                 base: "{colors.teal.800}",
-                _dark: "{colors.grey.900}",
+                _dark: "{colors.greyGold.600}",
               },
             },
           },
@@ -138,6 +138,12 @@ export const theme = {
             value: {
               base: "{colors.teal.600}",
               _dark: "{colors.teal.800}",
+            },
+          },
+          mobileBackground: {
+            value: {
+              base: "{colors.greyGold.200}",
+              _dark: "{colors.grey.900}",
             },
           },
         },

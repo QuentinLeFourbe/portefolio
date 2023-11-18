@@ -25,7 +25,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         <div className={cx(borderCard, "borderCard")} />
         {logoSrc && <img src={logoSrc} alt={""} className={logoSize} />}
 
-        <div className={cx(overCard, "overCard")}>
+        <div className={cx(titleCard, "overCard")}>
           <h2 className={titleStyle}>{children}</h2>
         </div>
       </div>
@@ -36,8 +36,8 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 export default Card;
 
 const closedCard = css({
-  height: "250px",
-  width: "250px",
+  height: { base: "200px", lg: "250px" },
+  width: { base: "200px", lg: "250px" },
   cursor: "pointer",
   position: "relative",
 
@@ -78,12 +78,12 @@ const logoSize = css({
   transition: "all 0.2s ease-in-out",
 });
 
-const overCard = css({
+const titleCard = css({
   width: "250px",
   height: "100px",
   position: "absolute",
   bottom: "-25px",
-  left: "25px",
+  left: { base: "", lg: "25px" },
   padding: "1rem",
 
   display: "flex",

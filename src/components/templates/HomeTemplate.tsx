@@ -73,7 +73,9 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
           appear
           classNames={"pages"}
         >
-          <MainContainer ref={nodeRef}>{currentOutlet}</MainContainer>
+          <div ref={nodeRef} className={contentContainer}>
+            {currentOutlet}
+          </div>
         </CSSTransition>
       </SwitchTransition>
     </div>
@@ -82,14 +84,21 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
 
 export default HomeTemplate;
 
+const contentContainer = css({
+  flexGrow: 1,
+  display: "flex",
+  flexDirection: "column nowrap",
+  alignItems: "center",
+});
+
 const backgroundStyle = css({
   position: "relative",
   width: "100vw",
   minHeight: "100vh",
-  backgroundColor: "transparent",
   display: "flex",
-  alignItems: "center",
+  flexDirection: "column",
   fontFamily: "body",
+  padding: { base: "0", lg: "10vh 0 10vh 200px" },
 
   "&:after": {
     zIndex: -2,
@@ -166,7 +175,8 @@ const lightPattern = css({
 
 const darkModeButtonStyle = css({
   position: "fixed",
-  top: "32px",
+  top: { base: "", lg: "32px" },
+  bottom: { base: "32px", lg: "" },
   right: "32px",
   zIndex: "100",
 });

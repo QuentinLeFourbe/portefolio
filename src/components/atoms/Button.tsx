@@ -31,7 +31,7 @@ function Button({ variant = "primary", ...props }: ButtonProps) {
 export default Button;
 
 const buttonPrimarySize = {
-  fontSize: "3rem",
+  fontSize: { base: "2.2rem", lg: "3rem" },
   cursor: "pointer",
   fontFamily: "title",
   transition: "all 0.2s ease-in-out",
@@ -41,7 +41,7 @@ const primaryStyle = css(buttonPrimarySize, {
   backgroundColor: "buttons.primary.background.base",
   color: "buttons.primary.text.base",
   fontWeight: "bold",
-  padding: "1rem 4rem",
+  padding: { base: "1rem 2rem", lg: "1rem 4rem" },
   "&:hover": {
     backgroundColor: "buttons.primary.background.hover",
     color: "buttons.primary.text.hover",

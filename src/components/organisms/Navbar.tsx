@@ -49,8 +49,8 @@ const bubble = {
   borderColor: "navbar.border",
   borderRadius: "50%",
 
-  width: "75px",
-  height: "75px",
+  width: { base: "50px", lg: "75px" },
+  height: { base: "50px", lg: "75px" },
 
   textAlign: "center",
 
@@ -102,22 +102,46 @@ const inactiveBubble = css(bubble, {
 });
 
 const container = css({
-  position: "fixed",
-  top: "50%",
+  position: { base: "sticky", lg: "fixed" },
+  top: { base: "50px", lg: "50%" },
+  left: { base: "50%", lg: "0" },
   transform: "translate(0, -50%)",
   display: "flex",
-  flexFlow: "column nowrap",
+  flexFlow: { base: "row nowrap", lg: "column nowrap" },
   alignItems: "center",
   justifyContent: "center",
-  height: "100vh",
-  width: "200px",
+  height: { base: "100px", lg: "100vh" },
+  width: { base: "100vw", lg: "200px" },
+  zIndex: 100,
+  padding: { base: "0 24px", lg: "24px 0" },
+
+  base: {
+    "&:before": {
+      zIndex: -1,
+      content: "''",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundColor: "background.primary",
+      opacity: 0.95,
+    },
+  },
+  lg: {
+    "&:before": {
+      display: "none",
+    },
+  },
 
   "& .line": {
     flexGrow: 1,
-    width: "1px",
+    width: { base: "auto", lg: "1px" },
+    height: { base: "1px", lg: "auto" },
     maxHeight: "150px",
-    margin: "12px 0 ",
-    borderStyle: "none none none dotted",
+    maxWidth: "150px",
+    margin: "12px 12px ",
+    borderStyle: "none none dotted dotted",
     borderColor: "navbar.dot",
     borderWidth: "3px",
     opacity: 0.5,
