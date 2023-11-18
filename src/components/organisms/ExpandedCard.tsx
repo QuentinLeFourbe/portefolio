@@ -28,8 +28,8 @@ const ExpandedCard = forwardRef<HTMLDivElement, ExpandedCardProps>(
     return (
       <div ref={ref} className={globalContainer}>
         <div className={titleContainer}>
-          <h2>{title}</h2>
           {src && <img src={src} />}
+          <h2>{title}</h2>
           <button className={closingButton} onClick={() => onClose()}>
             <Xmark />
           </button>
@@ -168,7 +168,7 @@ const titleContainer = css({
   gap: "32px",
 
   "& h2": {
-    fontSize: "3rem",
+    fontSize: { base: "2rem", sm: "2.2rem", md: "2.5rem", lg: "3rem" },
     color: "text.title",
     fontFamily: "title",
     fontWeight: "600",
@@ -182,9 +182,12 @@ const titleContainer = css({
 });
 
 const closingButton = css({
+  position: "absolute",
+  top: { base: "15px", lg: "5px" },
+  right: { base: "25px", lg: "5px" },
   marginLeft: "auto",
-  height: "75",
-  width: "75px",
+  height: { base: "35px", sm: "35px" },
+  width: { base: "35px", sm: "35px" },
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
   color: "expandedCard.closeButton.base",
@@ -201,7 +204,7 @@ const closingButton = css({
 
 const technoRow = css({
   display: "flex",
-  flexFlow: "row nowrap",
+  flexFlow: "row wrap",
   justifyContent: "flex-start",
   alignItems: "center",
   gap: "16px",
