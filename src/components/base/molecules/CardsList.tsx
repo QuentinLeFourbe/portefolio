@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import Card from "../Atoms/Card";
+import Card from "../atoms/Card";
 import { Project } from "../../../types/project";
 import { css } from "../../../../styled-system/css";
 

@@ -3,7 +3,7 @@ import { css } from "../../../../styled-system/css";
 import { forwardRef } from "react";
 import Xmark from "../../../assets/icons/x-mark.svg?react";
 import { Project } from "../../../types/project";
-import TechnologyIcon from "../Atoms/TechnologyIcon";
+import TechnologyIcon from "../atoms/TechnologyIcon";
 
 type ExpandedCardProps = {
   project: Project;

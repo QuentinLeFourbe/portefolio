@@ -4,7 +4,7 @@ import Navbar from "../organisms/Navbar";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useOutlet, useLocation } from "react-router-dom";
 import { porteFolioRoutes } from "../../../routes";
-import DarkModeButton from "../Atoms/DarkModeButton";
+import DarkModeButton from "../atoms/DarkModeButton";
 
 type HomeTemplateProps = ComponentProps<"div">;
 
