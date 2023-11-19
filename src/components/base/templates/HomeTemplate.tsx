@@ -54,12 +54,7 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
       )}
       data-color-mode={colorScheme}
     >
-      <DarkModeButton
-        mode={colorScheme}
-        onClick={switchMode}
-        className={darkModeButtonStyle}
-      />
-      <Navbar />
+      <Navbar darkMode={colorScheme === "dark"} onSwitchMode={switchMode} />
       <SwitchTransition>
         <CSSTransition
           timeout={200}

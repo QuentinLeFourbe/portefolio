@@ -39,10 +39,10 @@ const containerStyle = css({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  height: "100%",
+  minHeight: "100%",
   padding: {
     base: "0 1rem 10% 1rem",
-    lg: "8% 5% 8% 5%",
+    lg: "5% 5% 5% 5%",
   },
   width: "100%",
 });
@@ -64,6 +64,7 @@ const textStyle = css({
 
 const cardContainer = css({
   display: "flex",
+  flexFlow: "row wrap",
   gap: "64px",
   width: "100%",
   margin: "1rem 0",

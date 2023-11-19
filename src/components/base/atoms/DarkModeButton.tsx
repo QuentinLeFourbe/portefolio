@@ -4,19 +4,19 @@ import { css, cx } from "../../../../styled-system/css";
 import { ComponentProps } from "react";
 
 type DarkModeButtonProps = ComponentProps<"button"> & {
-  mode: "light" | "dark";
-  onClick: () => void;
+  darkMode?: boolean;
+  onClick?: () => void;
 };
 
 function DarkModeButton({
-  mode,
+  darkMode,
   onClick,
   className,
   ...props
 }: DarkModeButtonProps) {
   return (
     <button {...props} onClick={onClick} className={cx(buttonStyle, className)}>
-      {mode === "dark" ? <MoonIcon /> : <SunIcon />}
+      {darkMode ? <MoonIcon /> : <SunIcon />}
     </button>
   );
 }
@@ -27,8 +27,8 @@ const buttonStyle = css({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "50px",
-  height: "50px",
+  width: { base: "35px", sm: "50px" },
+  height: { base: "35px", sm: "50px" },
   borderRadius: "50%",
   border: "none",
   backgroundColor: "buttons.secondary.background.base",
