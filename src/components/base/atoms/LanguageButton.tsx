@@ -1,4 +1,3 @@
-import React from "react";
 import FrenchFlag from "../../../assets/icons/french-flag.svg?react";
 import UkFlag from "../../../assets/icons/uk-flag.svg?react";
 import { css, cx } from "../../../../styled-system/css";

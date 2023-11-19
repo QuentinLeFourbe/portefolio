@@ -4,7 +4,6 @@ import Navbar from "../organisms/Navbar";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useOutlet, useLocation } from "react-router-dom";
 import { porteFolioRoutes } from "../../../routes";
-import DarkModeButton from "../atoms/DarkModeButton";
 
 type HomeTemplateProps = ComponentProps<"div">;
 
@@ -101,7 +100,6 @@ const backgroundStyle = css({
     width: "100%",
     height: "100%",
     backgroundColor: "background.primary",
-    // opacity: 0.7,
   },
 
   "& .pages-enter": {
@@ -163,12 +161,4 @@ const lightPattern = css({
     // "invert(100%) sepia(2%) saturate(0%) hue-rotate(328deg) brightness(114%) contrast(92%)",
     opacity: 0.2,
   },
-});
-
-const darkModeButtonStyle = css({
-  position: "fixed",
-  top: { base: "", lg: "32px" },
-  bottom: { base: "32px", lg: "" },
-  right: "32px",
-  zIndex: "100",
 });
