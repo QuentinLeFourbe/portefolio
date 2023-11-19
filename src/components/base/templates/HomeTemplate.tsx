@@ -26,12 +26,10 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // Vérifie si la préférence de l'utilisateur est sombre au chargement de la page
     if (mediaQuery.matches) {
       setColorScheme("dark");
     }
 
-    // Écoute les changements de préférence de l'utilisateur
     const handleChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         setColorScheme("dark");
@@ -40,11 +38,10 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
       }
     };
 
-    mediaQuery.addListener(handleChange);
+    mediaQuery.addEventListener("change", handleChange);
 
-    // Nettoie l'écouteur lorsque le composant est démonté
     return () => {
-      mediaQuery.removeListener(handleChange);
+      mediaQuery.removeEventListener("change", handleChange);
     };
   }, []);
 

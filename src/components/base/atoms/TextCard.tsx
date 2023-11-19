@@ -25,6 +25,7 @@ export default TextCard;
 
 const container = css({
   display: "flex",
+  position: "relative",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-between",
@@ -46,6 +47,18 @@ const container = css({
     color: "text.primary",
     fontSize: "1.2rem",
     lineHeight: "2rem",
+  },
+
+  "&:before": {
+    content: "''",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    backgroundColor: "background.primary",
+    zIndex: -1,
+    opacity: 0.7,
   },
 });
 
