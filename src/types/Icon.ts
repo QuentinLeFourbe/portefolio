@@ -7,3 +7,5 @@ export type IconName =
   | "diplome"
   | "cake"
   | "telephone";
+
+export type SvgIconName = "cog" | "beaker" | "heart" | "sparkles" | "react";

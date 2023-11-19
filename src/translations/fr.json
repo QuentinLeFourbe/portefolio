@@ -1,8 +1,17 @@
 {
   "profile": {
     "greet": "Bonjour",
-    "presentation1": "Je suis Quentin Garcia, un développeur full-stack passionné par les technologies, avec une expertise particulière en React, Node.js et TypeScript. Mon expérience professionnelle, enrichie par des projets variés, m'a permis de perfectionner mes compétences et de rester constamment à la pointe des dernières avancées. Mon engagement envers la qualité du code et la robustesse des solutions est au cœur de ma démarche professionnelle.",
-    "presentation2": "En parallèle de mon engagement professionnel, je pratique assidûment la force athlétique. Mon entraînement intense reflète ma détermination à atteindre des objectifs, constituant un moyen de dépassement aussi bien physique que mental."
+    "presentation": [
+      "Je m'appelle Quentin GARCIA, je suis ingénieur en développement web fullstack"
+    ],
+    "front_expert": "Expertise frontend",
+    "front_text": "Passionné d'UX/UI, je possède une solide expertise en React.js et Typescript",
+    "back_expert": "Expertise backend",
+    "back_text": "Capable d'intervenir sur l'ensemble d'une application, je maitrise Express.js et Node.js",
+    "my_strengths": "Mes forces",
+    "strengths_text": "Une exigeance technique alliant qualité et simplicité, ainsi qu'une expertise pour faire évoluer vos projets",
+    "powerlifting": "Force athlétique",
+    "powerlifting_text": "Adepte de la force athlétique, ma détermination et ma rigueur me pousse à me dépasser"
   },
   "projects": {
     "backend": "Backend",
