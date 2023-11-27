@@ -158,20 +158,48 @@ export const theme = {
             secondary: {
               value: {
                 base: "{colors.greyGold.700}",
-                _dark: "{colors.greyGold.400}",
+                _dark: "{colors.grey.800}",
+              },
+            },
+            hover: {
+              value: {
+                base: "{colors.greyGold.900}",
+                _dark: "{colors.greyGold.700}",
               },
             },
           },
           border: {
-            value: {
-              base: "{colors.teal.600}",
-              _dark: "{colors.teal.900}",
+            primary: {
+              value: {
+                base: "{colors.teal.600}",
+                _dark: "{colors.teal.700}",
+              },
+            },
+            secondary: {
+              value: {
+                base: "{colors.greyGold.400}",
+                _dark: "{colors.greyGold.800}",
+              },
+            },
+            hover: {
+              value: {
+                base: "{colors.greyGold.900}",
+                _dark: "{colors.greyGold.600}",
+              },
             },
           },
           text: {
-            value: {
-              base: "{colors.greyGold.200}",
-              _dark: "{colors.greyGold.900}",
+            primary: {
+              value: {
+                base: "{colors.greyGold.200}",
+                _dark: "{colors.greyGold.200}",
+              },
+            },
+            hover: {
+              value: {
+                base: "{colors.greyGold.100}",
+                _dark: "{colors.greyGold.100}",
+              },
             },
           },
         },

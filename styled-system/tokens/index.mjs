@@ -1879,13 +1879,29 @@ const tokens = {
     "value": "var(--colors-card-background-secondary)",
     "variable": "var(--colors-card-background-secondary)"
   },
-  "colors.card.border": {
-    "value": "var(--colors-card-border)",
-    "variable": "var(--colors-card-border)"
+  "colors.card.background.hover": {
+    "value": "var(--colors-card-background-hover)",
+    "variable": "var(--colors-card-background-hover)"
   },
-  "colors.card.text": {
-    "value": "var(--colors-card-text)",
-    "variable": "var(--colors-card-text)"
+  "colors.card.border.primary": {
+    "value": "var(--colors-card-border-primary)",
+    "variable": "var(--colors-card-border-primary)"
+  },
+  "colors.card.border.secondary": {
+    "value": "var(--colors-card-border-secondary)",
+    "variable": "var(--colors-card-border-secondary)"
+  },
+  "colors.card.border.hover": {
+    "value": "var(--colors-card-border-hover)",
+    "variable": "var(--colors-card-border-hover)"
+  },
+  "colors.card.text.primary": {
+    "value": "var(--colors-card-text-primary)",
+    "variable": "var(--colors-card-text-primary)"
+  },
+  "colors.card.text.hover": {
+    "value": "var(--colors-card-text-hover)",
+    "variable": "var(--colors-card-text-hover)"
   },
   "colors.expandedCard.closeButton.base": {
     "value": "var(--colors-expanded-card-close-button-base)",
@@ -2223,9 +2239,33 @@ const tokens = {
     "value": "var(--colors-color-palette-background-secondary)",
     "variable": "var(--colors-color-palette-background-secondary)"
   },
-  "colors.colorPalette.text": {
-    "value": "var(--colors-color-palette-text)",
-    "variable": "var(--colors-color-palette-text)"
+  "colors.colorPalette.background.hover": {
+    "value": "var(--colors-color-palette-background-hover)",
+    "variable": "var(--colors-color-palette-background-hover)"
+  },
+  "colors.colorPalette.hover": {
+    "value": "var(--colors-color-palette-hover)",
+    "variable": "var(--colors-color-palette-hover)"
+  },
+  "colors.colorPalette.border.primary": {
+    "value": "var(--colors-color-palette-border-primary)",
+    "variable": "var(--colors-color-palette-border-primary)"
+  },
+  "colors.colorPalette.border.secondary": {
+    "value": "var(--colors-color-palette-border-secondary)",
+    "variable": "var(--colors-color-palette-border-secondary)"
+  },
+  "colors.colorPalette.border.hover": {
+    "value": "var(--colors-color-palette-border-hover)",
+    "variable": "var(--colors-color-palette-border-hover)"
+  },
+  "colors.colorPalette.text.primary": {
+    "value": "var(--colors-color-palette-text-primary)",
+    "variable": "var(--colors-color-palette-text-primary)"
+  },
+  "colors.colorPalette.text.hover": {
+    "value": "var(--colors-color-palette-text-hover)",
+    "variable": "var(--colors-color-palette-text-hover)"
   },
   "colors.colorPalette.closeButton.base": {
     "value": "var(--colors-color-palette-close-button-base)",
@@ -2238,10 +2278,6 @@ const tokens = {
   "colors.colorPalette.closeButton.hover": {
     "value": "var(--colors-color-palette-close-button-hover)",
     "variable": "var(--colors-color-palette-close-button-hover)"
-  },
-  "colors.colorPalette.hover": {
-    "value": "var(--colors-color-palette-hover)",
-    "variable": "var(--colors-color-palette-hover)"
   },
   "colors.colorPalette.background": {
     "value": "var(--colors-color-palette-background)",
@@ -2259,10 +2295,6 @@ const tokens = {
     "value": "var(--colors-color-palette-primary-background-hover)",
     "variable": "var(--colors-color-palette-primary-background-hover)"
   },
-  "colors.colorPalette.background.hover": {
-    "value": "var(--colors-color-palette-background-hover)",
-    "variable": "var(--colors-color-palette-background-hover)"
-  },
   "colors.colorPalette.primary.text.base": {
     "value": "var(--colors-color-palette-primary-text-base)",
     "variable": "var(--colors-color-palette-primary-text-base)"
@@ -2274,10 +2306,6 @@ const tokens = {
   "colors.colorPalette.primary.text.hover": {
     "value": "var(--colors-color-palette-primary-text-hover)",
     "variable": "var(--colors-color-palette-primary-text-hover)"
-  },
-  "colors.colorPalette.text.hover": {
-    "value": "var(--colors-color-palette-text-hover)",
-    "variable": "var(--colors-color-palette-text-hover)"
   },
   "colors.colorPalette.secondary.background.base": {
     "value": "var(--colors-color-palette-secondary-background-base)",
@@ -2323,10 +2351,6 @@ const tokens = {
     "value": "var(--colors-color-palette-tertiary-border-hover)",
     "variable": "var(--colors-color-palette-tertiary-border-hover)"
   },
-  "colors.colorPalette.border.hover": {
-    "value": "var(--colors-color-palette-border-hover)",
-    "variable": "var(--colors-color-palette-border-hover)"
-  },
   "colors.colorPalette.borders.primary": {
     "value": "var(--colors-color-palette-borders-primary)",
     "variable": "var(--colors-color-palette-borders-primary)"
@@ -2339,6 +2363,10 @@ const tokens = {
     "value": "var(--colors-color-palette-header-text)",
     "variable": "var(--colors-color-palette-header-text)"
   },
+  "colors.colorPalette.text": {
+    "value": "var(--colors-color-palette-text)",
+    "variable": "var(--colors-color-palette-text)"
+  },
   "colors.colorPalette.header.background": {
     "value": "var(--colors-color-palette-header-background)",
     "variable": "var(--colors-color-palette-header-background)"
@@ -2350,10 +2378,6 @@ const tokens = {
   "colors.colorPalette.title.background": {
     "value": "var(--colors-color-palette-title-background)",
     "variable": "var(--colors-color-palette-title-background)"
-  },
-  "colors.colorPalette.text.primary": {
-    "value": "var(--colors-color-palette-text-primary)",
-    "variable": "var(--colors-color-palette-text-primary)"
   },
   "colors.colorPalette.text.secondary": {
     "value": "var(--colors-color-palette-text-secondary)",
