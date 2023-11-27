@@ -16,7 +16,9 @@ function TextCard({ title, className, children, icon }: TextCardProps) {
         {icon && <SvgIcon icon={icon} />}
         <h2>{title}</h2>
       </div>
-      <p>{children}</p>
+      <div className={css({ display: "flex", alignItems: "center" })}>
+        <p>{children}</p>
+      </div>
     </div>
   );
 }
@@ -28,7 +30,6 @@ const container = css({
   position: "relative",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "space-between",
   gap: "1rem",
   padding: "2rem",
   borderWidth: "1px",
