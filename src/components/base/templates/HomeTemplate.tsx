@@ -137,7 +137,7 @@ const darkPattern = css({
     width: "100%",
     height: "100%",
     // backgroundColor: "#e9d9d9",
-    backgroundImage: "url(hideout.svg)",
+    backgroundImage: "url(/hideout.svg)",
     backgroundRepeat: "repeat",
     backgroundSize: "200px 200px",
     filter:
