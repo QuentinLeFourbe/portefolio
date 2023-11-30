@@ -8,7 +8,9 @@ import { porteFolioRoutes } from "../../../routes";
 type HomeTemplateProps = ComponentProps<"div">;
 
 function HomeTemplate({ ...props }: HomeTemplateProps) {
-  const [colorScheme, setColorScheme] = useState<"light" | "dark">("light"); // Par défaut, le mode clair
+  const [colorScheme, setColorScheme] = useState(
+    window.localStorage.getItem("colorScheme") || "light"
+  ); // Par défaut, le mode clair
   const location = useLocation();
   const currentOutlet = useOutlet();
   const { nodeRef } =
@@ -16,8 +18,10 @@ function HomeTemplate({ ...props }: HomeTemplateProps) {
 
   const switchMode = () => {
     if (colorScheme === "light") {
+      window.localStorage.setItem("colorScheme", "dark");
       setColorScheme("dark");
     } else {
+      window.localStorage.setItem("colorScheme", "light");
       setColorScheme("light");
     }
   };
