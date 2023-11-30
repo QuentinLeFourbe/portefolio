@@ -11,7 +11,6 @@ function LanguageButton({ className }: LanguageButtonProps) {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const notFrench = currentLanguage !== "fr";
-  console.log(currentLanguage);
   return (
     <button
       type="button"
