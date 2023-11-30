@@ -41,8 +41,8 @@ const ExpandedCard = forwardRef<HTMLDivElement, ExpandedCardProps>(
               <div className={technoRow}>
                 <h3>{t("frontend")}</h3>
                 <ul>
-                  {technologies.frontend.map((technology) => (
-                    <li>
+                  {technologies.frontend.map((technology, index) => (
+                    <li key={index}>
                       <TechnologyIcon technology={technology} />
                     </li>
                   ))}
@@ -53,8 +53,8 @@ const ExpandedCard = forwardRef<HTMLDivElement, ExpandedCardProps>(
               <div className={technoRow}>
                 <h3>{t("backend")}</h3>
                 <ul>
-                  {technologies.backend.map((technology) => (
-                    <li>
+                  {technologies.backend.map((technology, index) => (
+                    <li key={index}>
                       <TechnologyIcon technology={technology} />
                     </li>
                   ))}
