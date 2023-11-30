@@ -127,7 +127,7 @@ const backgroundStyle = css({
   },
 });
 
-const darkPattern = css({
+const pattern = {
   "&:before": {
     zIndex: -1,
     content: "''",
@@ -136,29 +136,22 @@ const darkPattern = css({
     left: 0,
     width: "100%",
     height: "100%",
-    // backgroundColor: "#e9d9d9",
     backgroundImage: "url(/hideout.svg)",
     backgroundRepeat: "repeat",
     backgroundSize: "200px 200px",
+  },
+};
+
+const darkPattern = css(pattern, {
+  "&:before": {
     filter:
       "   invert(76%) sepia(58%) saturate(3002%) hue-rotate(2deg) brightness(108%) contrast(105%)",
     opacity: 0.05,
   },
 });
 
-const lightPattern = css({
+const lightPattern = css(pattern, {
   "&:before": {
-    zIndex: -1,
-    content: "''",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    // backgroundColor: "#e9d9d9",
-    backgroundImage: "url(hideout.svg)",
-    backgroundRepeat: "repeat",
-    backgroundSize: "200px 200px",
     filter:
       // "invert(93%) sepia(5%) saturate(6880%) hue-rotate(304deg) brightness(132%) contrast(104%)",
       "  invert(92%) sepia(5%) saturate(3076%) hue-rotate(347deg) brightness(92%) contrast(106%)",
