@@ -102,5 +102,8 @@
       "🌐 Application déployée sur Heroku",
       "💡 Très formateur pour moi"
     ]
+  },
+  "contact": {
+    "contact_me": "Contactez-moi"
   }
 }

@@ -5,9 +5,12 @@ import MaltIcon from "../assets/icons/malt.svg?react";
 import GithubIcon from "../assets/icons/github.svg?react";
 import LinkedInIcon from "../assets/icons/linkedin.svg?react";
 import CVIcon from "../assets/icons/cv.svg?react";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
   const [isButtonsHovered, setIsButtonsHovered] = React.useState(false);
+  const { t } = useTranslation("contact");
+  const language = window.localStorage.getItem("i18nextLng");
 
   return (
     <div className={container}>
@@ -17,13 +20,19 @@ function Contact() {
           onMouseLeave={() => setIsButtonsHovered(false)}
           href="mailto:quentingarcia40@gmail.com"
         >
-          Contactez-moi
+          {t("contact_me")}
         </Button>
         <Button
           variant="secondary"
           className={cvButton}
           onMouseEnter={() => setIsButtonsHovered(true)}
           onMouseLeave={() => setIsButtonsHovered(false)}
+          href={
+            language === "fr"
+              ? "/Quentin_GARCIA_CV.pdf"
+              : "/Quentin_GARCIA_CV_EN.pdf"
+          }
+          download
         >
           <CVIcon />
         </Button>

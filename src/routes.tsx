@@ -8,11 +8,6 @@ import { createRef } from "react";
 
 export const porteFolioRoutes = [
   {
-    path: "/",
-    element: <Profile />,
-    nodeRef: createRef<HTMLDivElement>(),
-  },
-  {
     path: "/projects",
     element: <Projects />,
     nodeRef: createRef<HTMLDivElement>(),
@@ -22,17 +17,14 @@ export const porteFolioRoutes = [
     element: <Contact />,
     nodeRef: createRef<HTMLDivElement>(),
   },
+  {
+    path: "/*",
+    element: <Profile />,
+    nodeRef: createRef<HTMLDivElement>(),
+  },
 ];
 
 export const appRoutes = [
-  {
-    path: "/",
-    element: <HomeTemplate />,
-    children: porteFolioRoutes.map((route) => ({
-      path: route.path,
-      element: route.element,
-    })),
-  },
   {
     path: "/cv",
     element: <CV />,
@@ -40,5 +32,13 @@ export const appRoutes = [
   {
     path: "/cv-en",
     element: <CVEn />,
+  },
+  {
+    path: "/",
+    element: <HomeTemplate />,
+    children: porteFolioRoutes.map((route) => ({
+      path: route.path,
+      element: route.element,
+    })),
   },
 ];

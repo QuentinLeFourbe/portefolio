@@ -102,5 +102,8 @@
       "🌐 Application deployed on Heroku",
       "💡 Very instructive for me"
     ]
+  },
+  "contact": {
+    "contact_me": "Contact me"
   }
 }
