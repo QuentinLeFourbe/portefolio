@@ -31,13 +31,13 @@ const container = css({
   flexDirection: "column",
   alignItems: "center",
   gap: "1rem",
-  padding: "2rem",
+  padding: { base: "1rem", lg: "2rem" },
   borderWidth: "1px",
   borderStyle: "solid",
   borderColor: "contact.borders.primary",
 
   width: "300px",
-  height: "300px",
+  height: { base: "250px", lg: "300px" },
 
   "& svg": {
     width: "50px",
