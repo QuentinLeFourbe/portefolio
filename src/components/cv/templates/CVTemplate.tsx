@@ -59,6 +59,9 @@ const textStyles = css({
     fontSize: "0.75rem",
     textAlign: "justify",
   },
+  "& a": {
+    fontSize: "0.75rem",
+  },
   "& ul": {
     fontSize: "0.75rem",
   },

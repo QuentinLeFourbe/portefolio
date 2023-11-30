@@ -32,6 +32,9 @@ function Icon({ icon, className }: IconProps) {
     case "cake":
       iconSrc = "src/assets/cv/cake.svg";
       break;
+    case "globe":
+      iconSrc = "src/assets/cv/globe.svg";
+      break;
     default:
       break;
   }
