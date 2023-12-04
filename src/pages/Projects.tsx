@@ -18,7 +18,7 @@ const projects: Project[] = [
     challenges: "amcoeur_challenges",
     results: "amcoeur_results",
     technologies: {
-      backend: ["Node.js", "TypeScript", "Express.js"],
+      backend: ["Node.js", "TypeScript", "Express.js", "MongoDB"],
       frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
     },
   },
