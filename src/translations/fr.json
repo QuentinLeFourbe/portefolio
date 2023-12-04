@@ -14,6 +14,7 @@
     "powerlifting_text": "Adepte de la force athlétique, ma détermination et ma rigueur me pousse à me dépasser"
   },
   "projects": {
+    "title": "Mes projets",
     "backend": "Backend",
     "frontend": "Frontend",
     "challenges": "Défis",

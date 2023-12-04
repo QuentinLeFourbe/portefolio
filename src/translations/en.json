@@ -14,6 +14,7 @@
     "powerlifting_text": "A devotee of powerlifting, my determination and rigor drive me to surpass myself."
   },
   "projects": {
+    "title": "My projects",
     "backend": "Backend",
     "frontend": "Frontend",
     "challenges": "Challenges",

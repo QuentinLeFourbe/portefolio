@@ -6,6 +6,8 @@ import { Project } from "../types/project";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import ExpandedCard from "../components/base/organisms/ExpandedCard";
 import CardsList from "../components/base/molecules/CardsList";
+import Title from "../components/base/atoms/Title";
+import { useTranslation } from "react-i18next";
 
 const projects: Project[] = [
   {
@@ -59,6 +61,7 @@ const projects: Project[] = [
 ];
 
 function Projects() {
+  const { t } = useTranslation("projects");
   const [openedProject, setOpenedProject] = useState<Project | null>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const openedProjectRef = useRef<HTMLDivElement>(null);
@@ -73,25 +76,28 @@ function Projects() {
   };
 
   return (
-    <div className={cx(container)}>
-      <SwitchTransition>
-        <CSSTransition
-          classNames="card"
-          timeout={200}
-          key={openedProject ? "openProject" : "projects"}
-          nodeRef={nodeRef}
-        >
-          {openedProject ? (
-            <ExpandedCard
-              project={openedProject}
-              onClose={() => closeCard()}
-              ref={nodeRef}
-            />
-          ) : (
-            <CardsList projects={projects} onClick={openCard} ref={nodeRef} />
-          )}
-        </CSSTransition>
-      </SwitchTransition>
+    <div className={css({ width: "100%" })}>
+      <Title>{t("title")}</Title>
+      <div className={cx(container)}>
+        <SwitchTransition>
+          <CSSTransition
+            classNames="card"
+            timeout={200}
+            key={openedProject ? "openProject" : "projects"}
+            nodeRef={nodeRef}
+          >
+            {openedProject ? (
+              <ExpandedCard
+                project={openedProject}
+                onClose={() => closeCard()}
+                ref={nodeRef}
+              />
+            ) : (
+              <CardsList projects={projects} onClick={openCard} ref={nodeRef} />
+            )}
+          </CSSTransition>
+        </SwitchTransition>
+      </div>
     </div>
   );
 }

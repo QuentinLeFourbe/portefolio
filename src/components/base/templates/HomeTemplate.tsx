@@ -84,6 +84,7 @@ const contentContainer = css({
   flexDirection: "column nowrap",
   alignItems: "center",
   transition: "all 0.2s ease-in-out",
+  height: "100%",
 });
 
 const backgroundStyle = css({

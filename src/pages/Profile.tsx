@@ -1,13 +1,14 @@
 import { css, cx } from "../../styled-system/css";
 import { useTranslation } from "react-i18next";
 import TextCard from "../components/base/atoms/TextCard";
+import Title from "../components/base/atoms/Title";
 
 function Profile() {
   const { t } = useTranslation("profile");
 
   return (
     <div className={cx(containerStyle)}>
-      <h1 className={titleStyle}>{t("greet")}</h1>
+      <Title>{t("greet")}</Title>
       {(t("presentation", { returnObjects: true }) as string[]).map(
         (presentation, index) => (
           <p key={index} className={textStyle}>
@@ -45,13 +46,6 @@ const containerStyle = css({
     lg: "5% 0% 5% 0%",
   },
   width: "100%",
-});
-
-const titleStyle = css({
-  fontSize: { base: "4rem", lg: "6rem" },
-  fontFamily: "title",
-  lineHeight: "6.5rem",
-  color: "text.title",
 });
 
 const textStyle = css({
