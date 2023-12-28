@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "../../../../styled-system/css";
+import { css, cx } from "../../../../styled-system/css";
 
 type DatedItemProps = {
   startDate: string;
@@ -18,11 +18,11 @@ function DatedItem({
 }: DatedItemProps) {
   return (
     <div className={flexRow}>
-      <div className={flexColumn}>
+      <div className={cx(flexColumn, date)}>
         <p className={noWrap}>{startDate}</p>
         <p className={noWrap}>{endDate}</p>
       </div>
-      <div className={flexColumn}>
+      <div className={cx(flexColumn, jobContent)}>
         <h4>{title}</h4>
         {subtitle && <h5>{subtitle}</h5>}
         {children}
@@ -33,6 +33,14 @@ function DatedItem({
 
 export default DatedItem;
 
+const date = css({
+  // width: "100px",
+});
+
+const jobContent = css({
+  width: "410px",
+});
+
 const flexColumn = css({
   display: "flex",
   flexDirection: "column",
@@ -42,7 +50,7 @@ const flexColumn = css({
 const flexRow = css({
   display: "flex",
   flexDirection: "row",
-  gap: "2rem",
+  justifyContent: "space-between",
   margin: "1rem 0 1rem 0",
 });
 
