@@ -52,6 +52,13 @@ const flexRow = css({
   flexDirection: "row",
   justifyContent: "space-between",
   margin: "1rem 0 1rem 0",
+
+  "& li": {
+    listStyle: "square",
+  },
+  "& ul": {
+    margin: "0 0 0 1rem",
+  },
 });
 
 const noWrap = css({

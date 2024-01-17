@@ -1,5 +1,6 @@
 import CV from "./markdown/cv.mdx";
 import CVEn from "./markdown/cv-en.mdx";
+import CVDetail from "./markdown/cv-detailed.mdx";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 import HomeTemplate from "./components/base/templates/HomeTemplate";
@@ -41,6 +42,10 @@ export const appRoutes = [
   {
     path: "/cv-en",
     element: <CVEn />,
+  },
+  {
+    path: "/cv-detail",
+    element: <CVDetail />,
   },
   {
     path: "*",

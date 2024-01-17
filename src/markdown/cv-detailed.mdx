@@ -1,0 +1,186 @@
+import CVTemplate from "../components/cv/templates/CVTemplate";
+import Header from "../components/cv/organisms/Header";
+import MainPanel from "../components/cv/organisms/MainPanel";
+import SidePanel from "../components/cv/organisms/SidePanel";
+import Title from "../components/cv/atoms/Title";
+import DatedItem from "../components/cv/atoms/DatedItem";
+import IconItem from "../components/cv/atoms/IconItem";
+import ProfilePicture from "../components/cv/atoms/ProfilePicture";
+
+<CVTemplate>
+
+<Header>
+# GARCIA Quentin
+
+## Ingénieur développement Web fullstack
+
+</Header>
+
+<SidePanel>
+    <ProfilePicture/>
+    <Title>Profil</Title>
+    <IconItem icon="pin" title="Adresse">
+    38400 Saint-Martin-d'Hères
+    </IconItem>
+    <IconItem icon="mail" title="E-Mail">
+    quentingarcia40@gmail.com
+    </IconItem>
+    <IconItem icon="telephone" title="Téléphone">
+    06 32 44 15 44
+    </IconItem>
+    <IconItem icon="cake" title="Date de naissance">
+    02/12/1995
+    </IconItem>
+    <IconItem title="Portefolio" icon="globe">
+    <a href="https://quentingarcia.com">https://quentingarcia.com</a>
+    </IconItem>
+
+    <Title>Technologies</Title>
+    - React.js
+    - Node.js
+    - HTML5 / CSS3
+    - Javascript
+    - Typescript
+    - Git
+    - Jest / Playwright
+
+
+    <Title>Compétences</Title>
+    - Travail en équipe
+    - Autonomie
+    - Force de proposition
+    - Attention aux détails
+    - Curieux
+
+    <Title>Langues</Title>
+    - Français: natif
+    - Anglais: courant (TOIC 920)
+
+    <Title>Loisirs</Title>
+    - Force athlétique
+    - Aquariophilie
+
+</SidePanel>
+
+<MainPanel>
+Je suis un développeur front end passionné de nouvelles technologies. Je met un point d'honneur à la qualité et la pérennité du code et des solutions mises en oeuvres. Je suis également très attaché à l'accessibilité, sujet pour moi encore trop négligé de nos jours.
+
+<Title icon="valise">Expériences professionnelles</Title>
+<DatedItem
+  startDate="Aout 2023"
+  title="Développeur fullstack bénévole"
+  subtitle="Amcoeur"
+>
+  - Refonte du site de l'association avec React / Node.js / Typescript / Mongodb. 
+  - Création d'un back office pour la gestion des adoptions.
+  - Architecture et conception de la solution.
+  - Mise en place de la pipeline CI/CD.
+  - Encadrement d'un junior.
+  - Recueil du besoin.
+  - Estimation des couts de production.
+  - Gestion de projet.
+  - UX / UI
+</DatedItem>
+<DatedItem
+  startDate="Avril 2022"
+  endDate="Juil 2023"
+  title="Tech lead développement web front-end"
+  subtitle="Linxo - Aix-en-Provence"
+>
+  Tech lead de 4 développeurs transverses sur 4 projets:
+  - *(projet existant)* Portail développeur: React.js / Docusaurus
+  - *(projet legacy)* Aggregation de compte: React.js / Node.js / Express.js / Redis / Playwright / Jest
+  - *(projet existant)* Initiation de paiement: React.js / Node.js / Express.js / Playwright / Jest
+  - *(nouveau projet)* Portail de paiement: React.js / Typescript / Storybook / Node.js / Express.js / Playwright / Jest
+
+
+  Missions:
+  - Maintenir les applications existantes
+  - Mise à niveau des applications existantes en terme de robustesse et de qualité de code
+  - Refonte en profondeur
+  - Optimisation de la pipeline de déploiement
+  - Mise en place de bonnes pratiques de code
+  - Mise en place de test d'intégrations
+  - Mise à niveau de la couverture de code pour atteindre 80% sur le nouveau code
+  - Revue de code
+  - Mise un place de l'architecture en monorepo pour l'ensemble des projets
+  - Organisation d'atelier de conception de solution
+  - Proposer et argumenter le choix de nouvelles technologies
+  - Tuteur d'un stagiaire
+  - Accompagnement des développeurs dans la mise en place de solutions
+  - Initiation de projet
+    - Architecture
+    - Conception
+    - Choix des technologies
+  - Mise en place d'outils de développement
+  - Mise en place du trunk based development
+  - Mise en place de l'atomic design system
+  - Documentation technique
+</DatedItem>
+
+<DatedItem
+  startDate="Nov 2021"
+  endDate="Avril 2022"
+  title="Développeur web React.js"
+  subtitle="Linxo - Aix-en-Provence"
+>
+  Projet legacy avec une grosse dette technique. React/Node.js. Equipe de 2
+  personnes. Ma force de proposition et mon énergie m'a permis de devenir tech
+  lead de l'équipe. 
+  - Correction de bug 
+  - Refonte de code 
+  - Test unitaires 
+  - Conception
+</DatedItem>
+
+<DatedItem
+  startDate="Aout 2019"
+  endDate="Nov 2021"
+  title="Ingénieur en développement C#"
+  subtitle="Diginext CS Group - Aix-en-Provence"
+>
+  Développement C# client lourd au sein d'une équipe de 20 personnes. 
+  - Analyse du besoin 
+  - Conception 
+  - Développement 
+  - Documentation 
+  - Architecture en micro services.
+</DatedItem>
+
+<DatedItem
+  startDate="Sept 2018"
+  endDate="Févr 2019"
+  title="Consultant freelance Unity3D VR"
+  subtitle="Faurecia - Seloncourt"
+>
+  Lead dev Unity3D. Application de simulation de chaîne de production en réalité
+  virtuelle. 
+  - Conception 
+  - Documentation 
+  - Présentations à un public  internationnal 
+  - Développement de nouvelles features 
+  - Organisation d'atelier  d'évolution de l'application 
+  - Formation d'utilisateurs
+</DatedItem>
+
+<DatedItem
+  startDate="Avril 2018"
+  endDate="Sept 2018"
+  title="Stage Unity3D VR"
+  subtitle="Faurecia - Seloncourt"
+>
+  Lead dev Unity3D. Application de simulation de chaîne de production en réalité
+  virtuelle.
+</DatedItem>
+
+<Title icon="diplome">Formations</Title>
+<DatedItem
+  startDate="Sept 2013"
+  endDate="Aout 2018"
+  title="Diplôme d'ingénieur génie informatique"
+  subtitle="EISTI Pau"
+></DatedItem>
+
+</MainPanel>
+
+</CVTemplate>
