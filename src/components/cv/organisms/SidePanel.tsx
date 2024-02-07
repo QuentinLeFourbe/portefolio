@@ -13,5 +13,5 @@ export default SidePanel;
 
 const panel = css({
   gridArea: "side",
-  padding: "5rem 2rem 1rem 2rem",
+  padding: "4rem 2rem 1rem 2rem",
 });
