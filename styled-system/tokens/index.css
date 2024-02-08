@@ -460,6 +460,7 @@
   --colors-text-subtitle: #6f623d;
   --colors-text-primary: #6f623d;
   --colors-text-secondary: #3e6f6f;
+  --colors-text-link: #3e6f6f;
   --colors-background-primary: #f6f1e6;
   --colors-navbar-text-active: #fbf7f2;
   --colors-navbar-text-inactive: #3e6f6f;
@@ -508,6 +509,7 @@
   --colors-text-subtitle: #cac091;
   --colors-text-primary: #f6f1e6;
   --colors-text-secondary: #d7d6c2;
+  --colors-text-link: #d7d6c2;
   --colors-background-primary: #403f3e;
   --colors-navbar-text-active: #fbf7f2;
   --colors-navbar-text-inactive: #c7c6ac;

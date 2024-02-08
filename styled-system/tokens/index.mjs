@@ -1839,6 +1839,10 @@ const tokens = {
     "value": "var(--colors-text-secondary)",
     "variable": "var(--colors-text-secondary)"
   },
+  "colors.text.link": {
+    "value": "var(--colors-text-link)",
+    "variable": "var(--colors-text-link)"
+  },
   "colors.background.primary": {
     "value": "var(--colors-background-primary)",
     "variable": "var(--colors-background-primary)"
@@ -2194,6 +2198,10 @@ const tokens = {
   "colors.colorPalette.secondary": {
     "value": "var(--colors-color-palette-secondary)",
     "variable": "var(--colors-color-palette-secondary)"
+  },
+  "colors.colorPalette.link": {
+    "value": "var(--colors-color-palette-link)",
+    "variable": "var(--colors-color-palette-link)"
   },
   "colors.colorPalette.text.active": {
     "value": "var(--colors-color-palette-text-active)",
