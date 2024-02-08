@@ -20,6 +20,7 @@
     "challenges": "Challenges",
     "results": "Results",
     "role": "Role",
+    "link": "Link to the project",
     "amcoeur_description": "Redesign of the association's website. The site is transformed into a full-stack application, ultimately allowing the management of adoptions and losses from a back office provided to volunteers. I mentor a junior developer on this project.",
     "amcoeur_roles": [
       "📈 Project Initiator",

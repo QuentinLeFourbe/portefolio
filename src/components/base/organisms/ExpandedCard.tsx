@@ -21,6 +21,7 @@ const ExpandedCard = forwardRef<HTMLDivElement, ExpandedCardProps>(
       challenges,
       results,
       technologies,
+      link,
     } = project;
 
     const { t } = useTranslation("projects");
@@ -98,6 +99,20 @@ const ExpandedCard = forwardRef<HTMLDivElement, ExpandedCardProps>(
                   )
                 )}
               </ul>
+            </div>
+          )}
+          {link && (
+            <div className={detailsSection}>
+              <h3>
+                <a
+                  className={linkStyle}
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("link")}
+                </a>
+              </h3>
             </div>
           )}
         </div>
@@ -221,5 +236,15 @@ const technoRow = css({
 
   "& li": {
     display: "inline-block",
+  },
+});
+
+const linkStyle = css({
+  color: "text.link",
+  textDecoration: "underline",
+  transition: "color 0.2s ease-in-out",
+
+  "&:hover": {
+    color: "text.linkHover",
   },
 });

@@ -25,4 +25,5 @@ export type Project = {
   results?: string;
   technologies?: Technologies;
   src?: string;
+  link?: string;
 };

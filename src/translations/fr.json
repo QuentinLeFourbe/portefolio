@@ -20,6 +20,7 @@
     "challenges": "Défis",
     "results": "Résultats",
     "role": "Rôle",
+    "link": "Lien vers le projet",
     "amcoeur_description": "Refonte du site web de l'association. Le site devient une application fullstack permettant à terme de gérer les adoptions et les disparitions depuis un backoffice mit à disposition des bénévoles. Un développeur junior dont je suis le mentor m'accompagne sur ce projet.",
     "amcoeur_roles": [
       "📈 Initiateur du projet",

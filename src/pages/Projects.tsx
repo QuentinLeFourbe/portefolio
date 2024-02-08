@@ -21,6 +21,7 @@ const projects: Project[] = [
       backend: ["Node.js", "TypeScript", "Express.js", "MongoDB"],
       frontend: ["React", "TypeScript", "Panda-CSS", "Vite.js"],
     },
+    link: "https://www.amcoeur.org",
   },
 
   {
@@ -34,6 +35,7 @@ const projects: Project[] = [
       backend: ["Node.js", "JavaScript", "Express.js", "Redis"],
       frontend: ["React", "JavaScript", "Redux", "Webpack"],
     },
+    link: "https://developers.linxoconnect.com/docs/accounts-api-quickstart/",
   },
   {
     title: "Linxo paiement initiation",
@@ -46,6 +48,7 @@ const projects: Project[] = [
       backend: ["Node.js", "JavaScript", "Express.js"],
       frontend: ["React", "JavaScript", "Redux", "Webpack"],
     },
+    link: "https://developers.linxoconnect.com/docs/direct-payment-api-quickstart/",
   },
   {
     title: "Mes menus",

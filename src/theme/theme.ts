@@ -90,6 +90,12 @@ export const theme = {
               _dark: "{colors.grey.200}",
             },
           },
+          link: {
+            value: {
+              base: "{colors.teal.800}",
+              _dark: "{colors.grey.200}",
+            },
+          },
         },
         background: {
           primary: {
