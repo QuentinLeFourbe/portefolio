@@ -13,7 +13,7 @@ export default MainPanel;
 
 const panel = css({
   gridArea: "main",
-  padding: "0 1rem 0 2rem",
+  padding: "0 1rem 0 1rem",
   borderLeft: "1.7px solid",
   borderLeftColor: "middleBorder",
   marginBottom: "1rem",

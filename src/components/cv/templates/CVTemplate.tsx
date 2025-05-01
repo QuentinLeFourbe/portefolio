@@ -17,7 +17,7 @@ const template = css({
   width: "816px",
   backgroundColor: "white",
   display: "grid",
-  gridTemplateColumns: "1fr 2fr",
+  gridTemplateColumns: "250px 2fr",
   gridTemplateRows: "1fr 4fr",
   gridTemplateAreas: `" header header header"
   "side main main"`,

@@ -20,7 +20,7 @@ import ProfilePicture from "../components/cv/atoms/ProfilePicture";
     <ProfilePicture/>
     <Title>Profil</Title>
     <IconItem icon="pin" title="Adresse">
-    38400 Saint-Martin-d'Hères
+    39400 Morez
     </IconItem>
     <IconItem icon="mail" title="E-Mail">
     quentingarcia40@gmail.com
@@ -60,12 +60,40 @@ import ProfilePicture from "../components/cv/atoms/ProfilePicture";
     - Force athlétique
     - Aquariophilie
 
+
+<Title >Formation</Title>
+<DatedItem
+  startDate="Sept 2013"
+  endDate="Aout 2018"
+  title="Diplôme d'ingénieur génie informatique"
+  subtitle="EISTI Pau"
+  side
+></DatedItem>
+
 </SidePanel>
 
 <MainPanel>
 Je suis un développeur front end passionné de nouvelles technologies. Je met un point d'honneur à la qualité et la pérennité du code et des solutions mises en oeuvres. Je suis également très attaché à l'accessibilité, sujet pour moi encore trop négligé de nos jours.
 
 <Title icon="valise">Expériences professionnelles</Title>
+<DatedItem
+  startDate="Nov 2024"
+  title="Fondateur & développeur"
+  subtitle="Junkan"
+>
+Co-fondateur du projet avec un autre développeur. Application de gestion d'athlètes à destination des coachs de force athlétique. 
+- Initialisation, conception, développement et déploiement de l'application. 
+- Conception UX
+- Recueil et analyse du besoin auprès des coachs
+- Projet en monorepo contenant une application coach, une PWA athlète, et une API. 
+- Développement React.js / Node.js / tRPC / MongoDB.
+- Authentification oauth2.
+- Tests unitaires et d'intégrations
+- Revue de code
+- Gestion de projet: définition, découpage et attribution des tâches
+- Modélisation de la base de données
+- Documentation
+</DatedItem>
 <DatedItem
   startDate="Aout 2023"
   title="Développeur fullstack bénévole"
@@ -77,7 +105,7 @@ Je suis un développeur front end passionné de nouvelles technologies. Je met u
   - Architecture en monorepo.
   - Mise en place de l'atomic design system.
   - Gestion de l'authentification des utilisateurs.
-  - Gestion de la base de donnée.
+  - Gestion de la base de données.
   - Mise en place de la pipeline CI/CD.
   - Encadrement d'un junior.
   - Recueil du besoin.
@@ -103,7 +131,7 @@ Je suis un développeur front end passionné de nouvelles technologies. Je met u
   Missions:
   - Maintenir les applications existantes
   - Mise à niveau des applications existantes en terme de robustesse et de qualité de code
-  - Refonte en profondeur
+  - Refonte en profondeur de la base de code
   - Optimisation de la pipeline de déploiement
   - Mise en place de bonnes pratiques de code
   - Mise en place de test d'intégrations
@@ -120,7 +148,6 @@ Je suis un développeur front end passionné de nouvelles technologies. Je met u
     - Choix des technologies
   - Mise en place d'outils de développement
   - Mise en place du trunk based development
-  - Mise en place de l'atomic design system
   - Documentation technique
 </DatedItem>
 
@@ -146,11 +173,9 @@ Je suis un développeur front end passionné de nouvelles technologies. Je met u
   subtitle="Diginext CS Group - Aix-en-Provence"
 >
   Développement C# client lourd au sein d'une équipe de 20 personnes. 
-  - Analyse du besoin 
-  - Conception 
-  - Développement 
-  - Documentation 
-  - Architecture en micro services.
+   Analyse du besoin et conception et développement de nouvelles fonctionnalités. 
+   Rédaction de documentation technique.
+   Architecture en micro services.
 </DatedItem>
 
 <DatedItem
@@ -159,14 +184,12 @@ Je suis un développeur front end passionné de nouvelles technologies. Je met u
   title="Consultant freelance Unity3D VR"
   subtitle="Faurecia - Seloncourt"
 >
-  Lead dev Unity3D. Application de simulation de chaîne de production en réalité
-  virtuelle. 
-  - Conception 
-  - Documentation 
-  - Présentations à un public  internationnal 
-  - Développement de nouvelles features 
-  - Organisation d'atelier  d'évolution de l'application 
-  - Formation d'utilisateurs
+  Lead dev Unity3D. Application de simulation de chaîne de production en réalité virtuelle. 
+  Conception et développement de nouvelles fonctionnalitées. 
+  Rédaction de documentation utilisateur. 
+  Présentations et démonstrations devant un public internationnal.
+  Organisation d'atelier pour l'évolution de l'application.
+  Formation des utilisateurs.
 </DatedItem>
 
 <DatedItem
@@ -179,13 +202,6 @@ Je suis un développeur front end passionné de nouvelles technologies. Je met u
   virtuelle.
 </DatedItem>
 
-<Title icon="diplome">Formations</Title>
-<DatedItem
-  startDate="Sept 2013"
-  endDate="Aout 2018"
-  title="Diplôme d'ingénieur génie informatique"
-  subtitle="EISTI Pau"
-></DatedItem>
 
 </MainPanel>
 

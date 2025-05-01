@@ -1,12 +1,14 @@
 import React from "react";
 import { css, cx } from "../../../../styled-system/css";
+import { HStack } from "../../../../styled-system/jsx";
 
 type DatedItemProps = {
   startDate: string;
-  endDate: string;
+  endDate?: string;
   title: string;
   subtitle?: string;
   children?: React.ReactNode;
+  side?: boolean;
 };
 
 function DatedItem({
@@ -15,16 +17,36 @@ function DatedItem({
   title,
   subtitle,
   children,
+  side = false,
 }: DatedItemProps) {
   return (
     <div className={flexRow}>
-      <div className={cx(flexColumn, date)}>
-        <p className={noWrap}>{startDate}</p>
-        <p className={noWrap}>{endDate}</p>
-      </div>
+      {!side && (
+        <div className={cx(flexColumn, date)}>
+          <p className={noWrap}>{startDate}</p>
+          {endDate && <p className={noWrap}>{endDate}</p>}
+        </div>
+      )}
       <div className={cx(flexColumn, jobContent)}>
-        <h4>{title}</h4>
+        <h4
+          className={css({
+            lineHeight: "1.5",
+          })}
+        >
+          {title}
+        </h4>
         {subtitle && <h5>{subtitle}</h5>}
+        {side && (
+          <HStack>
+            <p className={noWrap}>{startDate}</p>
+            {endDate && (
+              <>
+                <p>-</p>
+                <p className={noWrap}> {endDate}</p>
+              </>
+            )}
+          </HStack>
+        )}
         {children}
       </div>
     </div>
@@ -50,7 +72,7 @@ const flexColumn = css({
 const flexRow = css({
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between",
+  gap: "28px",
   margin: "1rem 0 1rem 0",
 
   "& li": {
